@@ -1,5 +1,11 @@
 # @muffled-ui/react
 
+## 1.0.20
+
+### Patch Changes
+
+- 262f5fb: Fixed colours and removed code editor
+
 ## 1.0.19
 
 ### Patch Changes
