@@ -5,7 +5,7 @@
   "main": "./dist/index.js",
   "module": "./dist/index.mjs",
   "types": "./dist/index.d.ts",
-  "homepage": "https://ui.muffled.dev/",
+  "homepage": "https://ui.muffled.studio/",
   "bugs": {
     "url": "https://github.com/joshbatley/muffled-ui/issues"
   },
