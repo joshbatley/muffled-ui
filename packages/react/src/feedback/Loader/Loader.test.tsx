@@ -1,10 +1,10 @@
 import { ReactNode } from 'react';
 import { render as testRender } from '@testing-library/react';
-import { EdgmontUI } from '../../utils';
+import { muffledUI } from '../../utils';
 import { CircleLoader } from '.';
 
 function render(Comp: ReactNode) {
-  return testRender(<EdgmontUI>{Comp}</EdgmontUI>);
+  return testRender(<muffledUI>{Comp}</muffledUI>);
 }
 
 describe('Loader', () => {

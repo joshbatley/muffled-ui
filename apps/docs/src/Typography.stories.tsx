@@ -1,5 +1,5 @@
 import { StoryObj } from '@storybook/react';
-import { Typography as T, Title, Box } from '@edgmont-ui/react';
+import { Typography as T, Title, Box } from '@muffled-ui/react';
 
 export default {
   title: 'Data/Typography',

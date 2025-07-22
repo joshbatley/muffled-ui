@@ -1,5 +1,5 @@
 import { StoryObj } from '@storybook/react';
-import { ClickableElement } from '@edgmont-ui/react';
+import { ClickableElement } from '@muffled-ui/react';
 
 export default {
   title: 'Inputs/Buttons/ClickableElement',

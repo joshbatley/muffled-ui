@@ -1,5 +1,5 @@
 import { StoryObj } from '@storybook/react';
-import { Box, Label, Input } from '@edgmont-ui/react';
+import { Box, Label, Input } from '@muffled-ui/react';
 
 export default {
   title: 'Inputs/Label',

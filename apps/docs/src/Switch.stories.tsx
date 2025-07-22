@@ -1,5 +1,5 @@
 import { StoryObj } from '@storybook/react';
-import { Box, Switch } from '@edgmont-ui/react';
+import { Box, Switch } from '@muffled-ui/react';
 import { useState } from 'react';
 
 export default {

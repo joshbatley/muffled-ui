@@ -7,7 +7,7 @@ import {
   Typography,
   Input,
   NumberField,
-} from '@edgmont-ui/react';
+} from '@muffled-ui/react';
 
 export default {
   title: 'Inputs/Input',

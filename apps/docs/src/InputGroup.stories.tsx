@@ -1,5 +1,5 @@
 import { StoryObj } from '@storybook/react';
-import { Input, InputGroup } from '@edgmont-ui/react';
+import { Input, InputGroup } from '@muffled-ui/react';
 
 export default {
   title: 'Inputs/InputGroup',

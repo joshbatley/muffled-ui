@@ -1,5 +1,5 @@
 import { StoryObj } from '@storybook/react';
-import { Box, Skeleton, Typography, Title } from '@edgmont-ui/react';
+import { Box, Skeleton, Typography, Title } from '@muffled-ui/react';
 
 export default {
   title: 'Feedback/Skeleton',

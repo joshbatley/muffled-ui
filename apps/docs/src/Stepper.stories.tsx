@@ -1,5 +1,5 @@
 import { StoryObj } from '@storybook/react';
-import { Box, StepLabel, Stepper } from '@edgmont-ui/react';
+import { Box, StepLabel, Stepper } from '@muffled-ui/react';
 
 export default {
   title: 'Navigation/Stepper',

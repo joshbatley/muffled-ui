@@ -2,7 +2,7 @@ import { StoryObj } from '@storybook/react';
 import {
   CodeEditor as CE,
   SyntaxHighlighter as SH,
-} from '@edgmont-ui/react';
+} from '@muffled-ui/react';
 
 export default {
   title: 'Feedback/Code',

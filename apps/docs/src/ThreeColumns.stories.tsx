@@ -1,5 +1,5 @@
 import { StoryObj } from '@storybook/react';
-import { Box, ThreeColumns } from '@edgmont-ui/react';
+import { Box, ThreeColumns } from '@muffled-ui/react';
 
 export default {
   title: 'Layout/ThreeColumns',

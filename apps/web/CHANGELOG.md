@@ -5,11 +5,11 @@
 ### Patch Changes
 
 - Updated dependencies [7e13337]
-  - @edgmont-ui/react@2.0.2
+  - @muffled-ui/react@2.0.2
 
 ## 0.0.1
 
 ### Patch Changes
 
 - Updated dependencies [cba70fc]
-  - @edgmont-ui/react@2.0.1
+  - @muffled-ui/react@2.0.1

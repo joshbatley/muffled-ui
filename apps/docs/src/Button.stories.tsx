@@ -1,6 +1,6 @@
 import { StoryObj } from '@storybook/react';
 import { ArrowDownOnSquareIcon } from '@heroicons/react/24/outline';
-import { Button, CircleLoader } from '@edgmont-ui/react';
+import { Button, CircleLoader } from '@muffled-ui/react';
 
 export default {
   title: 'Inputs/Buttons/Button',

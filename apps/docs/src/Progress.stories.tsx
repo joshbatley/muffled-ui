@@ -1,6 +1,6 @@
 import React from 'react';
 import { StoryObj } from '@storybook/react';
-import { CircleProgress, LinearProgress } from '@edgmont-ui/react';
+import { CircleProgress, LinearProgress } from '@muffled-ui/react';
 
 export default {
   title: 'Feedback/Progress',

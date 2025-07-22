@@ -1,6 +1,6 @@
 import { StoryObj } from '@storybook/react';
-import { Box } from '@edgmont-ui/react';
-import { Checkbox } from '@edgmont-ui/react';
+import { Box } from '@muffled-ui/react';
+import { Checkbox } from '@muffled-ui/react';
 
 export default {
   title: 'Inputs/Checkbox',

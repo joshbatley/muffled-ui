@@ -1,10 +1,10 @@
 import { ReactNode } from 'react';
 import { render as testRender } from '@testing-library/react';
-import { EdgmontUI } from '../../utils';
+import { muffledUI } from '../../utils';
 import { Typography } from '.';
 
 function render(component: ReactNode) {
-  return testRender(<EdgmontUI>{component}</EdgmontUI>);
+  return testRender(<muffledUI>{component}</muffledUI>);
 }
 
 describe('Typography component', () => {

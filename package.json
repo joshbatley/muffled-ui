@@ -1,5 +1,5 @@
 {
-  "name": "edgmont-ui",
+  "name": "muffled-ui",
   "private": true,
   "scripts": {
     "build": "turbo build",

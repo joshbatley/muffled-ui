@@ -1,6 +1,6 @@
 import { StoryObj } from '@storybook/react';
 import { ChevronRightIcon } from '@heroicons/react/24/outline';
-import { Breadcrumbs } from '@edgmont-ui/react';
+import { Breadcrumbs } from '@muffled-ui/react';
 
 export default {
   title: 'Navigation/Breadcrumbs',
@@ -10,7 +10,7 @@ export default {
 export const Showcase: StoryObj<typeof Breadcrumbs> = {
   render: ({ ...rest }) => (
     <Breadcrumbs {...rest}>
-      <a href="#">Edgmont</a>
+      <a href="#">muffled</a>
       <a href="#">Navigation</a>
       <a href="#">Breadcrumbs</a>
     </Breadcrumbs>

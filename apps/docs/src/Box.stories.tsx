@@ -1,5 +1,5 @@
 import { StoryObj } from '@storybook/react';
-import { Box } from '@edgmont-ui/react';
+import { Box } from '@muffled-ui/react';
 
 export default {
   title: 'Data/Box',

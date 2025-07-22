@@ -1,6 +1,6 @@
 import { StoryObj } from '@storybook/react';
-import { Box, Typography } from '@edgmont-ui/react';
-import { Backdrop } from '@edgmont-ui/react';
+import { Box, Typography } from '@muffled-ui/react';
+import { Backdrop } from '@muffled-ui/react';
 
 export default {
   title: 'Utils/Backdrop',

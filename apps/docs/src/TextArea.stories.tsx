@@ -1,5 +1,5 @@
 import { StoryObj } from '@storybook/react';
-import { TextArea } from '@edgmont-ui/react';
+import { TextArea } from '@muffled-ui/react';
 
 export default {
   title: 'Inputs/TextArea',

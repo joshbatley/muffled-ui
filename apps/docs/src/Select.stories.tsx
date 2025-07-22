@@ -1,5 +1,5 @@
 import { StoryObj } from '@storybook/react';
-import { SimpleSelect } from '@edgmont-ui/react';
+import { SimpleSelect } from '@muffled-ui/react';
 
 export default {
   title: 'Inputs/Select',

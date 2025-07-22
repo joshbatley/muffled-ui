@@ -1,4 +1,4 @@
-# @edgmont-ui/react
+# @muffled-ui/react
 
 ## 1.0.19
 

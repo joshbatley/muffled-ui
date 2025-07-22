@@ -9,7 +9,7 @@ import {
   TableHead,
   TableRow,
   Typography,
-} from '@edgmont-ui/react';
+} from '@muffled-ui/react';
 
 export default {
   title: 'Data/Table',

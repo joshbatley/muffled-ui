@@ -1,5 +1,5 @@
 import { StoryObj } from '@storybook/react';
-import { Box, Radio } from '@edgmont-ui/react';
+import { Box, Radio } from '@muffled-ui/react';
 import { useState } from 'react';
 
 export default {

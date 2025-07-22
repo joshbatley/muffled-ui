@@ -1,5 +1,5 @@
 import { StoryObj } from '@storybook/react';
-import { CircleLoader, LinearLoader } from '@edgmont-ui/react';
+import { CircleLoader, LinearLoader } from '@muffled-ui/react';
 
 export default {
   title: 'Feedback/Loader',

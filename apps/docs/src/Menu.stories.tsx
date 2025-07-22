@@ -1,6 +1,6 @@
 import { Ref, useState } from 'react';
 import { StoryObj } from '@storybook/react';
-import { Box, ClickableElement, Menu, MenuItem } from '@edgmont-ui/react';
+import { Box, ClickableElement, Menu, MenuItem } from '@muffled-ui/react';
 
 export default {
   title: 'Navigation/Menu',

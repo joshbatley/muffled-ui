@@ -1,6 +1,6 @@
 import { StoryObj } from '@storybook/react';
 import { ArrowDownOnSquareIcon } from '@heroicons/react/24/outline';
-import { CircleLoader, DestructiveButton } from '@edgmont-ui/react';
+import { CircleLoader, DestructiveButton } from '@muffled-ui/react';
 
 export default {
   title: 'Inputs/Buttons/Destructive',

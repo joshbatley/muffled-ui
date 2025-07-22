@@ -1,6 +1,6 @@
 import { useState } from 'react';
 import { StoryObj } from '@storybook/react';
-import { Accordion, AccordionDetail } from '@edgmont-ui/react';
+import { Accordion, AccordionDetail } from '@muffled-ui/react';
 
 export default {
   title: 'Data/Accordion',

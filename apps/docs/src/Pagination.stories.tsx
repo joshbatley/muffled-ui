@@ -1,6 +1,6 @@
 import { useState } from 'react';
 import { StoryObj } from '@storybook/react';
-import { Box, Pagination } from '@edgmont-ui/react';
+import { Box, Pagination } from '@muffled-ui/react';
 
 export default {
   title: 'Data/Pagination',

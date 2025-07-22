@@ -9,7 +9,7 @@
     "build": "storybook build -o dist"
   },
   "dependencies": {
-    "@edgmont-ui/react": "workspace:*",
+    "@muffled-ui/react": "workspace:*",
     "@heroicons/react": "^2.1.3",
     "date-fns": "^3.6.0",
     "react": "^18.3.1",
