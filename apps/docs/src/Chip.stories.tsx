@@ -1,5 +1,5 @@
 import { StoryObj } from '@storybook/react';
-import { Chip } from '@edgmont-ui/react';
+import { Chip } from '@muffled-ui/react';
 
 export default {
   title: 'Feedback/Chip',

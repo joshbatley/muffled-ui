@@ -1,6 +1,6 @@
 import { useState } from 'react';
 import { StoryObj } from '@storybook/react';
-import { Box, Drawer, PrimaryButton } from '@edgmont-ui/react';
+import { Box, Drawer, PrimaryButton } from '@muffled-ui/react';
 
 export default {
   title: 'Navigation/Drawer',

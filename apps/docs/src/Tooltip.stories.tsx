@@ -1,5 +1,5 @@
 import { StoryObj } from '@storybook/react';
-import { Box, Tooltip } from '@edgmont-ui/react';
+import { Box, Tooltip } from '@muffled-ui/react';
 import { directionSelect } from './presets';
 
 export default {

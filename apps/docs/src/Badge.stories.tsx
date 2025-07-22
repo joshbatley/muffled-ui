@@ -1,7 +1,7 @@
 import { StoryObj } from '@storybook/react';
 import { UserIcon } from '@heroicons/react/24/solid';
-import { Badge } from '@edgmont-ui/react';
-import { Box } from '@edgmont-ui/react';
+import { Badge } from '@muffled-ui/react';
+import { Box } from '@muffled-ui/react';
 
 export default {
   title: 'Feedback/Badge',

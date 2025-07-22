@@ -4,7 +4,7 @@ import {
   ListItem,
   OrderedList as OL,
   UnorderedList as UL,
-} from '@edgmont-ui/react';
+} from '@muffled-ui/react';
 
 
 export default {

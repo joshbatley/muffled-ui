@@ -3,7 +3,7 @@ import {
   BasePicker,
   DatePicker,
   DateRangePicker,
-} from '@edgmont-ui/react';
+} from '@muffled-ui/react';
 
 export default {
   title: 'Inputs/Datepicker',

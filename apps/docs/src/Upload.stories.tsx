@@ -1,5 +1,5 @@
 import { StoryObj } from '@storybook/react';
-import { Box, UploadButton as UB, UploadZone as UZ } from '@edgmont-ui/react';
+import { Box, UploadButton as UB, UploadZone as UZ } from '@muffled-ui/react';
 
 export default {
   title: 'Inputs/Upload',

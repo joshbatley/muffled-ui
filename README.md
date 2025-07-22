@@ -5,5 +5,5 @@
 
 ### Packages
 
-- [React](https://github.com/joshbatley/edgmont-ui/tree/main/packages/react)
+- [React](https://github.com/joshbatley/muffled-ui/tree/main/packages/react)
   - React Package

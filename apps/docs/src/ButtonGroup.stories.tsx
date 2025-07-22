@@ -1,7 +1,7 @@
 import { StoryObj } from '@storybook/react';
-import { PrimaryButton } from '@edgmont-ui/react';
-import { OutlineButton } from '@edgmont-ui/react';
-import { ButtonGroup } from '@edgmont-ui/react';
+import { PrimaryButton } from '@muffled-ui/react';
+import { OutlineButton } from '@muffled-ui/react';
+import { ButtonGroup } from '@muffled-ui/react';
 
 export default {
   title: 'Inputs/Buttons/ButtonGroups',

@@ -1,17 +1,17 @@
 {
-  "name": "@edgmont-ui/react",
+  "name": "@muffled-ui/react",
   "version": "1.0.20",
   "private": false,
   "main": "./dist/index.js",
   "module": "./dist/index.mjs",
   "types": "./dist/index.d.ts",
-  "homepage": "https://ui.edgmont.dev/",
+  "homepage": "https://ui.muffled.studio/",
   "bugs": {
-    "url": "https://github.com/joshbatley/edgmont-ui/issues"
+    "url": "https://github.com/joshbatley/muffled-ui/issues"
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/joshbatley/edgmont-ui"
+    "url": "https://github.com/joshbatley/muffled-ui"
   },
   "jest": {
     "preset": "@repo/jest-presets/jest/browser"

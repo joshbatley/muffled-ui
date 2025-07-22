@@ -1,7 +1,7 @@
 import React from 'react';
 import { StoryObj } from '@storybook/react';
 import { PhotoIcon } from '@heroicons/react/24/solid';
-import { Box, ImageComp } from '@edgmont-ui/react';
+import { Box, ImageComp } from '@muffled-ui/react';
 
 export default {
   title: 'Data/Image',

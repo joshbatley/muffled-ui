@@ -4,7 +4,7 @@ import { GlobalStyles } from './GlobalStyles';
 import { createContext, useContext, useEffect, useState } from 'react';
 import { InheritedTheme } from '../../shared/preferColorScheme';
 
-const LocalStorageKey = '@edgmont-ui/settings';
+const LocalStorageKey = '@muffled-ui/settings';
 
 export type ThemeProviderProps = {
   theme?: ProvidedTheme;
@@ -19,17 +19,17 @@ export type SettingsCtx = {
 
 export const SettingsContext = createContext<SettingsCtx | undefined>(undefined);
 
-export const useEdgmontSettings = () => {
+export const useMuffledSettings = () => {
   let context = useContext(SettingsContext);
 
   if (context === undefined) {
-    throw new Error('useEdgmontSettings must be used within a EdgmontUI provider');
+    throw new Error('useMuffledSettings must be used within a MuffledUI provider');
   }
 
   return context;
 };
 
-export const EdgmontUI: React.FC<ThemeProviderProps> = ({ children }) => {
+export const MuffledUI: React.FC<ThemeProviderProps> = ({ children }) => {
   let [themeKey, setThemeKey] = useState<ProvidedTheme | undefined>(() => {
     if (localStorage.getItem(LocalStorageKey) !== null) {
       return JSON.parse(localStorage.getItem(LocalStorageKey) || '')?.theme;

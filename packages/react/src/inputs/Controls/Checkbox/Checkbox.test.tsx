@@ -1,10 +1,10 @@
 import { render as testRender } from '@testing-library/react';
 import userEvent from '@testing-library/user-event';
-import { EdgmontUI } from '../../../utils';
+import { MuffledUI } from '../../../utils';
 import { Checkbox } from '.';
 
 function render(Comp: any) {
-  return testRender(<EdgmontUI>{Comp}</EdgmontUI>);
+  return testRender(<MuffledUI>{Comp}</MuffledUI>);
 }
 
 const onChangeMock = jest.fn();

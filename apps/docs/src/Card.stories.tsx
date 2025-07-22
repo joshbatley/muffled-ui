@@ -1,6 +1,6 @@
 import { StoryObj } from '@storybook/react';
 import { ShoppingCartIcon, ShoppingBagIcon } from '@heroicons/react/24/outline';
-import { Title, Typography, Box } from '@edgmont-ui/react';
+import { Title, Typography, Box } from '@muffled-ui/react';
 import {
   Label,
   OutlineButton,
@@ -10,7 +10,7 @@ import {
   Card,
   CardContent,
   CardMedia,
-} from '@edgmont-ui/react';
+} from '@muffled-ui/react';
 
 export default {
   title: 'Data/Card',

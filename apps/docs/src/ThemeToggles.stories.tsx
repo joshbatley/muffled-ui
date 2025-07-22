@@ -1,5 +1,5 @@
 import { StoryObj } from '@storybook/react';
-import { ThemeSwitch, ThemeButton, OutlineButton, Box } from '@edgmont-ui/react';
+import { ThemeSwitch, ThemeButton, OutlineButton, Box } from '@muffled-ui/react';
 
 export default {
   title: 'Utils/Theme Toggle',

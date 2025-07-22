@@ -4,9 +4,9 @@ import {
   OutlineButton,
   SnackbarProvider,
   useSnackbar,
-} from '@edgmont-ui/react';
+} from '@muffled-ui/react';
 import { intercardinalPointsSelect } from './presets';
-import { Snack } from '@edgmont-ui/react/src/types';
+import { Snack } from '@muffled-ui/react/src/types';
 
 export default {
   title: 'Feedback/Snackbar',

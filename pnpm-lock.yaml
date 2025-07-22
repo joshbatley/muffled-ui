@@ -26,7 +26,7 @@ importers:
 
   apps/docs:
     dependencies:
-      '@edgmont-ui/react':
+      '@muffled-ui/react':
         specifier: workspace:*
         version: link:../../packages/react
       '@heroicons/react':
@@ -120,7 +120,7 @@ importers:
 
   apps/web:
     dependencies:
-      '@edgmont-ui/react':
+      '@muffled-ui/react':
         specifier: workspace:*
         version: link:../../packages/react
       react:

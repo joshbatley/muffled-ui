@@ -1,6 +1,6 @@
 import { StoryObj } from '@storybook/react';
 import { SunIcon } from '@heroicons/react/24/solid';
-import { Alert } from '@edgmont-ui/react';
+import { Alert } from '@muffled-ui/react';
 
 export default {
   title: 'Feedback/Alert',

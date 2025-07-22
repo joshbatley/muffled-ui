@@ -1,7 +1,7 @@
 import { StoryObj } from '@storybook/react';
 import {
   SyntaxHighlighter as SH,
-} from '@edgmont-ui/react';
+} from '@muffled-ui/react';
 
 export default {
   title: 'Feedback/Code',

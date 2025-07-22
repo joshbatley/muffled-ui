@@ -1,5 +1,5 @@
 import { StoryObj } from '@storybook/react';
-import { Panel } from '@edgmont-ui/react';
+import { Panel } from '@muffled-ui/react';
 
 export default {
   title: 'Data/Panel',

@@ -9,7 +9,7 @@ import {
   Input,
   Label,
   Password,
-} from '@edgmont-ui/react';
+} from '@muffled-ui/react';
 
 export default {
   title: 'Feedback/Modal',

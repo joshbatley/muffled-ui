@@ -1,5 +1,5 @@
 import { StoryObj } from '@storybook/react';
-import { TabPane, Tabs } from '@edgmont-ui/react';
+import { TabPane, Tabs } from '@muffled-ui/react';
 
 export default {
   title: 'Navigation/Tabs',
