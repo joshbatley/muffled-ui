@@ -1,10 +1,10 @@
 import { render as testRender } from '@testing-library/react';
 import userEvent from '@testing-library/user-event';
-import { muffledUI } from '../../../utils';
+import { MuffledUI } from '../../../utils';
 import { Radio } from '.';
 
 function render(Comp: any) {
-  return testRender(<muffledUI>{Comp}</muffledUI>);
+  return testRender(<MuffledUI>{Comp}</MuffledUI>);
 }
 
 const onChangeMock = jest.fn();

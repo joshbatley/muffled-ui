@@ -1,10 +1,10 @@
 import { render as testRender } from '@testing-library/react';
 import { LockClosedIcon } from '@heroicons/react/24/outline';
-import { muffledUI } from '../../utils';
+import { MuffledUI } from '../../utils';
 import { Input } from '.';
 
 function render(Comp: any) {
-  return testRender(<muffledUI>{Comp}</muffledUI>);
+  return testRender(<MuffledUI>{Comp}</MuffledUI>);
 }
 
 describe('Input test', () => {

@@ -19,17 +19,17 @@ export type SettingsCtx = {
 
 export const SettingsContext = createContext<SettingsCtx | undefined>(undefined);
 
-export const usemuffledSettings = () => {
+export const useMuffledSettings = () => {
   let context = useContext(SettingsContext);
 
   if (context === undefined) {
-    throw new Error('usemuffledSettings must be used within a muffledUI provider');
+    throw new Error('useMuffledSettings must be used within a MuffledUI provider');
   }
 
   return context;
 };
 
-export const muffledUI: React.FC<ThemeProviderProps> = ({ children }) => {
+export const MuffledUI: React.FC<ThemeProviderProps> = ({ children }) => {
   let [themeKey, setThemeKey] = useState<ProvidedTheme | undefined>(() => {
     if (localStorage.getItem(LocalStorageKey) !== null) {
       return JSON.parse(localStorage.getItem(LocalStorageKey) || '')?.theme;

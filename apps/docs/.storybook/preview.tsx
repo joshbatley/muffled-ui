@@ -1,6 +1,6 @@
 /** @type { import('@storybook/react').Preview } */
 
-import { muffledUI, usemuffledSettings } from '@muffled-ui/react'
+import { MuffledUI, useMuffledSettings } from '@muffled-ui/react'
 import { UPDATE_DARK_MODE_EVENT_NAME, useDarkMode } from 'storybook-dark-mode';
 import { darkTheme, lightTheme } from './themes';
 import { addons } from '@storybook/preview-api';
@@ -9,7 +9,7 @@ import React from 'react';
 const channel = addons.getChannel();
 
 const Comp: React.FC<{ isDark?: boolean, children: any }> = ({ children, isDark }) => {
-  const { theme, setTheme } = usemuffledSettings();
+  const { theme, setTheme } = useMuffledSettings();
 
   React.useEffect(() => {
     channel.emit(UPDATE_DARK_MODE_EVENT_NAME, theme === 'Dark' ? 'dark' : 'light');
@@ -34,11 +34,11 @@ const decorators = [
     const isDark = useDarkMode();
 
     return (
-      <muffledUI>
+      <MuffledUI>
         <Comp isDark={isDark}>
           {Story()}
         </Comp>
-      </muffledUI>
+      </MuffledUI>
     )
   },
 ];
