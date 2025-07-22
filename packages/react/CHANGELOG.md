@@ -1,5 +1,11 @@
 # @muffled-ui/react
 
+## 1.0.21
+
+### Patch Changes
+
+- 6bc30ef: Muffled Studio Branding
+
 ## 1.0.20
 
 ### Patch Changes
