@@ -1,5 +1,5 @@
 import { StoryObj } from '@storybook/react';
-import { Box, Switch } from '@muffled-ui/react';
+import { Box, Switch, Typography } from '@muffled-ui/react';
 import { useState } from 'react';
 
 export default {
@@ -16,13 +16,17 @@ export const Showcase: StoryObj<typeof Switch> = {
     return (
       <Box spaceXBetween="2">
         <Box spaceXBetween="2">
+          <Typography>Use me</Typography>
+          <Switch checked={check} {...rest} onChange={() => setCheck(!check)} />
+          <br /><br />
+          <Typography>Default</Typography>
           <Switch {...rest} onChange={() => { }} />
           <br /><br />
+          <Typography>Disabled</Typography>
           <Switch disabled {...rest} />
           <br /><br />
+          <Typography>Disabled Checked</Typography>
           <Switch disabled checked {...rest} onChange={() => { }} />
-          <br /><br />
-          <Switch checked={check} {...rest} onChange={() => setCheck(!check)} />
         </Box>
       </Box>
     );
