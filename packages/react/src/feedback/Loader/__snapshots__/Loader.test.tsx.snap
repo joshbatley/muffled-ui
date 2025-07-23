@@ -8,11 +8,11 @@ exports[`Loader it renders 1`] = `
 }
 
 .c1 {
-  color: hsl(240,3.7%,15.9%);
+  color: hsl(220,5%,20%);
 }
 
 .c2 {
-  color: hsl(0,0%,98%);
+  color: hsl(0,0%,95%);
 }
 
 <div>
