@@ -40,7 +40,7 @@ export const Alert: React.FC<AlertProps> = ({
 }) => {
   let Icons = icon || (destructive ? <ExclamationCircleIcon width={20} height={20} /> : <></>);
   return (
-    <Container p={2} display="flex" flexGrow={1} alignItems="center" borderRadius="4" overflow="hidden" position="relative" width={29} fontSize={1} lineHeight={1} flexWrap="wrap" destructive={destructive} {...rest} boxShadow="highlight">
+    <Container px={3} py={1} display="flex" flexGrow={1} alignItems="center" borderRadius="4" overflow="hidden" position="relative" width={29} fontSize={1} lineHeight={1} flexWrap="wrap" destructive={destructive} {...rest} boxShadow="highlight">
       <Box minWidth="100%">
         <Icon mr={3} mt="1px" lineHeight={5} alignSelf="center">{Icons}</Icon>
         <Title display="inline" fontWeight="600" fontSize={1} lineHeight={2} letterSpacing="0.025em">{title}</Title>

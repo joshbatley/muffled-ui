@@ -16,7 +16,7 @@ export const StyledButton: StyledComponent<'button', DefaultTheme, BaseButtonPro
   align-items: center;
   user-select: none;
   border-radius: ${({ theme }) => theme.radii[3]};
-  padding: ${({ theme }) => `${theme.space[2]} ${theme.space[3]}`};
+  padding: ${({ theme }) => `${theme.space[11]} ${theme.space[3]}`};
   font-size: ${({ theme }) => theme.fontSizes[1]};
   line-height: ${({ theme }) => theme.lineHeights[1]};
   font-weight: 500;

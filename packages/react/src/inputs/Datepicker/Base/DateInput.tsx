@@ -14,7 +14,6 @@ export type DateInputProps = {
 
 const Container = styled.div`
   display: flex;
-  align-items: center;
   > :not([hidden]) ~ :not([hidden]) {
     margin-left: ${({ theme }) => theme.space[1]};
     margin-right:${({ theme }) => theme.space[4]};

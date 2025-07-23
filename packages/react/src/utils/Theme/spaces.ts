@@ -10,6 +10,7 @@ export const spaces = [
   '2rem',
   '2.25rem',
   '2.5rem',
+  '0.375rem', // Yikes need to refactor this to allow more in
 ];
 
 export const spaceYBetween = spaces.map((s) => (

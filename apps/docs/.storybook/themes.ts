@@ -19,7 +19,7 @@ export const darkTheme = {
   brandTitle: 'Muffled UI',
   brandUrl: 'https://github.com/joshbatley/muffled-ui',
   brandImage: LogoDark,
-  appBg: 'hsl(240, 10%, 3.9%)',
-  appContentBg: 'hsl(240, 10%, 3.9%)',
-  barBg: 'hsl(240, 10%, 3.9%)',
+  appBg: 'hsl(220, 15%, 10%)',
+  appContentBg: 'hsl(220, 15%, 10%)',
+  barBg: 'hsl(220, 15%, 10%)',
 };

@@ -7,12 +7,19 @@
 [![Build][build-image]][build-url] [![NPM Version][version-image]][version-url] [![License][license-image]][license-url] [![Bundle Size][size-image]][size-url]
 
 [build-image]: https://img.shields.io/github/actions/workflow/status/joshbatley/muffled-ui/publish-npm.yml
+
 [build-url]: https://github.com/joshbatley/muffled-ui/actions
+
 [version-image]: https://img.shields.io/npm/v/@muffled-ui/react
+
 [version-url]: https://www.npmjs.com/package/@muffled-ui/react
+
 [license-image]: https://img.shields.io/github/license/joshbatley/muffled-ui
+
 [license-url]: https://github.com/joshbatley/muffled-ui/blob/main/LICENSE
+
 [size-image]: https://img.shields.io/bundlephobia/min/%40muffled-ui%2Freact%40latest
+
 [size-url]: https://bundlephobia.com/package/@muffled-ui/react
 
 </div>
@@ -25,7 +32,8 @@ There are a few methods to choose from depending on your usage for muffled-ui
 
 ##### Install tailwind
 
-Follow this official set-up [guide](https://tailwindcss.com/docs/guides/create-react-app) to get tailwind working within your react application.
+Follow this official set-up [guide](https://tailwindcss.com/docs/guides/create-react-app) to get tailwind working within
+your react application.
 
 ##### Install muffled-ui
 
