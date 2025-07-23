@@ -26,19 +26,54 @@
 
 ## Getting Started
 
-### Installation methods
+### Installation
 
-There are a few methods to choose from depending on your usage for muffled-ui
+Follow these steps to add Muffled UI to your React project:
 
-##### Install tailwind
+#### Install Muffled UI
 
-Follow this official set-up [guide](https://tailwindcss.com/docs/guides/create-react-app) to get tailwind working within
-your react application.
+```bash
+# Using npm
+npm install @muffled-ui/react
 
-##### Install muffled-ui
+# Using yarn
+yarn add @muffled-ui/react
 
+# Using pnpm
+pnpm add @muffled-ui/react
 ```
-npm/yarn install @muffled-ui/react
+
+### Usage
+
+Import and use components in your React application:
+
+```jsx
+import {Button, Card, Input} from '@muffled-ui/react';
+
+function MyComponent() {
+  return (
+    <Card>
+      <CardContent>
+        <h2>Login Form</h2>
+      </CardContent>
+      <CardContent>
+        <Input
+          label="Email"
+          placeholder="Enter your email"
+          type="email"
+        />
+        <Input
+          label="Password"
+          placeholder="Enter your password"
+          type="password"
+        />
+        <Button variant="primary">
+          Sign In
+        </Button>
+      </CardContent>
+    </Card>
+  );
+}
 ```
 
 ## Package used

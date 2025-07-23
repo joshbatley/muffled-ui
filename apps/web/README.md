@@ -1,30 +1,67 @@
-# React + TypeScript + Vite
+# Muffled UI Demo Application
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+This is a demo application showcasing the Muffled UI React component library in a real-world application context. It demonstrates how to use and integrate the components in a Vite-based React application.
 
-Currently, two official plugins are available:
+## Getting Started
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+To run the demo application locally:
 
-## Expanding the ESLint configuration
+```bash
+# Using pnpm
+pnpm start
 
-If you are developing a production application, we recommend updating the configuration to enable type aware lint rules:
+# Using yarn
+yarn start
 
-- Configure the top-level `parserOptions` property like this:
-
-```js
-export default {
-  // other rules...
-  parserOptions: {
-    ecmaVersion: 'latest',
-    sourceType: 'module',
-    project: ['./tsconfig.json', './tsconfig.node.json'],
-    tsconfigRootDir: __dirname,
-  },
-}
+# Using npm
+npm start
 ```
 
-- Replace `plugin:@typescript-eslint/recommended` to `plugin:@typescript-eslint/recommended-type-checked` or `plugin:@typescript-eslint/strict-type-checked`
-- Optionally add `plugin:@typescript-eslint/stylistic-type-checked`
-- Install [eslint-plugin-react](https://github.com/jsx-eslint/eslint-plugin-react) and add `plugin:react/recommended` & `plugin:react/jsx-runtime` to the `extends` list
+The application will be available at [http://localhost:5173](http://localhost:5173) (or another port if 5173 is already in use).
+
+## Features
+
+- **Component Showcase**: Real-world examples of Muffled UI components in action
+- **Integration Examples**: Demonstrates how to integrate multiple components together
+- **Responsive Design**: Shows how the components behave on different screen sizes
+- **Theme Customization**: Examples of customizing the component themes
+- **Form Handling**: Examples of using form components with state management
+
+## Project Structure
+
+- `src/components/` - Custom components built with Muffled UI
+- `src/pages/` - Example pages showcasing different use cases
+- `src/layouts/` - Layout components for structuring the application
+- `src/hooks/` - Custom hooks for state management and other functionality
+
+## Building for Production
+
+To build the application for production:
+
+```bash
+# Using pnpm
+pnpm build
+
+# Using yarn
+yarn build
+
+# Using npm
+npm run build
+```
+
+This will generate optimized production files in the `dist` directory that can be deployed to any static hosting service.
+
+## Preview Production Build
+
+To preview the production build locally:
+
+```bash
+# Using pnpm
+pnpm preview
+
+# Using yarn
+yarn preview
+
+# Using npm
+npm run preview
+```
