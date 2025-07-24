@@ -13,7 +13,7 @@ const StyledText = styled(Text)`
 
 export const RowControls: React.FC<RowControlsProps> = ({ onChange }) => (
   <Box display="inline-flex" alignItems="center" gridColumnGap="2">
-    <StyledText>Rows Per page</StyledText>
+    <StyledText>Rows per page</StyledText>
     <SimpleSelect onChange={(i) => onChange(parseInt(i))} initialSelectedItem="10" values={['10', '20', '30', '40', '50']}  />
   </Box>
 );
