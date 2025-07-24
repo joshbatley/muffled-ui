@@ -6,7 +6,7 @@ export type OutlineButtonProps = BaseButtonProps & React.ComponentPropsWithRef<'
 
 const StyledButton = styled(BaseButton) <OutlineButtonProps>`
   :disabled {
-    background: ${({ theme }) => theme.colors.muted};
+    opacity: 0.4;
   }
   :hover:not(:disabled) {
     background: ${({ theme }) => theme.colors.accent};

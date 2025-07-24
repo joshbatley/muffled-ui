@@ -1,5 +1,5 @@
 import { StoryObj } from '@storybook/react';
-import { SimpleSelect } from '@muffled-ui/react';
+import { Box, SimpleSelect } from '@muffled-ui/react';
 
 export default {
   title: 'Inputs/Select',
@@ -22,7 +22,7 @@ const values = [
 
 export const Showcase: StoryObj<typeof SimpleSelect> = {
   render: ({ ...rest }) => (
-    <>
+    <Box width="33.3%">
       <SimpleSelect {...rest} values={values} />
       <br />
       <SimpleSelect {...rest} values={values} disabled />
@@ -35,6 +35,6 @@ export const Showcase: StoryObj<typeof SimpleSelect> = {
       />
       <br />
       <SimpleSelect {...rest} values={values} isFilterable />
-    </>),
+    </Box>),
 };
 

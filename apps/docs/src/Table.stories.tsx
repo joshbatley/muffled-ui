@@ -21,7 +21,7 @@ export default {
 
 const arrayRange = (from: number, to: number) =>
   Array.from(Array(Math.max(0, to - from + 1)), (_, idx) => idx + from);
-const allRows = arrayRange(0, 40);
+const allRows = arrayRange(0, 39);
 
 export const Showcase: StoryObj<typeof Table> = {
   render: () => {
@@ -52,9 +52,9 @@ export const Showcase: StoryObj<typeof Table> = {
         <TableBody>
           {rows.map((m, idx) => (
             <TableRow key={`${m}-${idx}`}>
-              <TableCell>Value for row {m} item 1</TableCell>
-              <TableCell>Value for row {m} item 2</TableCell>
-              <TableCell>Value for row {m} item 3</TableCell>
+              <TableCell>Value for row {m + 1} item 1</TableCell>
+              <TableCell>Value for row {m + 1} item 2</TableCell>
+              <TableCell>Value for row {m + 1} item 3</TableCell>
             </TableRow>
           ))}
         </TableBody>

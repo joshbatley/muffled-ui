@@ -1,5 +1,8 @@
 import styled from 'styled-components';
 import { PaginationControls } from './PaginationControls';
+import { Typography } from '../Typography';
+import { RowControls } from './RowControls';
+import { Box } from '../Box';
 
 export type PaginationProps = {
   limit: number;
@@ -17,22 +20,19 @@ const Container = styled.div`
   line-height: 1rem;
 `;
 
-const Strong = styled.strong`
-  font-weight: 500;
-`;
-
 export const Pagination: React.FC<PaginationProps> = ({
   limit, skip, setSkip, itemCount,
 }) => {
   let to = (skip + limit > itemCount) ? itemCount : skip + limit;
   return (
     <Container>
-      <div>
-        Showing <Strong>{skip + 1}</Strong> to <Strong>{to}</Strong> of <Strong>{itemCount}</Strong> results
-      </div>
-      <div>
+      <Typography color="mutedForeground">
+        {skip + 1} to {to} of {itemCount} results
+      </Typography>
+      <Box display="flex" justifyContent="space-between">
+        <RowControls />
         <PaginationControls itemCount={itemCount} limit={limit} skip={skip} setSkip={setSkip} />
-      </div>
+      </Box>
     </Container>
   );
 };

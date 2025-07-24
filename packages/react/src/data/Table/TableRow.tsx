@@ -10,12 +10,10 @@ export const TableRow = styled.tr<TableRowProps>`
     cursor: pointer;
     :hover {
       background: ${theme.colors.accent};
-      box-shadow: ${theme.colors.primary} 3px 0px 0px 0px inset;
     }
   `}
   ${({ active, theme }) => active && `
     cursor: pointer;
     background: ${theme.colors.accent};
-    box-shadow: ${theme.colors.primary} 3px 0px 0px 0px inset;
   `}
 `;
