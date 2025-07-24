@@ -1,5 +1,5 @@
 import { StoryObj } from '@storybook/react';
-import { Box, Skeleton, Typography, Title } from '@muffled-ui/react';
+import { Box, Skeleton, Text, Title } from '@muffled-ui/react';
 
 export default {
   title: 'Feedback/Skeleton',
@@ -62,10 +62,10 @@ export const TextStory: StoryObj<typeof Skeleton> = {
         <span>Heading 6</span>
       </Title>
 
-      <Typography>
+      <Text>
         <Skeleton width="25%" mr="1" variant="text" {...rest} />
         <span>Text</span>
-      </Typography>
+      </Text>
     </Box>
   ),
 };

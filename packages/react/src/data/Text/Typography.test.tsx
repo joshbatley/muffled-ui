@@ -7,8 +7,8 @@ function render(component: ReactNode) {
   return testRender(<MuffledUI>{component}</MuffledUI>);
 }
 
-describe('Typography component', () => {
-  describe('Typography', () => {
+describe('Text component', () => {
+  describe('Text', () => {
     it('should render', () => {
       const { container } = render(<Text>Text</Text>);
       expect(container.firstChild).not.toBeEmptyDOMElement();
@@ -16,7 +16,7 @@ describe('Typography component', () => {
     });
   });
 
-  describe('TypographyMono', () => {
+  describe('TextMono', () => {
     it('should render', () => {
       const { container } = render(<Text mono>Text</Text>);
       expect(container.firstChild).not.toBeEmptyDOMElement();

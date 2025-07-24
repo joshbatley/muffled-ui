@@ -2,7 +2,7 @@ import { StoryObj } from '@storybook/react';
 import { Text, Title, Box } from '@muffled-ui/react';
 
 export default {
-  title: 'Data/Typography',
+  title: 'Data/Text',
   args: {
     children: 'My Text element',
   },

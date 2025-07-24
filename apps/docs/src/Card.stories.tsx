@@ -1,6 +1,6 @@
 import { StoryObj } from '@storybook/react';
 import { ShoppingCartIcon, ShoppingBagIcon } from '@heroicons/react/24/outline';
-import { Title, Typography, Box } from '@muffled-ui/react';
+import { Title, Text, Box } from '@muffled-ui/react';
 import {
   Label,
   OutlineButton,
@@ -37,16 +37,16 @@ export const Showcase: StoryObj<typeof Card> = {
             <Title as="h3" fontWeight="700">
               The Reptile
             </Title>
-            <Typography mono as="span" color="baseHighlight">
+            <Text mono as="span" color="baseHighlight">
               £99.99
-            </Typography>
+            </Text>
           </Box>
           <Box mb="2">
-            <Typography fontSize="0" lineHeight="0" color="baseHighlight">
+            <Text fontSize="0" lineHeight="0" color="baseHighlight">
               In stock
-            </Typography>
+            </Text>
           </Box>
-          <Typography>Good with children, only lightly bites limbs off.</Typography>
+          <Text>Good with children, only lightly bites limbs off.</Text>
           <Box as="hr" my="4" />
           <Box width="100%" display="flex">
             <PrimaryButton
@@ -56,7 +56,7 @@ export const Showcase: StoryObj<typeof Card> = {
               mr="2"
             >
               <ShoppingBagIcon width={16} height={16} />
-              <Typography>Buy now</Typography>
+              <Text>Buy now</Text>
             </PrimaryButton>
             <OutlineButton
               justifyContent="center"
@@ -65,7 +65,7 @@ export const Showcase: StoryObj<typeof Card> = {
               textAlign="center"
             >
               <ShoppingCartIcon width={16} height={16} />
-              <Typography>Add to cart</Typography>
+              <Text>Add to cart</Text>
             </OutlineButton>
           </Box>
         </CardContent>

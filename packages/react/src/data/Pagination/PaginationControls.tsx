@@ -1,8 +1,7 @@
 import { ChevronLeftIcon, ChevronRightIcon, ChevronDoubleLeftIcon, ChevronDoubleRightIcon } from '@heroicons/react/24/solid';
 import { OutlineButton } from '../../inputs/Button';
 import { Box } from '../Box';
-import styled from 'styled-components';
-import { Text } from '../Typography';
+import { Text } from '../Text';
 
 export type PaginationProps = {
   skip: number;
@@ -11,25 +10,17 @@ export type PaginationProps = {
   setSkip: (skip: number) => void;
 };
 
-const StyledBox = styled(Box)`
-  column-gap: 8px;
-`;
-
 export const PaginationControls: React.FC<PaginationProps> = ({
   skip, limit, itemCount, setSkip,
 }) => {
   let currentPage = skip === 0 ? 1 : Math.floor(skip / limit + 1);
   let totalPages = Math.ceil(itemCount / limit);
 
-  if (totalPages <= 1) {
-    return null;
-  }
-
   return (
-    <StyledBox display="inline-flex">
+    <Box display="inline-flex" alignItems="center" gridColumnGap="2">
       <Text>Page {currentPage} of {totalPages}</Text>
         <OutlineButton
-        verticalAlign="bottom"
+      verticalAlign="bottom"
         disabled={currentPage === 1}
         onClick={() => setSkip(0)}
           paddingX={11}
@@ -63,6 +54,6 @@ export const PaginationControls: React.FC<PaginationProps> = ({
       >
         <ChevronDoubleRightIcon width={18} height={18} />
       </OutlineButton>
-    </StyledBox>
+    </Box>
   );
 };

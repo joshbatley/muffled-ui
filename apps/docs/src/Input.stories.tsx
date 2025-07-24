@@ -4,7 +4,7 @@ import {
   Box,
   ClickableElement,
   Password as PasswordComp,
-  Typography,
+  Text,
   Input,
   NumberField,
 } from '@muffled-ui/react';
@@ -24,7 +24,7 @@ const Before = ({ ...rest }) => (
 );
 const After = ({ ...rest }) => (
   <Box px="3" py="2">
-    <Typography {...rest}>.com</Typography>
+    <Text {...rest}>.com</Text>
   </Box>
 );
 
