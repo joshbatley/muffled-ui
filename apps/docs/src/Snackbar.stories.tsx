@@ -37,8 +37,8 @@ export const Showcase: StoryObj = {
   render: ({ ...rest }) => (
     <SnackbarProvider {...rest}>
       <Box display="flex" width="500px" justifyContent="space-between">
+        <Comp text="Add Info" />
         <Comp destructive text="Add Destructive" />
-        <Comp severity="warning" text="Add Warning" />
         <Comp text="Add with body" body={lorem} />
       </Box>
     </SnackbarProvider>

@@ -5,7 +5,7 @@ import {
   OutlineButton,
   Box,
   PrimaryButton,
-  Typography,
+  Text,
   Input,
   Label,
   Password,
@@ -40,7 +40,7 @@ export const Showcase: StoryObj<typeof Modal> = {
             display="flex"
             flexDirection="column"
           >
-            <Typography color="mutedForeground">Make changes to your profile here. Click save when you're done.</Typography>
+            <Text color="mutedForeground">Make changes to your profile here. Click save when you're done.</Text>
             <Label value="Email">
               <Input placeholder="Email" />
             </Label>

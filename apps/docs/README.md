@@ -1,28 +1,54 @@
+# Muffled UI Documentation
+
+This is the Storybook documentation site for Muffled UI, a React component library. The documentation provides examples, usage guidelines, and API references for all the components in the library.
+
 ## Getting Started
 
-First, run the development server:
+To run the documentation site locally:
 
 ```bash
+# Using pnpm
+pnpm dev
+
+# Using yarn
 yarn dev
+
+# Using npm
+npm run dev
 ```
 
-Open [http://localhost:3001](http://localhost:3001) with your browser to see the result.
+Open [http://localhost:6006](http://localhost:6006) with your browser to see the Storybook documentation.
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+## Features
 
-To create [API routes](https://nextjs.org/docs/app/building-your-application/routing/router-handlers) add an `api/` directory to the `app/` directory with a `route.ts` file. For individual endpoints, create a subfolder in the `api` directory, like `api/hello/route.ts` would map to [http://localhost:3001/api/hello](http://localhost:3001/api/hello).
+- **Component Showcase**: Interactive examples of all Muffled UI components
+- **API Documentation**: Detailed API references for each component
+- **Theme Customization**: Examples of how to customize the components
+- **Accessibility Guidelines**: Information about the accessibility features of each component
+- **Dark Mode Support**: Toggle between light and dark mode to see how components appear in different themes
 
-## Learn More
+## Adding Documentation
 
-To learn more about Next.js, take a look at the following resources:
+To add or update documentation for a component:
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn/foundations/about-nextjs) - an interactive Next.js tutorial.
+1. Create or modify the story file in the appropriate directory
+2. Add examples showcasing different variants and use cases
+3. Include proper documentation using Storybook's documentation format
+4. Test the documentation by running the Storybook server locally
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
+## Building for Production
 
-## Deploy on Vercel
+To build the documentation site for production:
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_source=github.com&utm_medium=referral&utm_campaign=turborepo-readme) from the creators of Next.js.
+```bash
+# Using pnpm
+pnpm build
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+# Using yarn
+yarn build
+
+# Using npm
+npm run build
+```
+
+This will generate static files in the `dist` directory that can be deployed to any static hosting service.

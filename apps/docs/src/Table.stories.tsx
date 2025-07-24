@@ -8,7 +8,7 @@ import {
   TableCell,
   TableHead,
   TableRow,
-  Typography,
+  Text,
 } from '@muffled-ui/react';
 
 export default {
@@ -21,11 +21,11 @@ export default {
 
 const arrayRange = (from: number, to: number) =>
   Array.from(Array(Math.max(0, to - from + 1)), (_, idx) => idx + from);
-const allRows = arrayRange(0, 40);
+const allRows = arrayRange(0, 39);
 
 export const Showcase: StoryObj<typeof Table> = {
   render: () => {
-    const limit = 10;
+    let [limit, setLimit] = useState(10);
     let [skip, setSkip] = useState(0);
     let [rows, setRows] = useState<number[]>([]);
 
@@ -33,9 +33,10 @@ export const Showcase: StoryObj<typeof Table> = {
       if (skip + limit < allRows.length) {
         setRows(allRows.slice(skip, skip + limit));
       } else {
-        setRows(allRows.slice(allRows.length - limit, allRows.length));
+        let lower = allRows.length - limit < 0 ? 0 : allRows.length - limit;
+        setRows(allRows.slice(lower, allRows.length));
       }
-    }, [skip]);
+    }, [skip, limit]);
 
     return (
       <Table
@@ -44,6 +45,7 @@ export const Showcase: StoryObj<typeof Table> = {
             limit={limit}
             skip={skip}
             setSkip={setSkip}
+            setSize={setLimit}
             itemCount={allRows.length}
           />
         }
@@ -52,9 +54,9 @@ export const Showcase: StoryObj<typeof Table> = {
         <TableBody>
           {rows.map((m, idx) => (
             <TableRow key={`${m}-${idx}`}>
-              <TableCell>Value for row {m} item 1</TableCell>
-              <TableCell>Value for row {m} item 2</TableCell>
-              <TableCell>Value for row {m} item 3</TableCell>
+              <TableCell>Value for row {m + 1} item 1</TableCell>
+              <TableCell>Value for row {m + 1} item 2</TableCell>
+              <TableCell>Value for row {m + 1} item 3</TableCell>
             </TableRow>
           ))}
         </TableBody>
@@ -130,9 +132,9 @@ export const TableProps: StoryObj<typeof Table> = {
       </Box>
       <Table
         footer={
-          <Typography textAlign="center" color="primary" fontWeight="700">
+          <Text textAlign="center" color="primary" fontWeight="700">
             You can add any footer prop, like a Pagination
-          </Typography>
+          </Text>
         }
       >
         <TableHead headers={['Header 1', 'Header 2', 'Header 3']} />

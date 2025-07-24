@@ -14,6 +14,14 @@ const StyledList = styled(List)`
   position: absolute;
   min-width: 100%;
   z-index:1000;
+
+  :hover li {
+    background: ${({ theme }) => theme.colors.background};
+  }
+
+  li:hover {
+    background: ${({ theme }) => theme.colors.accent};
+  }
 `;
 
 export const SelectList: React.FC<WithChildren> = ({ children }) => {

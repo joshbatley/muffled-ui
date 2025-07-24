@@ -1,11 +1,11 @@
 import styled from 'styled-components';
 import { color, ColorProps, typography, TypographyProps as Q } from 'styled-system';
 
-export type TypographyProps = {
+export type TextProps = {
   mono?: boolean;
 } & ColorProps & Q;
 
-export const Typography = styled.p<TypographyProps>`
+export const Text = styled.p<TextProps>`
   font-family: ${({ mono, theme }) => mono ? theme.fonts.mono : ''};
   ${color}
   ${typography}

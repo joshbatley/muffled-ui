@@ -1,5 +1,5 @@
 import { StoryObj } from '@storybook/react';
-import { Box, Typography } from '@muffled-ui/react';
+import { Box, Text } from '@muffled-ui/react';
 import { Backdrop } from '@muffled-ui/react';
 
 export default {
@@ -12,7 +12,7 @@ export const Showcase: StoryObj<typeof Backdrop> = {
     return (
       <Backdrop onClick={() => { }}>
         <Box bg="background" height="40%" width="40%" display="flex" justifyContent="center" alignItems="center" flexDirection="column" spaceYBetween="5">
-          <Typography>Escape key or click the backdrop</Typography>
+          <Text>Escape key or click the backdrop</Text>
         </Box>
       </Backdrop>
     );

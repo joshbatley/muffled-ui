@@ -1,4 +1,4 @@
-import { Box, Typography } from '../../data';
+import { Box, Text } from '../../data';
 
 export type LabelProps = {
   value: React.ReactNode;
@@ -11,7 +11,7 @@ export const Label: React.FC<LabelProps> = ({ value, children, error }) => {
   return (
     <Box as="label" display="block">
       <Box color={error ? 'destructive' : 'inherit'} display="flex" fontSize="1" lineHeight="1" mt="4" mb="1">
-        {value} {isRequired && <Typography>*</Typography>}
+        {value} {isRequired && <Text>*</Text>}
       </Box>
       {children}
     </Box>

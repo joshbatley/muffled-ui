@@ -1,8 +1,8 @@
 import { StoryObj } from '@storybook/react';
-import { Typography as T, Title, Box } from '@muffled-ui/react';
+import { Text, Title, Box } from '@muffled-ui/react';
 
 export default {
-  title: 'Data/Typography',
+  title: 'Data/Text',
   args: {
     children: 'My Text element',
   },
@@ -13,13 +13,13 @@ export default {
   },
 };
 
-export const Typography: StoryObj<typeof T> = {
+export const Typography: StoryObj<typeof Text> = {
   render: ({ children, as }: any) => (<>
-    <T as={as}>{children}</T>
+    <Text as={as}>{children}</Text>
     <br />
-    <T as={as} mono>
+    <Text as={as} mono>
       {children}
-    </T>
+    </Text>
   </>),
 };
 

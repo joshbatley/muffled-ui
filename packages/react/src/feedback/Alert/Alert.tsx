@@ -1,6 +1,6 @@
 import styled from 'styled-components';
 import { ExclamationCircleIcon } from '@heroicons/react/24/outline';
-import { Box, Typography, Title } from '../../data';
+import { Box, Text, Title } from '../../data';
 import { CloseBtn } from './CloseBtn';
 import { WithChildren } from '../../types';
 
@@ -27,7 +27,7 @@ const Icon = styled(Box)`
   }
 `;
 
-const Content = styled(Typography)`
+const Content = styled(Text)`
   min-width: 100%;
   margin-top: ${({ theme }) => theme.space[2]};
   :empty {
@@ -40,7 +40,7 @@ export const Alert: React.FC<AlertProps> = ({
 }) => {
   let Icons = icon || (destructive ? <ExclamationCircleIcon width={20} height={20} /> : <></>);
   return (
-    <Container p={2} display="flex" flexGrow={1} alignItems="center" borderRadius="4" overflow="hidden" position="relative" width={29} fontSize={1} lineHeight={1} flexWrap="wrap" destructive={destructive} {...rest} boxShadow="highlight">
+    <Container px={3} py={1} display="flex" flexGrow={1} alignItems="center" borderRadius="4" overflow="hidden" position="relative" width={29} fontSize={1} lineHeight={1} flexWrap="wrap" destructive={destructive} {...rest} boxShadow="highlight">
       <Box minWidth="100%">
         <Icon mr={3} mt="1px" lineHeight={5} alignSelf="center">{Icons}</Icon>
         <Title display="inline" fontWeight="600" fontSize={1} lineHeight={2} letterSpacing="0.025em">{title}</Title>

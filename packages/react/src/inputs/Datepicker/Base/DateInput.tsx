@@ -2,7 +2,7 @@ import { forwardRef } from 'react';
 import { CalendarIcon } from '@heroicons/react/24/outline';
 import styled from 'styled-components';
 import { ClickableElement, OutlineButton } from '../../../inputs/Button';
-import { Typography } from '../../../data';
+import { Text } from '../../../data';
 
 export type DateInputProps = {
   placeholder?: string;
@@ -14,7 +14,6 @@ export type DateInputProps = {
 
 const Container = styled.div`
   display: flex;
-  align-items: center;
   > :not([hidden]) ~ :not([hidden]) {
     margin-left: ${({ theme }) => theme.space[1]};
     margin-right:${({ theme }) => theme.space[4]};
@@ -46,8 +45,8 @@ export const DateInput = forwardRef<HTMLButtonElement, DateInputProps>(({
   };
 
   let displayValue = value ?
-    (<Typography as="span">{value}</Typography>) :
-    (<Typography as="span" color="mutedForeground">{placeholder}</Typography>);
+    (<Text as="span">{value}</Text>) :
+    (<Text as="span" color="mutedForeground">{placeholder}</Text>);
 
   return (
     <OutlineButton bg="background" width="100%" fontWeight="400" lineHeight="inherit" justifyContent="space-between" ref={ref} onClick={onClick}>

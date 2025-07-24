@@ -16,33 +16,13 @@ export const Showcase: StoryObj<typeof Pagination> = {
 
     return (
       <Box>
-        <Box
-          borderBottomLeftRadius="4"
-          borderBottomRightRadius="4"
-          bg="background.1"
-          px="3"
-          py="2"
-          mb="2"
-          border="border.1"
-        >
           <Pagination
             limit={10}
             skip={skip}
             setSkip={setSkip}
             itemCount={100}
           />
-        </Box>
-        <Box
-          borderBottomLeftRadius="4"
-          borderBottomRightRadius="4"
-          bg="background.1"
-          px="3"
-          py="2"
-          mb="2"
-          border="border.1"
-        >
-          <Pagination limit={10} skip={skip} setSkip={setSkip} itemCount={5} />
-        </Box>
+          <Pagination limit={10} skip={skip} setSkip={setSkip} itemCount={5} hidePageSizeControls />
       </Box>
     );
   },

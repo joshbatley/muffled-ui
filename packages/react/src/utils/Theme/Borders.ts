@@ -17,11 +17,11 @@ export const generateBorders = (colors: ColorTheme) => {
 export const radii = [
   0,            // 0 - none
   '0.125rem',   // 1 - sm
-  '0.25rem',    // 2 -
-  '0.375rem',   // 3 - md
-  '0.5rem',     // 4 - lg
-  '0.75rem',    // 5 - xl
-  '1rem',       // 6 - 2xl
-  '1.5rem',     // 7 - 3xl
+  '0.25rem',    // 2
+  '0.5rem',     // 3 - md
+  '0.75rem',    // 4 - lg
+  '1rem',       // 5 - xl
+  '1.25rem',    // 6 - 2xl
+  '1.75rem',    // 7 - 3xl
   '9999px',     // 8 - full
 ];

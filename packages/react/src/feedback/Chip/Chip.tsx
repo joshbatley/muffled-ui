@@ -1,5 +1,5 @@
 import styled from 'styled-components';
-import { Typography } from '../../data';
+import { Text } from '../../data';
 import { WithChildren } from '../../types';
 
 export type ChipProps = {
@@ -28,7 +28,7 @@ export const Chip: React.FC<ChipProps> = ({
   destructive, children,
 }) => (
   <Container destructive={destructive}>
-    <Typography>{children}</Typography>
+    <Text>{children}</Text>
   </Container>
 );
 
