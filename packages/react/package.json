@@ -1,6 +1,6 @@
 {
   "name": "@muffled-ui/react",
-  "version": "1.0.21",
+  "version": "1.0.22",
   "private": false,
   "main": "./dist/index.js",
   "module": "./dist/index.mjs",

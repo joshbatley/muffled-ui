@@ -1,5 +1,11 @@
 # @muffled-ui/react
 
+## 1.0.22
+
+### Patch Changes
+
+- 4074ab9: Updated pagination and colours
+
 ## 1.0.21
 
 ### Patch Changes
