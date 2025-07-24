@@ -5,7 +5,7 @@ export type TypographyProps = {
   mono?: boolean;
 } & ColorProps & Q;
 
-export const Typography = styled.p<TypographyProps>`
+export const Text = styled.p<TypographyProps>`
   font-family: ${({ mono, theme }) => mono ? theme.fonts.mono : ''};
   ${color}
   ${typography}

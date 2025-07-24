@@ -2,7 +2,7 @@ import { ChevronLeftIcon, ChevronRightIcon, ChevronDoubleLeftIcon, ChevronDouble
 import { OutlineButton } from '../../inputs/Button';
 import { Box } from '../Box';
 import styled from 'styled-components';
-import { Typography } from '../Typography';
+import { Text } from '../Typography';
 
 export type PaginationProps = {
   skip: number;
@@ -27,7 +27,7 @@ export const PaginationControls: React.FC<PaginationProps> = ({
 
   return (
     <StyledBox display="inline-flex">
-      <Typography>Page {currentPage} of {totalPages}</Typography>
+      <Text>Page {currentPage} of {totalPages}</Text>
         <OutlineButton
         verticalAlign="bottom"
         disabled={currentPage === 1}
