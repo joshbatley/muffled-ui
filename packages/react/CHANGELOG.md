@@ -1,5 +1,11 @@
 # @muffled-ui/react
 
+## 1.0.23
+
+### Patch Changes
+
+- f77f0d9: Spelling
+
 ## 1.0.22
 
 ### Patch Changes
