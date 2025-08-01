@@ -34,6 +34,10 @@ exports[`Radio test should render 1`] = `
   position: absolute;
 }
 
+.c4 {
+  color: hsl(0,0%,95%);
+}
+
 .c2 {
   display: none;
 }
@@ -48,7 +52,6 @@ exports[`Radio test should render 1`] = `
   -ms-flex-align: center;
   align-items: center;
   cursor: pointer;
-  color: hsl(0,0%,95%);
 }
 
 .c0 > :not([hidden]) ~ :not([hidden]) {
@@ -61,12 +64,16 @@ exports[`Radio test should render 1`] = `
   position: relative;
 }
 
+.c0 div > svg {
+  color: hsl(220,15%,10%);
+}
+
 .c0:hover div {
-  background: hsl(220,15%,10%);
+  background: foreground;
 }
 
 .c0:hover div > svg {
-  color: hsl(0,0%,95%);
+  color: hsl(220,5%,40%);
 }
 
 <div>
@@ -84,19 +91,23 @@ exports[`Radio test should render 1`] = `
       <div
         class="c3"
       />
-      <svg
-        fill="currentColor"
-        h="16"
-        viewBox="0 0 16 16"
-        w="16"
-        xmlns="http://www.w3.org/2000/svg"
+      <div
+        class="c4"
       >
-        <circle
-          cx="8"
-          cy="8"
-          r="3"
-        />
-      </svg>
+        <svg
+          fill="currentColor"
+          height="16"
+          viewBox="0 0 16 16"
+          width="16"
+          xmlns="http://www.w3.org/2000/svg"
+        >
+          <circle
+            cx="8"
+            cy="8"
+            r="3"
+          />
+        </svg>
+      </div>
     </div>
   </label>
 </div>
@@ -136,6 +147,10 @@ exports[`Radio test should render with disabled classes 1`] = `
   position: absolute;
 }
 
+.c4 {
+  color: hsl(220,5%,70%);
+}
+
 .c2 {
   display: none;
 }
@@ -150,7 +165,6 @@ exports[`Radio test should render with disabled classes 1`] = `
   -ms-flex-align: center;
   align-items: center;
   cursor: not-allowed;
-  color: hsl(220,5%,70%);
 }
 
 .c0 > :not([hidden]) ~ :not([hidden]) {
@@ -163,12 +177,16 @@ exports[`Radio test should render with disabled classes 1`] = `
   position: relative;
 }
 
+.c0 div > svg {
+  color: hsl(220,15%,10%);
+}
+
 .c0:hover div {
-  background: hsl(220,15%,10%);
+  background: foreground;
 }
 
 .c0:hover div > svg {
-  color: hsl(0,0%,95%);
+  color: hsl(220,5%,40%);
 }
 
 <div>
@@ -188,19 +206,23 @@ exports[`Radio test should render with disabled classes 1`] = `
       <div
         class="c3"
       />
-      <svg
-        fill="currentColor"
-        h="16"
-        viewBox="0 0 16 16"
-        w="16"
-        xmlns="http://www.w3.org/2000/svg"
+      <div
+        class="c4"
       >
-        <circle
-          cx="8"
-          cy="8"
-          r="3"
-        />
-      </svg>
+        <svg
+          fill="currentColor"
+          height="16"
+          viewBox="0 0 16 16"
+          width="16"
+          xmlns="http://www.w3.org/2000/svg"
+        >
+          <circle
+            cx="8"
+            cy="8"
+            r="3"
+          />
+        </svg>
+      </div>
     </div>
   </label>
 </div>

@@ -34,6 +34,10 @@ exports[`Checkbox test should render 1`] = `
   position: absolute;
 }
 
+.c4 {
+  color: hsl(0,0%,95%);
+}
+
 .c2 {
   display: none;
 }
@@ -48,7 +52,6 @@ exports[`Checkbox test should render 1`] = `
   -ms-flex-align: center;
   align-items: center;
   cursor: pointer;
-  color: hsl(0,0%,95%);
 }
 
 .c0 > :not([hidden]) ~ :not([hidden]) {
@@ -61,12 +64,16 @@ exports[`Checkbox test should render 1`] = `
   position: relative;
 }
 
+.c0 div > svg {
+  color: hsl(220,15%,10%);
+}
+
 .c0:hover div {
-  background: hsl(220,15%,10%);
+  background: foreground;
 }
 
 .c0:hover div > svg {
-  color: hsl(0,0%,95%);
+  color: hsl(220,5%,40%);
 }
 
 <div>
@@ -83,23 +90,27 @@ exports[`Checkbox test should render 1`] = `
       <div
         class="c3"
       />
-      <svg
-        aria-hidden="true"
-        data-slot="icon"
-        fill="none"
-        height="12"
-        stroke="currentColor"
-        stroke-width="1.5"
-        viewBox="0 0 24 24"
-        width="12"
-        xmlns="http://www.w3.org/2000/svg"
+      <div
+        class="c4"
       >
-        <path
-          d="m4.5 12.75 6 6 9-13.5"
-          stroke-linecap="round"
-          stroke-linejoin="round"
-        />
-      </svg>
+        <svg
+          aria-hidden="true"
+          data-slot="icon"
+          fill="none"
+          height="12"
+          stroke="currentColor"
+          stroke-width="1.5"
+          viewBox="0 0 24 24"
+          width="12"
+          xmlns="http://www.w3.org/2000/svg"
+        >
+          <path
+            d="m4.5 12.75 6 6 9-13.5"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+          />
+        </svg>
+      </div>
     </div>
   </label>
 </div>
@@ -139,6 +150,10 @@ exports[`Checkbox test should render with disabled classes 1`] = `
   position: absolute;
 }
 
+.c4 {
+  color: hsl(220,5%,70%);
+}
+
 .c2 {
   display: none;
 }
@@ -153,7 +168,6 @@ exports[`Checkbox test should render with disabled classes 1`] = `
   -ms-flex-align: center;
   align-items: center;
   cursor: not-allowed;
-  color: hsl(220,5%,70%);
 }
 
 .c0 > :not([hidden]) ~ :not([hidden]) {
@@ -166,12 +180,16 @@ exports[`Checkbox test should render with disabled classes 1`] = `
   position: relative;
 }
 
+.c0 div > svg {
+  color: hsl(220,15%,10%);
+}
+
 .c0:hover div {
-  background: hsl(220,15%,10%);
+  background: foreground;
 }
 
 .c0:hover div > svg {
-  color: hsl(0,0%,95%);
+  color: hsl(220,5%,40%);
 }
 
 <div>
@@ -190,23 +208,27 @@ exports[`Checkbox test should render with disabled classes 1`] = `
       <div
         class="c3"
       />
-      <svg
-        aria-hidden="true"
-        data-slot="icon"
-        fill="none"
-        height="12"
-        stroke="currentColor"
-        stroke-width="1.5"
-        viewBox="0 0 24 24"
-        width="12"
-        xmlns="http://www.w3.org/2000/svg"
+      <div
+        class="c4"
       >
-        <path
-          d="m4.5 12.75 6 6 9-13.5"
-          stroke-linecap="round"
-          stroke-linejoin="round"
-        />
-      </svg>
+        <svg
+          aria-hidden="true"
+          data-slot="icon"
+          fill="none"
+          height="12"
+          stroke="currentColor"
+          stroke-width="1.5"
+          viewBox="0 0 24 24"
+          width="12"
+          xmlns="http://www.w3.org/2000/svg"
+        >
+          <path
+            d="m4.5 12.75 6 6 9-13.5"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+          />
+        </svg>
+      </div>
     </div>
   </label>
 </div>
