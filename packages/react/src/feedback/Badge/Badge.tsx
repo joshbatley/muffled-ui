@@ -92,7 +92,7 @@ const BadgeItem: React.FC<BadgeItemProps> = ({ position, destructive, children }
 };
 
 export const Badge: React.FC<BadgeProps> = ({ position = 'NE', children, tag, destructive = false }) => (
-  <Box display="inline-block" position="relative" w="fit-content">
+  <Box display="inline-block" position="relative" w="100%">
     <BadgeItem position={position} destructive={destructive}>
       {tag}
     </BadgeItem>
