@@ -1,4 +1,4 @@
-import styled from 'styled-components';
+import { x } from '@xstyled/styled-components';
 import { StepIcon } from './StepIcon';
 import { useStepperContext } from './StepperContext';
 import { Direction, WithChildren } from '../../types';
@@ -11,56 +11,61 @@ export type StepLabelProps = {
   error?: boolean;
 } & WithChildren;
 
-const Line = styled.div<{ direction: Direction }>`
-  left: calc(-50% + 30px);
-  right: calc(50% + 30px);
-  background: ${({ theme }) => theme.colors.primary};
-  opacity: 0.2;
-  flex: 1 1 auto;
-  width: 1px;
-  ${({ direction }) => direction === 'vertical' ? 'height: 100%; width: 1px;' : 'height: 1px;'}
-`;
+const Line = ({ direction, ...props }: { direction: Direction } & React.HTMLAttributes<HTMLDivElement>) => (
+  <x.div
+    left="calc(-50% + 30px)"
+    right="calc(50% + 30px)"
+    bg="primary"
+    opacity={0.2}
+    flex="1 1 auto"
+    w="1px"
+    h={direction === 'vertical' ? '100%' : '1px'}
+    {...props}
+  />
+);
 
-const AlternativeLine = styled.div<{ direction: Direction }>`
-  left: calc(-50% + 30px);
-  right: calc(50% + 30px);
-  position: absolute;
-  background: ${({ theme }) => theme.colors.primary};
-  opacity: 0.2;
-  top: ${({ theme }) => theme.sizes[3]};
-  flex: 1 1 auto;
-  ${({ direction }) => direction === 'vertical' ? 'height: 100%;' : 'height: 1px;'}
-`;
+const AlternativeLine = ({ direction, ...props }: { direction: Direction } & React.HTMLAttributes<HTMLDivElement>) => (
+  <x.div
+    left="calc(-50% + 30px)"
+    right="calc(50% + 30px)"
+    position="absolute"
+    bg="primary"
+    opacity={0.2}
+    top={3}
+    flex="1 1 auto"
+    h={direction === 'vertical' ? '100%' : '1px'}
+    {...props}
+  />
+);
 
-const Label = styled.div<{ alternativeLabel: boolean }>`
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  position: relative;
-  font-size: ${({ theme }) => theme.fontSizes[0]};
-  line-height: ${({ theme }) => theme.lineHeights[0]};
-  ${({ alternativeLabel }) => alternativeLabel ? `
-    flex-direction: column;
-    flex: 1 1 0%;
-  ` : `
-    > :not([hidden]) ~ :not([hidden]) {
-      margin-left: 0.5rem;
-    }
-   `}
-`;
+const Label = ({ alternativeLabel, ...props }: { alternativeLabel: boolean } & React.HTMLAttributes<HTMLDivElement>) => (
+  <x.div
+    display="flex"
+    alignItems="center"
+    justifyContent="center"
+    position="relative"
+    fontSize={0}
+    lineHeight={0}
+    flexDirection={alternativeLabel ? 'column' : undefined}
+    flex={alternativeLabel ? '1 1 0%' : undefined}
+    marginLeft={(!alternativeLabel ? { '> :not([hidden]) ~ :not([hidden])': '0.5rem' } : undefined)}
+    {...props}
+  />
+);
 
-const LineContainer = styled.div<{ direction: Direction }>`
-  flex: 1 1 auto;
-  display: flex;
-  width: 1px;
-  align-items: center;
-  margin-left: ${({ theme }) => theme.space[3]};
-  margin-right: ${({ theme }) => theme.space[3]};
-  ${({ direction, theme }) => direction === 'vertical' && `
-    margin-top: ${theme.space[3]};
-    margin-bottom: ${theme.space[3]};
-  `}
-`;
+const LineContainer = ({ direction, ...props }: { direction: Direction } & React.HTMLAttributes<HTMLDivElement>) => (
+  <x.div
+    flex="1 1 auto"
+    display="flex"
+    w="1px"
+    alignItems="center"
+    ml={3}
+    mr={3}
+    mt={direction === 'vertical' ? 3 : undefined}
+    mb={direction === 'vertical' ? 3 : undefined}
+    {...props}
+  />
+);
 
 export const StepLabel: React.FC<StepLabelProps> = ({
   icon, children, idx = 0, state, error,

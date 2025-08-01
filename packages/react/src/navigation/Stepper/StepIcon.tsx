@@ -1,4 +1,4 @@
-import styled from 'styled-components';
+import styled from '@xstyled/styled-components';
 import { CheckCircleIcon, ExclamationTriangleIcon } from '@heroicons/react/24/outline';
 
 export type StepIconProps = {
@@ -11,31 +11,31 @@ export type StepIconProps = {
 const ErrorComp = styled(ExclamationTriangleIcon)`
   width: 24px;
   height: 24px;
-  color: ${({ theme }) => theme.colors.destructive};
+  color: destructive;
 `;
 
 const DefaultSvg = styled.svg<{ state: 'completed' | 'active' | 'default' }>`
   width: 30px;
   height: 30px;
-  color: ${({ theme }) => theme.colors.primary};
+  color: primary;
   opacity: ${({ state }) => state === 'default' ? '0.6' : '1'};
 `;
 
 const DefaultText = styled.text`
   font-weight: 700;
-  font-size: ${({ theme }) => theme.fontSizes[0]};
-  line-height: ${({ theme }) => theme.lineHeights[0]};
+  font-size: 0;
+  line-height: 0;
 `;
 
 
 const Checkmark = styled(CheckCircleIcon)`
-  color: ${({ theme }) => theme.colors.primary};
+  color: primary;
   width: 30px;
   height: 30px;
 `;
 
-const InnerCirle = styled.circle`
-  color: ${({ theme }) => theme.colors.background};
+const InnerCircle = styled.circle`
+  color: background;
 `;
 
 export const StepIcon: React.FC<StepIconProps> = ({
@@ -55,7 +55,7 @@ export const StepIcon: React.FC<StepIconProps> = ({
     return (
       <DefaultSvg fill='currentColor' state={state}>
         <circle cx="50%" cy="50%" r="12" />
-        <InnerCirle cx="50%" cy="50%" r="10" />
+        <InnerCircle cx="50%" cy="50%" r="10" />
         <DefaultText x="50%" y="65%" textAnchor="middle">{number}</DefaultText>
       </DefaultSvg>
     );
