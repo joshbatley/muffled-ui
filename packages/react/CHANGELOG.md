@@ -1,5 +1,11 @@
 # @muffled-ui/react
 
+## 1.1.1
+
+### Patch Changes
+
+- ffe7a64: Badge updates
+
 ## 1.1.0
 
 ### Minor Changes
