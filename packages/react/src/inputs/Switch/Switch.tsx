@@ -1,4 +1,4 @@
-import styled, { x } from '@xstyled/styled-components';
+import styled, { x, useTheme } from '@xstyled/styled-components';
 import { Box } from '../../data';
 
 export type SwitchProps = React.ComponentPropsWithRef<'input'>;
@@ -7,7 +7,10 @@ const Backing = styled(Box)<{ checked?: boolean }>`
   box-shadow: ${({ checked, theme }) => checked ? theme.colors.primary + ' 0 0 0 2px' : theme.colors.input + ' 0 0 0 2px'}
 `;
 
-export const Switch: React.FC<SwitchProps> = ({ disabled = false, ...rest }) => (
+export const Switch: React.FC<SwitchProps> = ({ disabled = false, ...rest }) => {
+  const theme = useTheme();
+
+  return (
   <x.label position="relative" display="inline-flex" alignItems="center" cursor={disabled ? 'not-allowed' : 'pointer'} h="4" w="8" opacity={disabled ? 0.4 : 1}>
     <x.input display="none" type="checkbox" disabled={disabled} {...rest} />
     <Backing
@@ -16,7 +19,9 @@ export const Switch: React.FC<SwitchProps> = ({ disabled = false, ...rest }) => 
       borderRadius="8"
       position="absolute"
       bg={rest.checked ? 'primary' : 'input'}
-      checked={rest.checked} />
+      checked={rest.checked}
+      theme={theme}
+    />
     <x.div
       bg="background"
       position="absolute"
@@ -32,3 +37,4 @@ export const Switch: React.FC<SwitchProps> = ({ disabled = false, ...rest }) => 
     />
   </x.label>
 );
+};
