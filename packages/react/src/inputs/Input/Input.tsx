@@ -15,10 +15,6 @@ export type InputProps = {
 } & React.ComponentPropsWithRef<'input'>;
 
 const Container = styled(Box) <{ disabled: boolean; }>`
-  overflow: hidden;
-  :focus-within {
-    border: ${({ theme }) => theme.borders.input[1]};
-  }
   ${({ disabled }) => disabled && `
     opacity: 0.5;
     cursor: not-allowed;
@@ -38,7 +34,8 @@ export const Input = forwardRef<HTMLInputElement, InputProps>(({
     bg="background"
     display="flex"
     borderRadius="3"
-    border="border.1"
+    border={{ '': 'border.1', '&:focus-within': 'input.1' }}
+    overflow="hidden"
     boxShadow="base.0"
   >
     <OptionalIcon left icon={prefiXMarkIcon} />
