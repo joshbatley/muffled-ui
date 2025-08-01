@@ -32,8 +32,9 @@ export const Skeleton: React.FC<SkeletonProps> = ({ variant = 'rectangle', ...re
 
   return (
     <x.div
-      animation={theme.animations.pulse}
-      bg={rgba(theme.colors.primary, 0.1)}
+      animation="pulse"
+      bg="primary"
+      opacity={0.1}
       {...getVariantProps()}
       {...rest}
     >
