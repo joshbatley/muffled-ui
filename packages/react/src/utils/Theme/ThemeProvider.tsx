@@ -1,4 +1,4 @@
-import { ColorModeProvider, ThemeProvider } from '@xstyled/styled-components';
+import { ThemeProvider } from '@xstyled/styled-components';
 import { LightTheme, DarkTheme, ProvidedTheme } from './Theme';
 import { GlobalStyles } from './GlobalStyles';
 import { createContext, useContext, useEffect, useState } from 'react';
