@@ -1,4 +1,4 @@
-import styled from 'styled-components';
+import { x } from '@xstyled/styled-components';
 import { StepperContext } from './StepperContext';
 import { WithChildren } from '../../types';
 import { Children, isValidElement, cloneElement } from 'react';
@@ -32,15 +32,16 @@ const parseChildren = (children: React.ReactNode, step: number): any[] => {
   });
 };
 
-const StyledDiv = styled.div <{ direction: 'vertical' | 'horizontal' }> `
-  display: flex;
-  postion: relative;
-  ${({ direction }) => direction === 'vertical' && `
-    flex-direction: column;
-    height: 100%;
-    alignItems: flex-start;
-  `}
-`;
+const StyledDiv = ({ direction, ...props }: { direction: 'vertical' | 'horizontal' } & React.HTMLAttributes<HTMLDivElement>) => (
+  <x.div
+    display="flex"
+    position="relative"
+    flexDirection={direction === 'vertical' ? 'column' : undefined}
+    h={direction === 'vertical' ? '100%' : undefined}
+    alignItems={direction === 'vertical' ? 'flex-start' : undefined}
+    {...props}
+  />
+);
 
 export const Stepper: React.FC<StepperProps> = ({
   children, direction = 'horizontal', step, ...rest

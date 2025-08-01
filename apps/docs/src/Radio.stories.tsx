@@ -9,7 +9,7 @@ export default {
 
 export const Showcase: StoryObj<typeof Radio> = {
   render: () => (
-    <Box spaceYBetween="2">
+    <Box spaceY="2">
       <Radio labelText="Radio" />
       <Radio checked labelText="Radio Radio" />
       <Radio disabled labelText="Radio Radio" />
@@ -27,7 +27,7 @@ export const Demo: StoryObj<typeof Radio> = {
       setSelected(e.currentTarget.value);
     }
     return (
-      <Box spaceYBetween="2">
+      <Box spaceY="2">
         <Radio value="1" name="demo" checked={selected === '1'} onChange={onChange} labelText="1" />
         <Radio value="2" name="demo" checked={selected === '2'} onChange={onChange} labelText="2" />
         <Radio value="3" name="demo" checked={selected === '3'} onChange={onChange} labelText="3" />

@@ -9,12 +9,12 @@ export type LeftNavigationProps = {
 export const LeftNavigation: React.FC<LeftNavigationProps> = ({ decreaseYear, decreaseMonth }) => (
   <>
     {decreaseYear && (
-      <OutlineButton px="5px" py="5px" height="inherit" onClick={decreaseYear}>
+      <OutlineButton px="5px" py="5px" h="inherit" onClick={decreaseYear}>
         <ChevronLeftIcon width={16} height={16} />
       </OutlineButton>
     )}
     {decreaseMonth && (
-      <OutlineButton px="5px" py="5px" height="inherit" onClick={decreaseMonth}>
+      <OutlineButton px="5px" py="5px" h="inherit" onClick={decreaseMonth}>
         <ChevronLeftIcon width={16} height={16} />
       </OutlineButton>
     )}
@@ -29,12 +29,12 @@ export type RightNavigationProps = {
 export const RightNavigation: React.FC<RightNavigationProps> = ({ increaseYear, increaseMonth }) => (
   <>
     {increaseMonth && (
-      <OutlineButton px="5px" py="5px" height="inherit" onClick={increaseMonth}>
+      <OutlineButton px="5px" py="5px" h="inherit" onClick={increaseMonth}>
         <ChevronRightIcon width={16} height={16} />
       </OutlineButton>
     )}
     {increaseYear && (
-      <OutlineButton px="5px" py="5px" height="inherit" onClick={increaseYear}>
+      <OutlineButton px="5px" py="5px" h="inherit" onClick={increaseYear}>
         <ChevronRightIcon width={16} height={16} />
       </OutlineButton>
     )}

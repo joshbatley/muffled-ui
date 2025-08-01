@@ -1,4 +1,4 @@
-import styled from 'styled-components';
+import { x } from '@xstyled/styled-components';
 import { WithChildren } from '../../types';
 
 type WrapperProps = {
@@ -6,21 +6,20 @@ type WrapperProps = {
   skip?: boolean;
 } & WithChildren;
 
-const StyledDiv = styled.div`
-  overflow: hidden;
-  font-size: ${({ theme }) => theme.fontSizes[1]};
-  line-height: ${({ theme }) => theme.lineHeights[1]};
-  font-family: ${({ theme }) => theme.fonts.mono};
-  border: ${({ theme }) => theme.borders.border[1]};
-  box-shadow: ${({ theme }) => theme.shadows.base[1]};
-  border-radius: ${({ theme }) => theme.radii[3]};
-  background: ${({ theme }) => theme.colors.offsetBackground};
-`;
-
 export const Wrapper: React.FC<WrapperProps> = ({
-  children, skip,
+  children, skip, style,
 }) => skip ? <>{children}</> : (
-  <StyledDiv >
+  <x.div
+    overflow="hidden"
+    fontSize={1}
+    lineHeight={1}
+    fontFamily="mono"
+    border="border.1"
+    boxShadow="base.1"
+    borderRadius={3}
+    background="offsetBackground"
+    style={style}
+  >
     {children}
-  </StyledDiv>
+  </x.div>
 );

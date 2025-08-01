@@ -1,37 +1,40 @@
-import styled from 'styled-components';
-import { rgba } from 'polished';
-import { LayoutProps, SpaceProps, layout, space, variant } from 'styled-system';
+import { x } from '@xstyled/styled-components';
+import type { LayoutProps, SpaceProps, SizingProps } from '@xstyled/styled-components';
 
 export type SkeletonProps = {
   variant?: 'text' | 'rectangle' | 'circle';
-} & LayoutProps & SpaceProps;
+} & LayoutProps & SpaceProps & SizingProps;
 
-const Comp = styled.div<SkeletonProps>`
-  ${({ theme }) => theme.animations.pulse}
-  background: ${({ theme }) => rgba(theme.colors.primary, 0.1)};
-  ${layout}
-  ${space}
-  ${({ theme, height, width }) => variant({
-  prop: 'variant',
-  variants: {
-    circle: {
-      borderRadius: theme.radii[8],
-      height: height + 'px',
-      width: width + 'px',
-    },
-    rectangle: {
-      borderRadius: theme.radii[3],
-      height: height + 'px',
-      width: width + 'px',
-    },
-    text: {
-      display: 'inline-flex',
-      borderRadius: theme.radii[3],
-    },
-  },
-})}
-`;
+export const Skeleton: React.FC<SkeletonProps> = ({ variant = 'rectangle', ...rest }) => {
+  const getVariantProps = () => {
+    switch (variant) {
+      case 'circle':
+        return {
+          borderRadius: 8,
+        };
+      case 'rectangle':
+        return {
+          borderRadius: 3,
 
-export const Skeleton: React.FC<SkeletonProps> = ({ ...rest }) => (
-  <Comp {...rest}>&nbsp;</Comp>
-);
+        };
+      case 'text':
+        return {
+          display: 'inline-flex',
+          borderRadius: 3,
+        };
+      default:
+        return {};
+    }
+  };
+
+  return (
+    <x.div
+      animation="pulse"
+      bg="modalBackdrop"
+      {...getVariantProps()}
+      {...rest}
+    >
+      &nbsp;
+    </x.div>
+  );
+};

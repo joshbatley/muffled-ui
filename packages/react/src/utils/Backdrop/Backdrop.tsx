@@ -47,8 +47,8 @@ export const Backdrop: React.FC<BackdropProps> = ({
       <FocusLock>
         <Fade inProp={open} onProps={onClick} {...rest}>
           <Box
-            width="100vw"
-            height="100%"
+            w="100vw"
+            h="100%"
             position="fixed"
             top={0}
             left={0}

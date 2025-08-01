@@ -1,5 +1,4 @@
 import { ChevronUpDownIcon } from '@heroicons/react/24/outline';
-import styled from 'styled-components';
 import { Box, Text } from '../../data';
 import { ClickableElement, OutlineButton, OutlineButtonProps } from '../Button';
 import { useSelectContext } from './SelectContext';
@@ -9,23 +8,6 @@ export type SelectButtonProps = {
   isFilterable?: boolean;
   placeholder?: string;
 } & OutlineButtonProps;
-
-const ClearBtn = styled(ClickableElement)`
-  color: ${({ theme }) => theme.colors.mutedForeground};
-  margin-right: 3px;
-  :hover {
-    color: ${({ theme }) => theme.colors.foreground};
-  }
-`;
-
-const Container = styled(Box)`
-  > {
-    margin-right: ${({ theme }) => theme.space[4]};
-  }
-  > :last-child {
-    margin-right: 0;
-  }
-`;
 
 export const SelectButton: React.FC<SelectButtonProps> = ({
   isClearable,
@@ -45,28 +27,29 @@ export const SelectButton: React.FC<SelectButtonProps> = ({
 
   let isClearableActive = isClearable && selectedItem;
 
-  let clear = (e: any) => {
+  let handleClear = (e: any) => {
     e.stopPropagation();
     clearSelection();
   };
 
   return (
     <OutlineButton
-      width="100%"
+      w="100%"
       bg="background"
+      border={{ '': 'border.1', '&:focus': 'input.1' }}
       justifyContent="space-between"
       {...getToggleButtonProps()}
       {...rest}
     >
       <Text fontWeight="normal" color={!selectedItem ? 'mutedForeground' : 'default'}>{buttonText}</Text>
-      <Container display="flex" alignItems="center">
+      <Box display="flex" alignItems="center" mr={{ '>': 4, '> :last-child': 0 }}>
         {isClearableActive &&
-          <ClearBtn as="a" onClick={clear}>
+          <ClickableElement color="foreground" opacity={{ ':hover': 0.3 }} onClick={handleClear} as="a">
             Clear
-          </ClearBtn>
+          </ClickableElement>
         }
         <ChevronUpDownIcon height={16} width={16} />
-      </Container>
+      </Box>
     </OutlineButton>
   );
 };

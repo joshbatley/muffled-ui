@@ -6,7 +6,6 @@ import {
   useSnackbar,
 } from '@muffled-ui/react';
 import { intercardinalPointsSelect } from './presets';
-import { Snack } from '@muffled-ui/react/src/types';
 
 export default {
   title: 'Feedback/Snackbar',
@@ -22,7 +21,7 @@ export default {
 const lorem =
   'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam aliquet imperdiet nunc non porttitor. Morbi vitae venenatis mauris. Nam malesuada ipsum mi, sed maximus nulla rhoncus sit amet.';
 
-const Comp: React.FC<Snack> = ({
+const Comp: React.FC<any> = ({
   text = 'Add Snackbar',
   title = 'Your notification here',
   ...rest
@@ -36,7 +35,7 @@ const Comp: React.FC<Snack> = ({
 export const Showcase: StoryObj = {
   render: ({ ...rest }) => (
     <SnackbarProvider {...rest}>
-      <Box display="flex" width="500px" justifyContent="space-between">
+      <Box display="flex" w="500px" justifyContent="space-between">
         <Comp text="Add Info" />
         <Comp destructive text="Add Destructive" />
         <Comp text="Add with body" body={lorem} />

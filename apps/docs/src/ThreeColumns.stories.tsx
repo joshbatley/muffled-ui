@@ -9,12 +9,12 @@ export default {
 };
 
 let sidebar = (
-  <Box bg="primary" borderRight="background.1" height="100vh">
+  <Box bg="primary" borderRight="background.1" h="100vh">
     123
   </Box>
 );
 let mainNav = (
-  <Box bg="destructive" borderRight="background.1" height="100vh">
+  <Box bg="destructive" borderRight="background.1" h="100vh">
     123
   </Box>
 );
@@ -22,7 +22,7 @@ let mainNav = (
 export const Showcase: StoryObj<typeof ThreeColumns> = {
   render: () => (
     <ThreeColumns sideNav={sidebar} mainNav={mainNav}>
-      <Box bg="muted" borderRight="background.1" height="100vh">
+      <Box bg="muted" borderRight="background.1" h="100vh">
         123
       </Box>
     </ThreeColumns>

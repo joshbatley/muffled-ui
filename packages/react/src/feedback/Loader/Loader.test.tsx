@@ -4,7 +4,7 @@ import { MuffledUI } from '../../utils';
 import { CircleLoader } from '.';
 
 function render(Comp: ReactNode) {
-  return testRender(<MuffledUI>{Comp}</MuffledUI>);
+  return testRender(<MuffledUI theme="Light">{Comp}</MuffledUI>);
 }
 
 describe('Loader', () => {

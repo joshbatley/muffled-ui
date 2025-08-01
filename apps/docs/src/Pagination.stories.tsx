@@ -21,8 +21,9 @@ export const Showcase: StoryObj<typeof Pagination> = {
             skip={skip}
             setSkip={setSkip}
             itemCount={100}
+            setSize={() => {}}
           />
-          <Pagination limit={10} skip={skip} setSkip={setSkip} itemCount={5} hidePageSizeControls />
+          <Pagination limit={10} skip={skip} setSkip={setSkip} itemCount={5} hidePageSizeControls  setSize={() => {}} />
       </Box>
     );
   },

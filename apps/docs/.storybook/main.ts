@@ -6,11 +6,11 @@ const managerHead = (head) => `
   ${head}
   <link rel="icon" href="favicon.svg" type="image/svg+xml" sizes="any">
   <link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&display=swap" rel="stylesheet">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&display=swap" rel="stylesheet">
 `
 
-const managerHeadProd = (head) => `
+const managerHeadProd = (head: any) => `
   ${managerHead(head)}
   <base href="/react/">
 `
@@ -19,6 +19,7 @@ const config = {
   stories: [
     '../src/*.stories.@(js|jsx|ts|tsx)'
   ],
+
   addons: [
     getAbsolutePath("@storybook/addon-links"),
     getAbsolutePath("@storybook/addon-essentials"),
@@ -41,6 +42,7 @@ const config = {
       propFilter: () => true,
     },
   },
+
   async viteFinal(config: any, { configType }: any) {
     // customize the Vite config here
     return {

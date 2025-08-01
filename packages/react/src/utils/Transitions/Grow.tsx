@@ -1,5 +1,5 @@
 import { animated, useTransition, UseTransitionProps } from 'react-spring';
-import styled from 'styled-components';
+import styled from '@xstyled/styled-components';
 
 export type GrowProps = {
   children: React.ReactNode;

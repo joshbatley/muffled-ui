@@ -1,5 +1,7 @@
 import { themes } from '@storybook/theming';
+// @ts-ignore
 import LogoLight from '../public/logo-light.svg';
+// @ts-ignore
 import LogoDark from '../public/logo-dark.svg';
 
 export const lightTheme = {

@@ -1,17 +1,23 @@
-import styled from 'styled-components';
+import { x } from '@xstyled/styled-components';
+import { forwardRef } from 'react';
 
-export const AccordionDetail = styled.div`
-  background: ${({ theme }) => theme.colors.background};
-  padding: ${({ theme }) => `${theme.space[3]} ${theme.space[2]}`};
-  border-bottom: ${({ theme }) => theme.borders.border[1]};
-  border-left: ${({ theme }) => theme.borders.border[1]};
-  border-right: ${({ theme }) => theme.borders.border[1]};
-  box-shadow: ${({ theme }) => theme.shadows.inner};
-`;
+export const AccordionDetail = forwardRef<HTMLDivElement, React.ComponentPropsWithRef<'div'>>((props, ref) => (
+  <x.div
+    ref={ref}
+    bg="background"
+    padding="3 2"
+    borderBottom="border.1"
+    borderLeft="border.1"
+    borderRight="border.1"
+    boxShadow="inner"
+    {...props}
+  />
+));
 
-export const DetailsGrouping = styled.div`
-  :last-of-type ${AccordionDetail} {
-    border-bottom-left-radius: ${({ theme }) => theme.radii[3]};
-    border-bottom-right-radius: ${({ theme }) => theme.radii[3]};
-  }
-`;
+export const DetailsGrouping = forwardRef<HTMLDivElement, React.ComponentPropsWithRef<'div'>>((props, ref) => (
+  <x.div
+    ref={ref}
+    borderRadius={{ '&:last-of-type div': '0 0 3 3' }}
+    {...props}
+  />
+));

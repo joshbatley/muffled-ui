@@ -1,20 +1,22 @@
-import styled from 'styled-components';
-import { FlexboxProps, LayoutProps, SpaceProps, flexbox, layout, space, ColorProps, color, background } from 'styled-system';
+import { x } from '@xstyled/styled-components';
+import type { FlexboxesProps, LayoutProps, SpaceProps, ColorProps, SizingProps } from '@xstyled/styled-components';
+import { forwardRef } from 'react';
 
 export type CardProps = {
   children: React.ReactNode;
   style?: React.CSSProperties;
-} & LayoutProps & FlexboxProps & SpaceProps & ColorProps;
+} & LayoutProps & SizingProps & FlexboxesProps & SpaceProps & ColorProps & React.ComponentPropsWithRef<'div'>;
 
-export const Card = styled.div<CardProps>`
-  background: ${({ theme }) => theme.colors.background};
-  border-radius: ${({ theme }) => theme.radii[3]};
-  box-shadow: ${({ theme }) => theme.shadows.base[0]};
-  border:${({ theme }) => theme.borders.border[1]};
-  overflow: hidden;
-  ${layout}
-  ${flexbox}
-  ${space}
-  ${color}
-  ${background}
-`;
+export const Card = forwardRef<HTMLDivElement, CardProps>(({ children, ...rest }, ref) => (
+  <x.div
+    ref={ref}
+    bg="background"
+    borderRadius={3}
+    boxShadow="base.0"
+    border="border.1"
+    overflow="hidden"
+    {...rest}
+  >
+    {children}
+  </x.div>
+));

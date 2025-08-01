@@ -24,13 +24,13 @@ export const Showcase: StoryObj<typeof List> = {
         <ListItem>Item 3</ListItem>
       </List>
       <br /> <br />
-      <OL {...rest}>
+      <OL>
         <ListItem>Item 1</ListItem>
         <ListItem>Item 2</ListItem>
         <ListItem>Item 3</ListItem>
       </OL>
       <br /> <br />
-      <UL {...rest}>
+      <UL>
         <ListItem>Item 1</ListItem>
         <ListItem>Item 2</ListItem>
         <ListItem>Item 3</ListItem>

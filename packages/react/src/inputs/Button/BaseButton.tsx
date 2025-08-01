@@ -1,46 +1,39 @@
 import { forwardRef } from 'react';
-import styled, { DefaultTheme, StyledComponent } from 'styled-components';
-import {
-  border, BorderProps, color, ColorProps, flexbox, FlexboxProps, layout, LayoutProps, position, PositionProps, space, SpaceProps, typography, TypographyProps, boxShadow, BoxShadowProps,
-} from 'styled-system';
+import { x } from '@xstyled/styled-components';
+import type {
+  BordersProps, ColorProps, FlexboxesProps, LayoutProps, PositionProps, SpaceProps, TypographyProps, BoxShadowProps, BackgroundsProps, SizingProps, EffectsProps,
+} from '@xstyled/styled-components';
 import { AsProp } from '../../types';
 
 export type BaseButtonProps = {
   type?: 'button' | 'reset' | 'submit';
   as?: AsProp;
-} & React.ComponentPropsWithoutRef<'button'> & LayoutProps & BorderProps & PositionProps & ColorProps & SpaceProps & TypographyProps & FlexboxProps & BoxShadowProps;
-
-export const StyledButton: StyledComponent<'button', DefaultTheme, BaseButtonProps, never> = styled.button<BaseButtonProps>`
-  display: inline-flex;
-  place-content: center;
-  align-items: center;
-  user-select: none;
-  border-radius: ${({ theme }) => theme.radii[3]};
-  padding: ${({ theme }) => `${theme.space[11]} ${theme.space[3]}`};
-  font-size: ${({ theme }) => theme.fontSizes[1]};
-  line-height: ${({ theme }) => theme.lineHeights[1]};
-  font-weight: 500;
-  > :not([hidden]) ~ :not([hidden]) {
-    margin-left: 0.5rem;
-  }
-  ${({ disabled }) => disabled && 'cursor: not-allowed;'}
-  ${layout}
-  ${border}
-  ${position}
-  ${color}
-  ${space}
-  ${typography}
-  ${flexbox}
-  ${boxShadow}
-`;
+}  & EffectsProps & LayoutProps & BordersProps & PositionProps & ColorProps & SpaceProps & TypographyProps & FlexboxesProps & BoxShadowProps & BackgroundsProps & SizingProps & Omit<React.ComponentPropsWithoutRef<'button'>, 'Color'>;
 
 export const BaseButton: React.ForwardRefExoticComponent<React.PropsWithoutRef<BaseButtonProps> & React.RefAttributes<HTMLButtonElement>> = forwardRef<HTMLButtonElement, BaseButtonProps>(({
   children, disabled, ...rest
 }, ref) => {
   return (
-    <StyledButton ref={ref} disabled={disabled} {...rest}>
+    <x.button
+      ref={ref}
+      disabled={disabled}
+      display="inline-flex"
+      alignContent="center"
+      justifyContent="center"
+      alignItems="center"
+      userSelect="none"
+      borderRadius={3}
+      px={3}
+      py={11}
+      fontSize={1}
+      lineHeight={1}
+      fontWeight={500}
+      marginLeft={{ '> :not([hidden]) ~ :not([hidden])': '0.5rem' }}
+      cursor={{ '&:disabled': 'not-allowed' }}
+      {...rest}
+    >
       {children}
-    </StyledButton>
+    </x.button>
   );
 });
 

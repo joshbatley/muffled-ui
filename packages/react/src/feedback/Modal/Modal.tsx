@@ -17,9 +17,9 @@ type HeaderProps = {
 
 
 const Header: React.FC<HeaderProps> = ({ children, handleClose }) => (
-  <Box display="inline-flex" pr="2" pl="4" pt="3" alignItems="center" width="100%" justifyContent="space-between" >
+  <Box display="inline-flex" pr="2" pl="4" pt="3" alignItems="center" w="100%" justifyContent="space-between" >
     <Title as="h3">{children}</Title>
-    <ClickableElement px={3} py={2} ml={5} onClick={handleClose}>
+    <ClickableElement padding="2 3" ml={5} onClick={handleClose}>
       <XMarkIcon width={20} height={20} />
     </ClickableElement>
   </Box>

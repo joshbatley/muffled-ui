@@ -12,7 +12,7 @@ export default {
 export const Showcase: StoryObj<typeof CenteredWidget> = {
   render: () => (
     <CenteredWidget>
-      <Panel height="29" p="2">
+      <Panel h="29" p="2">
         123
       </Panel>
     </CenteredWidget>

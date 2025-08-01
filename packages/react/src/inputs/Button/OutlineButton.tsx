@@ -1,28 +1,19 @@
 import { forwardRef } from 'react';
-import styled from 'styled-components';
 import { BaseButton, BaseButtonProps } from './BaseButton';
 
 export type OutlineButtonProps = BaseButtonProps & React.ComponentPropsWithRef<'button'>;
 
-const StyledButton = styled(BaseButton) <OutlineButtonProps>`
-  :disabled {
-    opacity: 0.4;
-  }
-  :hover:not(:disabled) {
-    background: ${({ theme }) => theme.colors.accent};
-  }
-`;
-
 export const OutlineButton = forwardRef<HTMLButtonElement, OutlineButtonProps>(({ children, ...rest }, ref) => (
-  <StyledButton
-    backgroundColor="background"
+  <BaseButton
+    bg={{ '': 'background', '&:hover': 'accent' }}
     boxShadow="base.0"
     border="border.1"
     color="foreground"
     lineHeight="18px"
+    opacity={{ '&:disabled': '0.4' }}
     ref={ref}
     {...rest}
   >
     {children}
-  </StyledButton>
+  </BaseButton>
 ));

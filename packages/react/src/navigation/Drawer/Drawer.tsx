@@ -1,7 +1,7 @@
 import { useState } from 'react';
-import styled from 'styled-components';
 import { Backdrop, stopPropagation, Open } from '../../utils';
 import { WithChildren } from '../../types';
+import { styled, x } from '@xstyled/styled-components';
 
 export type DrawerProps = {
   open?: boolean;
@@ -17,12 +17,6 @@ const StyledOpen = styled(Open) <{ direction: 'left' | 'right' }>`
   ${({ direction }) => direction === 'left' ? 'left: 0px;' : 'right: 0;'}
 `;
 
-const Container = styled.div`
-  width: 100%;
-  height: 100%;
-  background: ${({ theme }) => theme.colors.background};
-`;
-
 export const Drawer: React.FC<DrawerProps> = ({
   open, handleClose, direction = 'right', children,
 }) => {
@@ -35,9 +29,9 @@ export const Drawer: React.FC<DrawerProps> = ({
   return (
     <Backdrop config={{ duration: 195 }} onClick={() => setOpen(!isOpen)} onDestroyed={handleClose}>
       <StyledOpen inProp={isOpen} direction={direction} data-testId='here'>
-        <Container onClick={stopPropagation}>
+        <x.div w="100%" h="100%" bg="background" onClick={stopPropagation}>
           {children}
-        </Container>
+        </x.div>
       </StyledOpen>
     </Backdrop >
   );

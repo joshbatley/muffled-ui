@@ -12,7 +12,7 @@ export const Showcase: StoryObj<typeof Drawer> = {
     let [open, setOpen] = useState<string>('');
     return (
       <>
-        <Box display="grid" height="100vh" style={{ placeContent: 'center' }}>
+        <Box display="grid" h="100vh" style={{ placeContent: 'center' }}>
           <PrimaryButton onClick={() => setOpen('left')}>
             Open Drawer Left
           </PrimaryButton>

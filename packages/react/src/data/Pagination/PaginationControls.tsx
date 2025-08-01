@@ -17,13 +17,13 @@ export const PaginationControls: React.FC<PaginationProps> = ({
   let totalPages = Math.ceil(itemCount / limit);
 
   return (
-    <Box display="inline-flex" alignItems="center" gridColumnGap="2">
+    <Box display="inline-flex" alignItems="center" gap="2">
       <Text>Page {currentPage} of {totalPages}</Text>
         <OutlineButton
       verticalAlign="bottom"
         disabled={currentPage === 1}
         onClick={() => setSkip(0)}
-          paddingX={11}
+      px={11}
       >
         <ChevronDoubleLeftIcon width={18} height={18} />
       </OutlineButton>
@@ -31,7 +31,7 @@ export const PaginationControls: React.FC<PaginationProps> = ({
         verticalAlign="bottom"
         onClick={() => setSkip(skip - limit)}
         disabled={currentPage === 1}
-          paddingX={11}
+          px={11}
       >
         <ChevronLeftIcon width={18} height={18} />
       </OutlineButton>
@@ -41,7 +41,7 @@ export const PaginationControls: React.FC<PaginationProps> = ({
         verticalAlign="bottom"
         onClick={() => setSkip(skip + limit)}
         disabled={currentPage === totalPages}
-          paddingX={11}
+        px={11}
       >
         <ChevronRightIcon width={18} height={18} />
       </OutlineButton>
@@ -50,7 +50,7 @@ export const PaginationControls: React.FC<PaginationProps> = ({
         verticalAlign="bottom"
         onClick={() => setSkip(itemCount - limit)}
         disabled={currentPage === totalPages}
-        paddingX={11}
+        px={11}
       >
         <ChevronDoubleRightIcon width={18} height={18} />
       </OutlineButton>

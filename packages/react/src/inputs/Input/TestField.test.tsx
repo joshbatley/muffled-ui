@@ -4,7 +4,7 @@ import { MuffledUI } from '../../utils';
 import { Input } from '.';
 
 function render(Comp: any) {
-  return testRender(<MuffledUI>{Comp}</MuffledUI>);
+  return testRender(<MuffledUI theme="Light">{Comp}</MuffledUI>);
 }
 
 describe('Input test', () => {

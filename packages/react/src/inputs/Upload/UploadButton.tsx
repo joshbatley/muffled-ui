@@ -1,26 +1,19 @@
-import { useCallback } from 'react';
+import { forwardRef, useCallback } from 'react';
 import { ArrowUpTrayIcon } from '@heroicons/react/24/outline';
-import styled from 'styled-components';
 import { OutlineButton } from '../../inputs/Button';
 import { List } from '../../data';
 import { BasicItem } from './BasicItem';
 import { BaseUploader, BaseUploaderProps } from './BaseUploader';
 import { AcceptedFile } from './Utils';
+import { x } from '@xstyled/styled-components';
 
 export type UploadButtonProps = {
   buttonText?: boolean;
 } & Omit<BaseUploaderProps, 'container' | 'renderUploader'>;
 
-const StyledList = styled(List)`
-  margin-top: ${({ theme }) => theme.space[2]};
-  > :not([hidden]) ~ :not([hidden]) {
-    margin-top: ${({ theme }) => theme.space[2]};
-    margin-bottom: ${({ theme }) => theme.space[2]};
-  }
-  :empty {
-    margin: 0px;
-  }
-`;
+const Container = forwardRef<HTMLDivElement, { isDragActive: boolean; }>(({ isDragActive, ...rest }, ref) => (
+  <x.div ref={ref} {...rest} />
+));
 
 export const UploadButton: React.FC<UploadButtonProps> = ({
   buttonText = 'Upload file', ...rest
@@ -33,16 +26,16 @@ export const UploadButton: React.FC<UploadButtonProps> = ({
   ), [buttonText]);
 
   let defaultRender = useCallback((files: AcceptedFile[], handleDelete: any) => (
-    <StyledList>
+    <List mt={{ '': 2, ' > :not([hidden]) ~ :not([hidden])': 2 }} mb={{ ' > :not([hidden]) ~ :not([hidden])':2 }} margin={{ ':empty': 0 }}>
       {files.map(file => (
         <BasicItem key={file.key} file={file} handleDelete={handleDelete} />
       ))}
-    </StyledList>
+    </List>
   ), []);
 
   return (
     <BaseUploader
-      container={({ ...params }: any) => <div {...params} />}
+      container={Container}
       {...rest}
       options={{
         noClick: true,

@@ -1,5 +1,10 @@
-import styled from 'styled-components';
+import { x } from '@xstyled/styled-components';
+import { forwardRef } from 'react';
 
-export const TableCell = styled.td`
-  padding: ${({ theme }) => `0.625rem ${theme.space[3]}`}
-`;
+export const TableCell = forwardRef<HTMLTableCellElement, React.ComponentPropsWithRef<'td'>>((props, ref) => (
+  <x.td
+    ref={ref}
+    padding="0.625rem 3"
+    {...props}
+  />
+));

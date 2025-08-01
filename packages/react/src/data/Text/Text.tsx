@@ -1,12 +1,12 @@
-import styled from 'styled-components';
-import { color, ColorProps, typography, TypographyProps as Q } from 'styled-system';
+import { x } from '@xstyled/styled-components';
+import type { ColorProps, TypographyProps, OpacityProps, SizingProps } from '@xstyled/styled-components';
+import { AsProp, WithChildren } from '../../types';
 
 export type TextProps = {
   mono?: boolean;
-} & ColorProps & Q;
+  as?: AsProp;
+} & ColorProps & TypographyProps & OpacityProps & WithChildren & SizingProps;
 
-export const Text = styled.p<TextProps>`
-  font-family: ${({ mono, theme }) => mono ? theme.fonts.mono : ''};
-  ${color}
-  ${typography}
-`;
+export const Text: React.FC<TextProps> = ({ mono, ...rest }) => (
+  <x.p fontFamily={mono ? 'mono' : undefined} {...rest} />
+);

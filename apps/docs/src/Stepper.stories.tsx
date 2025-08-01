@@ -13,14 +13,14 @@ export default {
 export const Showcase: StoryObj<typeof Stepper> = {
   render: ({ ...rest }: any) => (
     <>
-      <Box height="300px">
+      <Box h="300px">
         <Stepper {...rest}>
           <StepLabel>Select campaign settings</StepLabel>
           <StepLabel>Create an ad group</StepLabel>
           <StepLabel>Create an ad</StepLabel>
         </Stepper>
       </Box>
-      <Box height="300px">
+      <Box h="300px">
         <Stepper {...rest}>
           <StepLabel>Select campaign settings</StepLabel>
           <StepLabel error>Create an ad group</StepLabel>

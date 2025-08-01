@@ -1,40 +1,36 @@
 import { useState } from 'react';
-import styled from 'styled-components';
-import {
-  FlexboxProps,
-  GridProps,
+import { x } from '@xstyled/styled-components';
+import type {
+  FlexboxesProps,
+  GridsProps,
   LayoutProps,
   OrderProps,
   PositionProps,
   SpaceProps,
-  flexbox, grid, layout, order, position, space,
-} from 'styled-system';
+  SizingProps,
+  BordersProps,
+  BackgroundsProps,
+} from '@xstyled/styled-components';
 
 export type ImageProps =
   {
     fallback?: React.ReactNode;
   }
   & React.ComponentPropsWithoutRef<'img'>
-  & FlexboxProps
-  & GridProps
+  & FlexboxesProps
+  & GridsProps
   & LayoutProps
   & OrderProps
   & PositionProps
-  & SpaceProps;
-
-const Img = styled.img`
-  ${space}
-  ${layout}
-  ${order}
-  ${grid}
-  ${flexbox}
-  ${position}
-`;
+  & SpaceProps
+  & SizingProps
+  & BordersProps
+  & BackgroundsProps;
 
 export const ImageComp: React.FC<ImageProps> = ({ fallback, ...rest }) => {
   let [hasError, setError] = useState(false);
 
   return (hasError && fallback) ? <>{fallback}</> : (
-    <Img onError={() => setError(true)} {...rest} />
+    <x.img onError={() => setError(true)} {...rest} />
   );
 };

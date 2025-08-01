@@ -22,7 +22,7 @@ export const clearInputOnSelectItem = (state: DownshiftState<any>, changes: Stat
 export const Select: React.FC<SelectProps> = ({ itemToString, children, ...rest }) => (
   <Downshift itemToString={itemToString} stateReducer={clearInputOnSelectItem} {...rest}>
     {({ getRootProps, ...downshift }) => (
-      <Box position="relative" width="100%" {...getRootProps()}>
+      <Box position="relative" w="100%" {...getRootProps()}>
         <SelectContext.Provider value={{ ...downshift, ...getRootProps() }}>
           {children}
         </SelectContext.Provider>
