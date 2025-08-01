@@ -1,4 +1,4 @@
-import { x, useTheme } from '@xstyled/styled-components';
+import { x } from '@xstyled/styled-components';
 import type { LayoutProps, SpaceProps, SizingProps } from '@xstyled/styled-components';
 
 export type SkeletonProps = {
@@ -6,8 +6,6 @@ export type SkeletonProps = {
 } & LayoutProps & SpaceProps & SizingProps;
 
 export const Skeleton: React.FC<SkeletonProps> = ({ variant = 'rectangle', ...rest }) => {
-  const theme = useTheme();
-
   const getVariantProps = () => {
     switch (variant) {
       case 'circle':
