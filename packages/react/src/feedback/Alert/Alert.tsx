@@ -1,4 +1,3 @@
-import { x, th } from '@xstyled/styled-components';
 import { ExclamationCircleIcon } from '@heroicons/react/24/outline';
 import { Box, Text, Title } from '../../data';
 import { CloseBtn } from './CloseBtn';

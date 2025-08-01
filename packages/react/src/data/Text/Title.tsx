@@ -10,7 +10,6 @@ export type HeadingProps = {
 export const Title: React.FC<HeadingProps> = ({
   children,
   as = 'h1',
-  color = 'foreground',
   fontWeight = 'bold',
   fontSize,
   ...rest
@@ -33,7 +32,6 @@ export const Title: React.FC<HeadingProps> = ({
   return (
     <x.h1
       as={as}
-      // color={color}
       fontWeight={fontWeight}
       fontSize={determineFontSize()}
       {...rest}

@@ -1,6 +1,4 @@
 import { forwardRef } from 'react';
-import { styled, th } from '@xstyled/styled-components';
-import { darken } from 'polished';
 import { BaseButton, BaseButtonProps } from './BaseButton';
 
 export type DestructiveButtonProps = BaseButtonProps & React.ComponentPropsWithRef<'button'>;

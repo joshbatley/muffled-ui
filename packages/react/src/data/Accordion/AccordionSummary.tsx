@@ -1,7 +1,6 @@
 import { ChevronRightIcon } from '@heroicons/react/24/solid';
 import { ClickableElement } from '../../inputs/Button';
 import { WithChildren } from '../../types';
-import { th } from '@xstyled/styled-components';
 import { Box } from '../Box';
 
 type AccordionSummaryProps = {

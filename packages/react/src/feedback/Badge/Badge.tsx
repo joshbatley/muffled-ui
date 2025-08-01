@@ -1,4 +1,4 @@
-import { th, x } from '@xstyled/styled-components';
+import {  x } from '@xstyled/styled-components';
 import { Box } from '../../data';
 import { Position, WithChildren } from '../../types';
 
