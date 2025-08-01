@@ -5,19 +5,16 @@ import React from 'react';
 export type HeadingProps = {
   children?: React.ReactNode;
   as?: 'h1' | 'h2' | 'h3' | 'h4' | 'h5' | 'h6';
+  color?: string;
 } & ColorProps & TypographyProps & LayoutProps;
 
 export const Title: React.FC<HeadingProps> = ({
   children,
   as = 'h1',
-  fontWeight = 'bold',
-  fontSize,
   ...rest
 }) => {
 
   const determineFontSize = () => {
-    if (fontSize) return fontSize;
-
     switch (as) {
       case 'h1': return 5;
       case 'h2': return 4;
@@ -32,7 +29,7 @@ export const Title: React.FC<HeadingProps> = ({
   return (
     <x.h1
       as={as}
-      fontWeight={fontWeight}
+      fontWeight={600}
       fontSize={determineFontSize()}
       {...rest}
     >
