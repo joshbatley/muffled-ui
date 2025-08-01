@@ -5,7 +5,7 @@ export type RadioPrpos = Omit<BaseControlProps, 'icon' | 'rounded'>;
 
 export const Radio: React.FC<RadioPrpos> = ({ ...rest }) => (
   <BaseControl
-    icon={<RadioIcon w="16" h="16" />}
+    icon={<RadioIcon width="16" height="16" />}
     type="radio"
     labelText={rest.labelText || rest.value?.toString()}
     value={rest.value || rest.labelText}

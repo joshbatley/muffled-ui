@@ -11,7 +11,6 @@ const Label = styled.label<{ disabled: boolean; checked?: boolean; }>`
   display: flex;
   align-items: center;
   cursor: ${({ disabled }) => disabled ? 'not-allowed' : 'pointer'};
-  color: ${({ theme, disabled }) => disabled ? theme.colors.mutedForeground : theme.colors.foreground};
   > :not([hidden]) ~ :not([hidden]) {
     margin-left: 0.5rem;
   }
@@ -21,21 +20,15 @@ const Label = styled.label<{ disabled: boolean; checked?: boolean; }>`
     position: relative;
   }
   div > svg {
-    ${({ theme, checked }) => checked && `
-        color: ${theme.colors.background};
-    `}
+    color: background;
   }
 
   :hover div  {
-    ${({ theme, checked }) => `
-        background: ${checked ? theme.colors.foreground : theme.colors.background};
-    `}
+    background: foreground;
   }
 
   :hover div > svg {
-    ${({ theme, checked }) => `
-        color: ${checked ? theme.colors.background : theme.colors.foreground};
-    `}
+    color: input;
   }
 `;
 
@@ -60,7 +53,7 @@ export const BaseControl: React.FC<BaseControlProps> = ({
       >
         <x.input display="none" disabled={disabled} {...rest}></x.input>
         <Box bg={rest.checked ? 'primary' : 'background'} w="100%" h="100%" position="absolute" />
-        {icon}
+        <Box color={ disabled ? 'mutedForeground' : 'foreground' }>{icon}</Box>
       </x.div>
     {labelText}
   </Label>
