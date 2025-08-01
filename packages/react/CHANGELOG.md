@@ -1,5 +1,11 @@
 # @muffled-ui/react
 
+## 1.1.0
+
+### Minor Changes
+
+- 9eaa2bc: Migration to xstyle
+
 ## 1.0.23
 
 ### Patch Changes
