@@ -1,4 +1,4 @@
-import { ThemeProvider } from '@xstyled/styled-components';
+import { ColorModeProvider, ThemeProvider } from '@xstyled/styled-components';
 import { LightTheme, DarkTheme, ProvidedTheme } from './Theme';
 import { GlobalStyles } from './GlobalStyles';
 import { createContext, useContext, useEffect, useState } from 'react';
@@ -49,8 +49,10 @@ export const MuffledUI: React.FC<ThemeProviderProps> = ({ children }) => {
       toggleTheme: () => setThemeKey(themeKey == 'Dark' ? 'Light' : 'Dark'),
     }}>
       <ThemeProvider theme={theme}>
-        <GlobalStyles theme={theme} />
-        {children}
+        <ColorModeProvider>
+          <GlobalStyles theme={theme} />
+          {children}
+        </ColorModeProvider>
       </ThemeProvider>
     </SettingsContext.Provider>
   );
