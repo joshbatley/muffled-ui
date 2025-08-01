@@ -4,7 +4,7 @@ import { MuffledUI } from '../../../utils';
 import { Checkbox } from '.';
 
 function render(Comp: any) {
-  return testRender(<MuffledUI>{Comp}</MuffledUI>);
+  return testRender(<MuffledUI theme="Light">{Comp}</MuffledUI>);
 }
 
 const onChangeMock = jest.fn();

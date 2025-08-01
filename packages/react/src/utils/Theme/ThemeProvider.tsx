@@ -49,10 +49,8 @@ export const MuffledUI: React.FC<ThemeProviderProps> = ({ children }) => {
       toggleTheme: () => setThemeKey(themeKey == 'Dark' ? 'Light' : 'Dark'),
     }}>
       <ThemeProvider theme={theme}>
-        <ColorModeProvider>
-          <GlobalStyles theme={theme} />
-          {children}
-        </ColorModeProvider>
+        <GlobalStyles theme={theme} />
+        {children}
       </ThemeProvider>
     </SettingsContext.Provider>
   );

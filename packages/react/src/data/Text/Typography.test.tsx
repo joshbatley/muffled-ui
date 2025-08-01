@@ -4,7 +4,7 @@ import { MuffledUI } from '../../utils';
 import { Text } from '.';
 
 function render(component: ReactNode) {
-  return testRender(<MuffledUI>{component}</MuffledUI>);
+  return testRender(<MuffledUI theme="Light">{component}</MuffledUI>);
 }
 
 describe('Text component', () => {
