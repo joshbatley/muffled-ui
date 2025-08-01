@@ -1,18 +1,20 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`Loader it renders 1`] = `
+.c1 {
+  fill: none;
+  color: hsl(220,10%,20%);
+}
+
+.c2 {
+  fill: none;
+  color: hsl(0,0%,95%);
+}
+
 .c0 {
   -webkit-animation: spin 1s linear infinite;
   animation: spin 1s linear infinite;
   stroke: currentColor;
-}
-
-.c1 {
-  color: hsl(220,5%,20%);
-}
-
-.c2 {
-  color: hsl(0,0%,95%);
 }
 
 <div>
@@ -26,7 +28,6 @@ exports[`Loader it renders 1`] = `
       class="c1"
       cx="50"
       cy="50"
-      fill="none"
       r="20"
       stroke-width="4"
     />
@@ -34,7 +35,6 @@ exports[`Loader it renders 1`] = `
       class="c2"
       cx="50"
       cy="50"
-      fill="none"
       r="20"
       stroke-dasharray="60"
       stroke-dashoffset="-50"

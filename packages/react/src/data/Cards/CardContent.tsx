@@ -1,8 +1,8 @@
 import { x } from '@xstyled/styled-components';
-import type { BorderProps, SpaceProps } from '@xstyled/styled-components';
+import type { BordersProps, SpaceProps } from '@xstyled/styled-components';
 import { forwardRef } from 'react';
 
-export type CardContentProps = SpaceProps & BorderProps & React.ComponentPropsWithRef<'div'>;
+export type CardContentProps = SpaceProps & BordersProps & React.ComponentPropsWithRef<'div'>;
 
 export const CardContent = forwardRef<HTMLDivElement, CardContentProps>(({ children, ...rest }, ref) => (
   <x.div

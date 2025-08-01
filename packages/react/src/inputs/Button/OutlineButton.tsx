@@ -5,7 +5,7 @@ export type OutlineButtonProps = BaseButtonProps & React.ComponentPropsWithRef<'
 
 export const OutlineButton = forwardRef<HTMLButtonElement, OutlineButtonProps>(({ children, ...rest }, ref) => (
   <BaseButton
-    bg="background"
+    bg={{ '': 'background', '&:hover': 'accent' }}
     boxShadow="base.0"
     border="border.1"
     color="foreground"

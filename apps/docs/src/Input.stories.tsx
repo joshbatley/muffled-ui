@@ -18,12 +18,12 @@ export default {
 };
 
 const Before = ({ ...rest }) => (
-  <ClickableElement px="3" py="2" onClick={() => alert('boo')} {...rest}>
+  <ClickableElement padding="0 3" onClick={() => alert('boo')} {...rest}>
     https://
   </ClickableElement>
 );
 const After = ({ ...rest }) => (
-  <Box px="3" py="2">
+  <Box px="3">
     <Text {...rest}>.com</Text>
   </Box>
 );

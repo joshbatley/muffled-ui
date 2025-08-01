@@ -1,7 +1,7 @@
-import { useCallback } from 'react';
-import styled from 'styled-components';
+import { useCallback, forwardRef } from 'react';
+import { x } from '@xstyled/styled-components';
 import { ArrowUpTrayIcon } from '@heroicons/react/24/outline';
-import { Text, List } from '../../data';
+import { Text, List, Box } from '../../data';
 import { TileItem } from './TileItem';
 import { BasicItem } from './BasicItem';
 import { BaseUploader, BaseUploaderProps } from './BaseUploader';
@@ -12,48 +12,26 @@ export type UploadZoneProps = {
   bottomText?: string;
 } & Omit<BaseUploaderProps, 'container' | 'renderUploader'>;
 
-const Container = styled.div<{ isDragActive: boolean }>`
-  width: 100%;
-  display: flex;
-  flex-direction: column;
-  text-align: center;
-  justify-content: center;
-  align-items: center;
-  cursor: pointer;
-  border-radius: ${({ theme }) => theme.radii[2]};
-  border-color: ${({ theme }) => theme.colors.border};
-  border-width: 4px;
-  border-style: dashed;
-  padding: ${({ theme }) => `${theme.space[5]} ${theme.space[2]}`};
-
-  > :not([hidden]) ~ :not([hidden]) {
-    margin: ${({ theme }) => theme.space[1]} 0;
-  }
-
-  ${({ isDragActive, theme }) => isDragActive && `
-    background: ${theme.colors.muted};
-    border-color: ${theme.colors.accent};
-  `}
-`;
-
-const StyledList = styled(List)`
-  margin-top: ${({ theme }) => theme.space[2]};
-  > :not([hidden]) ~ :not([hidden]) {
-    margin-top: ${({ theme }) => theme.space[2]};
-    margin-bottom: ${({ theme }) => theme.space[2]};
-  }
-  :empty {
-    margin: 0px;
-  }
-`;
-
-const TrayIcon = styled(ArrowUpTrayIcon) <{ isDragActive: boolean }>`
-  color: ${({ theme }) => theme.colors.foreground};
-  ${({ isDragActive, theme }) => isDragActive && `
-    color: ${theme.colors.foreground};
-    ${theme.animations.bounce}
-  `}
-`;
+const Container = forwardRef<HTMLDivElement, { isDragActive: boolean; }>(({ isDragActive, ...rest }, ref) => (
+  <x.div
+    w="100%"
+    display="flex"
+    flexDirection="column"
+    textAlign="center"
+    justifyContent="center"
+    alignItems="center"
+    cursor="pointer"
+    borderRadius="3"
+    borderColor={isDragActive ? 'accent' : 'border'}
+    bg={isDragActive ? 'muted' : 'background'}
+    borderWidth="4px"
+    borderStyle="dashed"
+    padding="5 2"
+    margin={{ '> :not([hidden]) ~ :not([hidden])': '1 0' }}
+    ref={ref}
+    {...rest}
+  />
+));
 
 export const UploadZone: React.FC<UploadZoneProps> = ({
   showAsTile,
@@ -63,7 +41,7 @@ export const UploadZone: React.FC<UploadZoneProps> = ({
 }) => {
   let Uploader = useCallback((isDragActive: boolean) => (
     <>
-      <TrayIcon width={30} height={30} isDragActive={isDragActive} />
+      <Box color="foreground" animation={isDragActive ? 'bounce' : 'none'}><ArrowUpTrayIcon width={30} height={30}  /></Box>
       {isDragActive ? <Text fontWeight="700" color="base">And drop your file to upload</Text> :
         <Text>
           Drag and drop, or <Text as="span" color="primary">click to find</Text> a file
@@ -75,13 +53,13 @@ export const UploadZone: React.FC<UploadZoneProps> = ({
   ), [bottomText]);
 
   let defaultRender = useCallback((files: AcceptedFile[], handleDelete: any) => (
-    <StyledList>
+    <List mt={{ '': 2, ' > :not([hidden]) ~ :not([hidden])': 2 }} mb={{ ' > :not([hidden]) ~ :not([hidden])':2 }} margin={{ ':empty': 0 }}>
       {files.map(file => showAsTile ? (
         <TileItem key={file.key} file={file} handleDelete={handleDelete} />
       ) : (
         <BasicItem key={file.key} file={file} handleDelete={handleDelete} />
       ))}
-    </StyledList>
+    </List>
   ), [showAsTile]);
 
   return (

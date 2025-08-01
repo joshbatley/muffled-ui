@@ -1,16 +1,25 @@
-import styled from 'styled-components';
+import { x } from '@xstyled/styled-components';
+import type {
+  ColorProps, SpaceProps, LayoutProps, BoxShadowProps, BordersProps, TypographyProps, SizingProps,
+} from '@xstyled/styled-components';
+import { forwardRef } from 'react';
 
-export const BaseInput = styled.input`
-  width: 100%;
-  outline: 2px solid transparent;
-  outline-offset: 2px;
-  background: transparent;
-  color: ${({ theme }) => theme.colors.foreground};
-  padding: ${({ theme }) => theme.space[1]} ${({ theme }) => theme.space[3]};
-  font-size: ${({ theme }) => theme.fontSizes[1]};
-  line-height: ${({ theme }) => theme.lineHeights[1]};
-  height: ${({ theme }) => theme.sizes[8]};
-  :placeholder {
-    color: ${({ theme }) => theme.colors.mutedForeground};
-  }
-`;
+export type BaseInputProps = ColorProps & SpaceProps & LayoutProps & BoxShadowProps
+  & BordersProps & TypographyProps & SizingProps
+  & React.ComponentPropsWithRef<'input'>;
+
+export const BaseInput = forwardRef<HTMLInputElement, BaseInputProps>(({ ...rest }, ref) => (
+  <x.input
+    ref={ref}
+    w="100%"
+    outline="2px solid transparent"
+    outlineOffset="2px"
+    bg="transparent"
+    color={{ _: 'foreground', placeholder: 'mutedForeground' }}
+    padding="1 3"
+    fontSize={1}
+    lineHeight={1}
+    h="8"
+    {...rest}
+  />
+));

@@ -1,4 +1,3 @@
-import styled from 'styled-components';
 import { PaperClipIcon, TrashIcon } from '@heroicons/react/24/outline';
 import { ClickableElement } from '../../inputs/Button';
 import { Tooltip } from '../../feedback/Tooltip';
@@ -10,47 +9,33 @@ export type BasicItemProps = {
   handleDelete: (key: string) => void;
 };
 
-const BoxStyled = styled(Box)`
-  :hover button {
-    opacity: 1;
-  }
-`;
-
-const DeleteBtn = styled(ClickableElement) <{ hasError: boolean }>`
-  opacity: ${({ hasError }) => hasError ? 1 : 0};
-`;
-
-const SpacedBox = styled(Box)`
-  > :not([hidden]) ~ :not([hidden]) {
-    margin-left: ${({ theme }) => theme.space[2]};
-  }
-`;
-
 export const BasicItem: React.FC<BasicItemProps> = ({ file, handleDelete }) => {
   let { bytes, name } = file.meta;
   let hasError = (file.errors?.length || 0) > 0;
   let errorMessage = hasError && file.errors!.reduce((acc, curr) => acc += curr.message + ' ', '');
   return (
     <Tooltip disabled={!hasError} as='li' tooltip={errorMessage}>
-      <BoxStyled
+      <Box
         display="flex"
         alignItems="center"
         justifyContent="space-between"
+        gap="2"
         px="1"
         borderRadius="1"
+        opacity={{ ':hover button': 1 }}
         color={hasError ? 'error' : 'base'}
       >
-        <SpacedBox display="flex" alignItems="center">
+        <Box display="flex" alignContent="center" gap="2">
           <PaperClipIcon widths={16} height={16} />
           <Text as="span">{name}</Text>
           {!hasError && <Text as="span" fontSize={1} lineHeight={1}>{bytes}</Text>}
-        </SpacedBox>
-        <SpacedBox display="flex" alignItems="center">
-          <DeleteBtn hasError={hasError} onClick={() => handleDelete(file.key)}>
+        </Box>
+        <Box display="flex" alignItems="center">
+          <ClickableElement opacity={hasError ? 1 : 0} onClick={() => handleDelete(file.key)}>
             <TrashIcon width={16} height={16} />
-          </DeleteBtn>
-        </SpacedBox>
-      </BoxStyled>
+          </ClickableElement>
+        </Box>
+      </Box>
     </Tooltip>
   );
 };

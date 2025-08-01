@@ -1,8 +1,7 @@
 import { forwardRef } from 'react';
 import { CalendarIcon } from '@heroicons/react/24/outline';
-import styled from 'styled-components';
 import { ClickableElement, OutlineButton } from '../../../inputs/Button';
-import { Text } from '../../../data';
+import { Box, Text } from '../../../data';
 
 export type DateInputProps = {
   placeholder?: string;
@@ -11,26 +10,6 @@ export type DateInputProps = {
   clear?: () => void;
   showClear?: boolean;
 };
-
-const Container = styled.div`
-  display: flex;
-  > :not([hidden]) ~ :not([hidden]) {
-    margin-left: ${({ theme }) => theme.space[1]};
-    margin-right:${({ theme }) => theme.space[4]};
-  }
-`;
-
-const Icon = styled(CalendarIcon)`
-  color: ${({ theme }) => theme.colors.foreground};
-  margin-right: ${({ theme }) => theme.space[2]};
-`;
-
-const ClearBtn = styled(ClickableElement)`
-  color: ${({ theme }) => theme.colors.foreground};
-  :hover {
-    color: ${({ theme }) => theme.colors.foreground};
-  }
-`;
 
 export const DateInput = forwardRef<HTMLButtonElement, DateInputProps>(({
   value,
@@ -49,18 +28,18 @@ export const DateInput = forwardRef<HTMLButtonElement, DateInputProps>(({
     (<Text as="span" color="mutedForeground">{placeholder}</Text>);
 
   return (
-    <OutlineButton bg="background" w="100%" fontWeight="400" lineHeight="inherit" justifyContent="space-between" ref={ref} onClick={onClick}>
-      <Container>
-        <Icon width={16} height={16} />
+    <OutlineButton w="100%" fontWeight="400" lineHeight="inherit" justifyContent="space-between" ref={ref} onClick={onClick}>
+      <Box display="flex" alignContent="center" ml={{ ' > :not([hidden]) ~ :not([hidden])': '1' }} mr={{ ' > :not([hidden]) ~ :not([hidden])': 4 }} >
+        <Box color="primary" mr="2" >
+          <CalendarIcon width={16} height={16} />
+        </Box>
         {displayValue}
-      </Container>
-      {
-        showClear && value && (
-          <ClearBtn onClick={handleClear} as="a">
-            Clear
-          </ClearBtn>
-        )
-      }
+      </Box>
+      {showClear && value && (
+        <ClickableElement color="foreground" opacity={{ ':hover': 0.3 }} onClick={handleClear} as="a">
+          Clear
+        </ClickableElement>
+      )}
     </OutlineButton>
   );
 });

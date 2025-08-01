@@ -7,6 +7,9 @@ import type {
   OrderProps,
   PositionProps,
   SpaceProps,
+  SizingProps,
+  BordersProps,
+  BackgroundsProps,
 } from '@xstyled/styled-components';
 
 export type ImageProps =
@@ -19,7 +22,10 @@ export type ImageProps =
   & LayoutProps
   & OrderProps
   & PositionProps
-  & SpaceProps;
+  & SpaceProps
+  & SizingProps
+  & BordersProps
+  & BackgroundsProps;
 
 export const ImageComp: React.FC<ImageProps> = ({ fallback, ...rest }) => {
   let [hasError, setError] = useState(false);

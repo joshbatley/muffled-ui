@@ -1,4 +1,3 @@
-import styled from 'styled-components';
 import { Box } from '../../data';
 
 export type AddonElementProps = {
@@ -7,27 +6,21 @@ export type AddonElementProps = {
   right?: boolean;
 };
 
-const StyledBox = styled(Box)`
-  &:focus {
-    z-index:0;
-    outline: none;
-  }
-
-  button:focus {
-    outline: none;
-    box-shadow: none;
-  }
-
-  :hover {
-    opacity: 0.8;
-  }
-`;
-
 export const AddonElement: React.FC<AddonElementProps> = ({
   addon, left, right,
 }) =>
   addon ? (
-    <StyledBox bg="offsetBackground" borderRight={right ? 'none' : 'border.1'} borderLeft={left ? 'none' : 'border.1'} display="flex" alignItems="center">
+    <Box
+      bg="offsetBackground"
+      borderRight={right ? 'none' : 'border.1'}
+      borderLeft={left ? 'none' : 'border.1'}
+      display="flex"
+      alignItems="center"
+      zIndex={{ '&:focus': 0 }}
+      outline={{ '&:focus': 'none', 'button:focus': 'none' }}
+      boxShadow={{ 'button:focus': 'none' }}
+      opacity={{ '&:hover': 0.8 }}
+    >
       {addon}
-    </StyledBox>
+    </Box>
   ) : null;

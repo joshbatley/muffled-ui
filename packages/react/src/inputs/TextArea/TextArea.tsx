@@ -1,19 +1,29 @@
-import styled from 'styled-components';
+import { x } from '@xstyled/styled-components';
+import type {
+  ColorProps, SpaceProps, LayoutProps, BoxShadowProps, BordersProps, TypographyProps, SizingProps,
+} from '@xstyled/styled-components';
+import { forwardRef } from 'react';
 
-export const TextArea = styled.textarea`
-  box-shadow: ${({ theme }) => theme.shadows.base[0]};
-  border: ${({ theme }) => theme.borders.border[1]};
-  padding: ${({ theme }) => theme.space[2]};
-  width: 100%;
-  min-height: ${({ theme }) => theme.sizes[16]};
-  background: ${({ theme }) => theme.colors.background};
-  font-size: ${({ theme }) => theme.fontSizes[1]};
-  line-height: ${({ theme }) => theme.lineHeights[1]};
-  border-radius: ${({ theme }) => theme.radii[3]};
-  :focus {
-    outline: 2px solid transparent;
-    outline-offset: 2px;
-    border-color: ${({ theme }) => theme.colors.primary};
-    z-index: 10;
-  }
-`;
+export type TextAreaProps = ColorProps & SpaceProps & LayoutProps & BoxShadowProps
+  & BordersProps & TypographyProps & SizingProps
+  & React.ComponentPropsWithRef<'textarea'>;
+
+export const TextArea = forwardRef<HTMLTextAreaElement, TextAreaProps>(({ ...rest }, ref) => (
+  <x.textarea
+    ref={ref}
+    boxShadow="base.0"
+    border="border.1"
+    padding={2}
+    w="100%"
+    minHeight={16}
+    bg="background"
+    fontSize={1}
+    lineHeight={1}
+    borderRadius={3}
+    outline={{ '&:focus': '2px solid transparent' }}
+    outlineOffset={{ '&:focus': '2px' }}
+    borderColor={{ '&:focus': 'primary' }}
+    zIndex={{ '&:focus': 10 }}
+    {...rest}
+  />
+));

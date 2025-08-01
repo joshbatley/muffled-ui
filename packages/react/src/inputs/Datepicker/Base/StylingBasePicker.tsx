@@ -1,7 +1,8 @@
 import { darken } from 'polished';
-import styled from 'styled-components';
+import styled from '@xstyled/styled-components';
+import { WithChildren } from '../../../types';
 
-export const Container = styled.div`
+export const Container: React.FC<WithChildren> = styled.div`
 /*
 --------------------------
   Day names

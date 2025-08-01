@@ -1,6 +1,5 @@
 import { Ref, useState } from 'react';
 import { ReactDatePickerCustomHeaderProps } from 'react-datepicker';
-import styled from 'styled-components';
 import { format, getYear } from 'date-fns';
 import { ClickableElement } from '../../../inputs/Button';
 import { Menu, MenuItem } from '../../../navigation/Menu';
@@ -21,10 +20,6 @@ const months = [
   'November',
   'December',
 ];
-
-const StyledMenu = styled(Menu)`
-  max-height: 200px;
-`;
 
 export type DateHeaderProps = {
   monthsShown?: number;
@@ -99,12 +94,11 @@ export const DateHeader: React.FC<DateHeaderProps> = ({
         </ClickableElement>
         {showRightNav && <RightNavigation increaseMonth={canModifyMonths(increaseMonth)} increaseYear={canModifyYear(increaseYearFn)} />}
       </Box>
-      <StyledMenu inline handleClose={() => setMonthMenuOpen(false)} itemRef={itemRef} isOpen={isOpen}>
+      <Menu inline maxHeight="200px" handleClose={() => setMonthMenuOpen(false)} itemRef={itemRef} isOpen={isOpen}>
         {months.map((month, idx) => (
           <MenuItem key={month} onClick={() => handleMonthChange(idx)}>{month}</MenuItem>
         ))}
-      </StyledMenu>
+      </Menu>
     </div >
   );
 };
-

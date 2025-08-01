@@ -1,13 +1,7 @@
 import { useEffect, useRef, useState } from 'react';
-import styled from 'styled-components';
 import { ChevronLeftIcon, ChevronRightIcon } from '@heroicons/react/24/outline';
 import { Box } from '../../data';
 import { WithChildren } from '../../types';
-
-const ScrollBox = styled(Box)`
-  white-space: nowrap;
-  scroll-snap-type: x;
-`;
 
 export const Scrollable: React.FC<WithChildren> = ({ children }) => {
   let [{ left, right }, setArrows] = useState({ left: false, right: false });
@@ -43,14 +37,16 @@ export const Scrollable: React.FC<WithChildren> = ({ children }) => {
           <ChevronLeftIcon width={16} height={16} />
         </Box>
       )}
-      <ScrollBox
+      <Box
+        whiteSpace="nowrap"
         maxHeight="100%"
         ref={ref}
         overflowX="auto"
+        style={{ scrollSnapType: 'x' }}
         onScroll={handleScroll}
       >
         {children}
-      </ScrollBox>
+      </Box>
       {right && (
         <Box h="100%" w="5" position="absolute" right="0" top="0" zIndex="50" display="flex" alignItems="center" justifyContent="end" color="baseHighlight">
           <ChevronRightIcon width={16} height={16} />

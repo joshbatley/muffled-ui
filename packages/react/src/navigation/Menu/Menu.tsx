@@ -4,6 +4,7 @@ import { Placement } from '@popperjs/core';
 import { ClickOutside } from '../../utils';
 import { Box } from '../../data';
 import { WithChildren } from '../../types';
+import type { SizingProps } from '@xstyled/styled-components';
 
 export type MenuProps = {
   direction?: Placement;
@@ -11,7 +12,7 @@ export type MenuProps = {
   itemRef: Element | null;
   handleClose: () => void;
   inline?: boolean;
-} & WithChildren;
+} & WithChildren & SizingProps;
 
 export const Menu: React.FC<MenuProps> = ({ children, isOpen, direction = 'bottom-start', itemRef, handleClose, inline = false, ...rest }) => {
   let [popperRef, setPopperRef] = useState<HTMLDivElement | null>(null);

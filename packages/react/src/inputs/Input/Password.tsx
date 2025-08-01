@@ -6,7 +6,7 @@ import { Input, InputProps } from './Input';
 export type PasswordProps = InputProps;
 
 const Btn: React.FC<{ showPassword: boolean, onClick: () => void }> = ({ showPassword, onClick, ...rest }) => (
-  <ClickableElement px="3" py="2" type="button" onClick={onClick} {...rest}>
+  <ClickableElement padding="2 3" type="button" onClick={onClick} {...rest}>
     {showPassword ? <EyeSlashIcon width={16} /> : <EyeIcon width={16} />}
   </ClickableElement>
 );

@@ -18,7 +18,8 @@ export const BaseButton: React.ForwardRefExoticComponent<React.PropsWithoutRef<B
       ref={ref}
       disabled={disabled}
       display="inline-flex"
-      placeContent="center"
+      alignContent="center"
+      justifyContent="center"
       alignItems="center"
       userSelect="none"
       borderRadius={3}

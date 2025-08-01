@@ -1,9 +1,9 @@
 import { forwardRef, ReactElement } from 'react';
-import styled from 'styled-components';
 import { Box } from '../../data';
 import { BaseInput } from './BaseInput';
 import { AddonElement } from './AddonElement';
 import { OptionalIcon } from './OptionalIcon';
+import styled from '@xstyled/styled-components';
 
 export type InputProps = {
   before?: ReactElement;
@@ -17,7 +17,7 @@ export type InputProps = {
 const Container = styled(Box) <{ disabled: boolean; }>`
   overflow: hidden;
   :focus-within {
-    border: ${({ theme }) => theme.borders.primary[1]};
+    border: ${({ theme }) => theme.borders.input[1]};
   }
   ${({ disabled }) => disabled && `
     opacity: 0.5;
