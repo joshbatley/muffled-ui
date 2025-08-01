@@ -12,7 +12,7 @@ export const ThreeColumns: React.FC<ThreeColumnsProps> = ({
 }) => (
   <TwoColumns sideNav={sideNav}>
     <Box
-      height="100%"
+      h="100%"
       minWidth="0"
       display={{ md: 'grid' }}
       gridTemplateColumns={{ md: '19.5rem auto' }}

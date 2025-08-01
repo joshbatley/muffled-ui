@@ -29,12 +29,12 @@ const After = ({ ...rest }) => (
 );
 
 export const Showcase: StoryObj<typeof Input> = {
-  render: ({ ...rest }) => <Box width="320px"><Input {...rest} /></Box>,
+  render: ({ ...rest }) => <Box w="320px"><Input {...rest} /></Box>,
 };
 
 export const WithIcons: StoryObj<typeof Input> = {
   render: ({ ...rest }) => (
-    <Box spaceYBetween="2" width="320px">
+    <Box spaceY="2" w="320px">
       <Input prefixMarkIcon={<CalendarIcon width={16} />} {...rest} />
       <Input suffixMarkIcon={<CodeBracketIcon width={16} />} {...rest} />
       <Input
@@ -48,7 +48,7 @@ export const WithIcons: StoryObj<typeof Input> = {
 
 export const WithAddons: StoryObj<typeof Input> = {
   render: ({ ...rest }) => (
-    <Box spaceYBetween="2" width="320px">
+    <Box spaceY="2" w="320px">
       <Input before={<Before />} {...rest} />
       <Input after={<After />} {...rest} />
       <Input before={<Before />} after={<After />} {...rest} />
@@ -57,23 +57,23 @@ export const WithAddons: StoryObj<typeof Input> = {
 };
 
 export const AsPassword: StoryObj<typeof PasswordComp> = {
-  render: ({ ...rest }) => <Box width="320px"><PasswordComp {...rest} /></Box>,
+  render: ({ ...rest }) => <Box w="320px"><PasswordComp {...rest} /></Box>,
 };
 
 export const AsNumber: StoryObj<typeof NumberField> = {
-  render: ({ ...rest }) => <Box width="320px"><NumberField {...rest} /></Box>,
+  render: ({ ...rest }) => <Box w="320px"><NumberField {...rest} /></Box>,
 };
 
 export const Disabled: StoryObj<typeof Input> = {
   render: ({ ...rest }) => (
-    <Box spaceYBetween="2" width="320px">
+    <Box spaceY="2" w="320px">
       <Input disabled {...rest} />
       <Input
         disabled
-        prefiXMarkIcon={<LockClosedIcon width={16} />}
+        prefixMarkIcon={<LockClosedIcon width={16} />}
         {...rest}
       />
-      <Input disabled suffiXMarkIcon={<EyeIcon width={16} />} {...rest} />
+      <Input disabled suffixMarkIcon={<EyeIcon width={16} />} {...rest} />
       <Input disabled before={<Before />} {...rest} />
       <Input disabled after={<After />} {...rest} />
       <Input disabled before={<Before />} after={<After />} {...rest} />

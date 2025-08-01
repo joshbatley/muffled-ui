@@ -1,9 +1,9 @@
-import styled from 'styled-components';
+import { x } from '@xstyled/styled-components';
 
-export const OrderedList = styled.ol`
-  list-style-type: decimal;
-  list-style-position: inside;
-  *::marker {
-    color:${({ theme }) => theme.colors.foreground};
-  }
-`;
+export const OrderedList: React.FC<React.ComponentPropsWithRef<'ol'>> = (props) => (
+  <x.ol
+    listStyleType="decimal"
+    listStylePosition="inside"
+    {...props}
+  />
+);

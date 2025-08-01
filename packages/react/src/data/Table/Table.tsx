@@ -1,5 +1,5 @@
 import { forwardRef } from 'react';
-import styled from 'styled-components';
+import { x } from '@xstyled/styled-components';
 import { Box } from '../Box';
 
 export type TableProps = {
@@ -7,32 +7,34 @@ export type TableProps = {
   footer?: React.ReactNode;
 } & React.ComponentPropsWithRef<'table'>;
 
-const Container = styled.div`
-  background: ${({ theme }) => theme.colors.background};
-  border: 1px solid ${({ theme }) => theme.colors.border};
-  border-radius: ${({ theme }) => theme.radii[3]};
-  contain: paint;
-`;
-
-const StyledTable = styled.table`
-  width: 100%;
-  position: relative;
-  border-collapse: collapse;
-  > :not([hidden]) ~ :not([hidden]) & :not(:last-child) {
-    border-top-width: 1px;
-    border-bottom-width: 1px;
-    border-color: ${({ theme }) => theme.colors.border}
-  }
-`;
-
 export const Table = forwardRef<HTMLTableElement, TableProps>(({ children, containerClasses, footer, ...rest }, ref) => (
   <Box>
-    <Container>
-      <StyledTable ref={ref} {...rest}>
+    <x.div
+      bg="background"
+      border="1px solid"
+      borderColor="border"
+      borderRadius={3}
+      style={{
+        contain: 'paint',
+      }}
+    >
+      <x.table
+        ref={ref}
+        w="100%"
+        position="relative"
+        borderCollapse="collapse"
+        css={{
+          '> :not([hidden]) ~ :not([hidden]) & :not(:last-child)': {
+            borderTopWidth: '1px',
+            borderBottomWidth: '1px',
+            borderColor: 'border',
+          },
+        }}
+        {...rest}
+      >
         {children}
-      </StyledTable>
-
-    </Container>
+      </x.table>
+    </x.div>
     {footer}
   </Box>
 ));

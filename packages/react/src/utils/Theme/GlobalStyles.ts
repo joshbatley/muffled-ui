@@ -1,14 +1,14 @@
-import { createGlobalStyle } from 'styled-components';
+import { createGlobalStyle, th } from '@xstyled/styled-components';
 import { ColorTheme } from './Colors';
 
-export const GlobalStyles = createGlobalStyle<{ theme: ColorTheme }>`
+export const GlobalStyles: any = createGlobalStyle<{ theme: ColorTheme }>`
   *,
   ::before,
   ::after {
     box-sizing: border-box;
     border-width: 0;
     border-style: solid;
-    border-color: ${({ theme }) => theme.colors.background}
+    border-color: ${th.color('background')};
   }
 
   body {
@@ -19,9 +19,9 @@ export const GlobalStyles = createGlobalStyle<{ theme: ColorTheme }>`
     font-style: normal;
     font-variation-settings: "wdth" 100, "YTLC" 500;
     tab-size: 4;
-    background: ${({ theme }) => theme.colors.background};
-    font-family: ${({ theme }) => theme.fonts.base};
-    color: ${({ theme }) => theme.colors.foreground};
+    background: ${th.color('background')};
+    font-family: ${th.font('base')};
+    color: ${th.color('foreground')};
     margin: 0;
   }
 
@@ -58,7 +58,7 @@ export const GlobalStyles = createGlobalStyle<{ theme: ColorTheme }>`
   kbd,
   samp,
   pre {
-    font-family: ${({ theme }) => theme.fonts.mono};
+    font-family: ${th.font('mono')};
     font-size: 1em;
   }
 
@@ -188,7 +188,7 @@ export const GlobalStyles = createGlobalStyle<{ theme: ColorTheme }>`
   input::placeholder,
   textarea::placeholder {
     opacity: 1;
-    color: ${({ theme }) => theme.colors.mutedForeground};
+    color: ${th.color('mutedForeground')};
   }
 
   button,
@@ -216,5 +216,34 @@ export const GlobalStyles = createGlobalStyle<{ theme: ColorTheme }>`
 
   [hidden] {
     display: none;
+  }
+
+  @keyframes spin {
+    from {
+      transform: rotate(0deg);
+    }
+    to {
+      transform: rotate(360deg);
+    }
+  }
+
+  @keyframes pulse {
+    0%, 100% {
+      opacity: 1;
+    }
+    50% {
+      opacity: .5;
+    }
+  }
+
+  @keyframes bounce {
+    0%, 100% {
+      transform: translateY(-25%);
+      animation-timing-function: cubic-bezier(0.8, 0, 1, 1);
+    }
+    50% {
+      transform: translateY(0);
+      animation-timing-function: cubic-bezier(0, 0, 0.2, 1);
+    }
   }
 `;

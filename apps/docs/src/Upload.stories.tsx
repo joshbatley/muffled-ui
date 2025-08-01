@@ -8,7 +8,7 @@ export default {
 
 export const UploadZone: StoryObj<typeof UZ> = {
   render: ({ ...rest }) => (
-    <Box px="3" py="2" width="50%">
+    <Box px="3" py="2" w="50%">
       <UZ {...rest} />
     </Box>
   ),

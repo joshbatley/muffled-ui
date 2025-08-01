@@ -1,6 +1,6 @@
 import { useState } from 'react';
-import styled from 'styled-components';
-import { LayoutProps, layout } from 'styled-system';
+import { x } from '@xstyled/styled-components';
+import type { LayoutProps, SizingProps } from '@xstyled/styled-components';
 import { WithChildren } from '../../types';
 
 type MediaComponent = 'video' | 'audio' | 'picture' | 'iframe' | 'img' | 'div';
@@ -12,26 +12,10 @@ export type CardMediaProps = {
   src?: string;
   alt?: string;
   fallback?: React.ReactNode;
-} & WithChildren & LayoutProps;
-
-type Props = {
-  isImageComponent?: boolean;
-  isMediaComponent?: boolean;
-  showBgImagine?: boolean;
-};
+} & WithChildren & LayoutProps & SizingProps;
 
 const MEDIA_COMPONENTS = ['video', 'audio', 'picture', 'iframe', 'img'];
 const IMAGE_COMPONENTS = ['picture', 'img'];
-
-const Component = styled.div<CardMediaProps & Props>`
-  ${layout}
-  object-fit: ${({ isImageComponent }) => isImageComponent ? 'cover' : 'unset'};
-  display: block;
-  background-size: cover;
-  background-repeat: no-repeat;
-  background-position: center;
-  ${({ image, showBgImagine }) => showBgImagine ? `background-image: url("${image}");` : ''}
-`;
 
 export const CardMedia: React.FC<CardMediaProps> = ({
   children, as, image, src, fallback, ...rest
@@ -42,16 +26,19 @@ export const CardMedia: React.FC<CardMediaProps> = ({
   let showBgImagine = !isMediaComponent && image !== undefined;
 
   return errored ? <>{fallback}</> : (
-    <Component
+    <x.div
       as={as}
       onError={() => setError(true)}
       src={src}
-      isImageComponent={isImageComponent}
-      isMediaComponent={isMediaComponent}
-      showBgImagine={showBgImagine}
+      objectFit={isImageComponent ? 'cover' : 'unset'}
+      display="block"
+      backgroundSize="cover"
+      backgroundRepeat="no-repeat"
+      backgroundPosition="center"
+      backgroundImage={showBgImagine && image ? `url("${image}")` : undefined}
       {...rest}
     >
       {children}
-    </Component>
+    </x.div>
   );
 };

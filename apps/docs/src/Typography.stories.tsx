@@ -27,7 +27,7 @@ export const Typography: StoryObj<typeof Text> = {
 
 export const Titles: StoryObj<typeof Title> = {
   render: ({ children }) => (
-    <Box spaceYBetween="2">
+    <Box spaceY="2">
       <Title as="h1">{children}</Title>
       <Title as="h2">{children}</Title>
       <Title as="h3">{children}</Title>

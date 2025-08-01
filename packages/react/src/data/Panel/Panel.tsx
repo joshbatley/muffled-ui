@@ -1,8 +1,12 @@
-import styled from 'styled-components';
+import { forwardRef } from 'react';
 import { Box, BoxProps } from '../Box';
 
-export const Panel: typeof Box = styled(Box) <BoxProps>`
-  border-radius:${({ theme }) => theme.radii[4]};
-  border: ${({ theme }) => theme.borders.border[1]};
-  background: ${({ theme }) => theme.colors.offsetBackground};
-`;
+export const Panel = forwardRef<HTMLDivElement, BoxProps>((props, ref) => (
+  <Box
+    ref={ref}
+    borderRadius={4}
+    border="border.1"
+    bg="offsetBackground"
+    {...props}
+  />
+));

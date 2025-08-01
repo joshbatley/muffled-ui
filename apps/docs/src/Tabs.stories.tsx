@@ -19,7 +19,7 @@ export const Showcase: StoryObj<typeof Tabs> = {
   render: ({ ...rest }) => (
     <Tabs value={arr[arr.length - 1]} {...rest}>
       {arr.map((i, idx) => (
-        <TabPane key={i} value={i} tab={`Tab button ${idx}`} width="100%">
+        <TabPane key={i} value={i} tab={`Tab button ${idx}`} w="100%">
           Content {idx}
         </TabPane>
       ))}

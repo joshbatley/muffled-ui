@@ -1,28 +1,37 @@
 import { forwardRef } from 'react';
-import styled from 'styled-components';
+import { x } from '@xstyled/styled-components';
 
 export type TableHeadProps = {
   headers?: string[];
   sticky?: boolean;
 } & React.ComponentPropsWithRef<'thead'>;
 
-const Thead = styled.thead<TableHeadProps>`
-  text-align: left;
-  background: ${({ theme }) => theme.colors.offsetBackground};
-  border-bottom: 1px solid ${({ theme }) => theme.colors.border};
-  ${({ sticky, theme }) => sticky && `
-    position: sticky;
-    top: 0;
-    box-shadow: ${theme.shadows.base[1]};
-  `}
-`;
+type TheadProps = TableHeadProps & {
+  ref?: React.Ref<HTMLTableSectionElement>;
+};
 
-const TableHeadItem = styled.th`
-  padding: ${({ theme }) => theme.space[3]};
-  font-weight: 600;
-  letter-spacing: 0.025em;
-  color: ${({ theme }) => theme.colors.primary};
-`;
+const Thead = ({ sticky, ...props }: TheadProps) => (
+  <x.thead
+    textAlign="left"
+    bg="offsetBackground"
+    borderBottom="1px solid"
+    borderColor="border"
+    position={sticky ? 'sticky' : undefined}
+    top={sticky ? 0 : undefined}
+    boxShadow={sticky ? 'base.1' : undefined}
+    {...props}
+  />
+);
+
+const TableHeadItem = (props: React.ComponentPropsWithRef<'th'>) => (
+  <x.th
+    padding={3}
+    fontWeight={600}
+    letterSpacing="0.025em"
+    color="primary"
+    {...props}
+  />
+);
 
 export const TableHead = forwardRef<HTMLTableSectionElement, TableHeadProps>(({ children, headers, sticky, ...rest }, ref) => {
   if (!headers) {

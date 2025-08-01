@@ -11,7 +11,7 @@ export default {
 
 export const Showcase: StoryObj<typeof Label> = {
   render: () => (
-    <Box spaceYBetween="6">
+    <Box spaceY="6">
       <Label value="Username">
         <Input placeholder="Username" />
       </Label>

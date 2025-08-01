@@ -20,6 +20,7 @@ const Comp: React.FC<{ isDark?: boolean, children: any }> = ({ children, isDark 
   }, [isDark])
 
   return (
+    // @ts-ignore
     <div>{children}</div>
   )
 }
@@ -60,6 +61,5 @@ const preview = {
     },
   },
 };
-
 
 export default preview;

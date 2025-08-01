@@ -33,7 +33,7 @@ export const Showcase: StoryObj<typeof Modal> = {
           handleClose={() => setOpen(!open)}
         >
           <Box
-            width="400px"
+            w="400px"
             pt="0"
             pb="4"
             px="4"

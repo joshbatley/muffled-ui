@@ -93,6 +93,7 @@ export const Interactable: StoryObj<typeof Table> = {
             skip={skip}
             setSkip={setSkip}
             itemCount={allRows.length}
+            setSize={() => {}}
           />
         }
       >

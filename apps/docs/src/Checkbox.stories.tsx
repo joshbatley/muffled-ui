@@ -9,7 +9,7 @@ export default {
 
 export const Showcase: StoryObj<typeof Checkbox> = {
   render: () => (
-    <Box spaceYBetween="3">
+    <Box spaceY="3">
       <Checkbox labelText="Checkbox" />
       <Checkbox checked labelText="Checked Checkbox" />
       <Checkbox disabled labelText="Disabled Checkbos" />

@@ -13,8 +13,8 @@ export default {
 
 const fallback = (
   <Box
-    width="12"
-    height="12"
+    w="12"
+    h="12"
     display="flex"
     alignItems="center"
     justifyContent="center"

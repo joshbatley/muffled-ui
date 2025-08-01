@@ -1,10 +1,12 @@
-import styled from 'styled-components';
+import { x } from '@xstyled/styled-components';
+import { forwardRef } from 'react';
 
-export const TableBody = styled.tbody`
-  background: ${({ theme }) => theme.colors.background};
-  border-top-width: 1px;
-  > :not([hidden]) ~ :not([hidden]) {
-    border-top-width: 1px;
-    border-color: ${({ theme }) => theme.colors.border}
-  }
-`;
+export const TableBody = forwardRef<HTMLTableSectionElement, React.ComponentPropsWithRef<'tbody'>>((props, ref) => (
+  <x.tbody
+    ref={ref}
+    bg="background"
+    borderColor={{ '> :not([hidden]) ~ :not([hidden])': 'border' }}
+    borderTopWidth={{ '> :not([hidden]) ~ :not([hidden])': '1px' }}
+    {...props}
+  />
+));

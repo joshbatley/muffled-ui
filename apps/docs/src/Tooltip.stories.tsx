@@ -17,9 +17,9 @@ export default {
 export const Showcase: StoryObj<typeof Tooltip> = {
   render: ({ ...rest }: any) => (
     <Box
-      spaceYBetween="2"
+      spaceY="2"
       display="grid"
-      height="100vh"
+      h="100vh"
       style={{ placeContent: 'center' }}
     >
       <Tooltip {...rest}>

@@ -49,7 +49,7 @@ export const DateInput = forwardRef<HTMLButtonElement, DateInputProps>(({
     (<Text as="span" color="mutedForeground">{placeholder}</Text>);
 
   return (
-    <OutlineButton bg="background" width="100%" fontWeight="400" lineHeight="inherit" justifyContent="space-between" ref={ref} onClick={onClick}>
+    <OutlineButton bg="background" w="100%" fontWeight="400" lineHeight="inherit" justifyContent="space-between" ref={ref} onClick={onClick}>
       <Container>
         <Icon width={16} height={16} />
         {displayValue}

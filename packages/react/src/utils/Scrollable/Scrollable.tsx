@@ -39,7 +39,7 @@ export const Scrollable: React.FC<WithChildren> = ({ children }) => {
   return (
     <Box position="relative" px="5">
       {left && (
-        <Box height="100%" width="5" position="absolute" left="0" top="0" zIndex="50" display="flex" alignItems="center" color="baseHighlight">
+        <Box h="100%" w="5" position="absolute" left="0" top="0" zIndex="50" display="flex" alignItems="center" color="baseHighlight">
           <ChevronLeftIcon width={16} height={16} />
         </Box>
       )}
@@ -52,7 +52,7 @@ export const Scrollable: React.FC<WithChildren> = ({ children }) => {
         {children}
       </ScrollBox>
       {right && (
-        <Box height="100%" width="5" position="absolute" right="0" top="0" zIndex="50" display="flex" alignItems="center" justifyContent="end" color="baseHighlight">
+        <Box h="100%" w="5" position="absolute" right="0" top="0" zIndex="50" display="flex" alignItems="center" justifyContent="end" color="baseHighlight">
           <ChevronRightIcon width={16} height={16} />
         </Box>
       )}

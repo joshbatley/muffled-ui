@@ -7,7 +7,7 @@ export type TwoColumnsProps = {
 
 export const TwoColumns: React.FC<TwoColumnsProps> = ({ children, sideNav }) => (
   <Box
-    height="100%"
+    h="100%"
     m-width="0"
     display={{ md: 'grid' }}
     gridTemplateColumns={{ md: '19.5rem auto' }}

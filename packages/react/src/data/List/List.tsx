@@ -1,6 +1,9 @@
-import styled from 'styled-components';
+import { x } from '@xstyled/styled-components';
 
-export const List = styled.ul`
-  list-style-position: inside;
-  list-style-type: none;
-`;
+export const List: React.FC<React.ComponentPropsWithRef<'ul'>> = (props) => (
+  <x.ul
+    listStylePosition="inside"
+    listStyleType="none"
+    {...props}
+  />
+);

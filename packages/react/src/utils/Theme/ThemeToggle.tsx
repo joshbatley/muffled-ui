@@ -6,7 +6,7 @@ import { useMuffledSettings } from './ThemeProvider';
 export const ThemeSwitch: React.FC = () => {
   let { theme, toggleTheme } = useMuffledSettings();
   return (
-    <Box display="flex" alignSelf="center" width="120px" justifyContent="space-between" borderRadius="8" border="border.1" px="3" py="3" bg="background">
+    <Box display="flex" alignSelf="center" w="120px" justifyContent="space-between" borderRadius="8" border="border.1" px="3" py="3" bg="background">
       <SunIcon width="16px" />
       <Switch checked={theme === 'Dark'} onChange={toggleTheme} />
       <MoonIcon width="16px" />

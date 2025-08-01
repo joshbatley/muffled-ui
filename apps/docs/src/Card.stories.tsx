@@ -29,7 +29,7 @@ export const Showcase: StoryObj<typeof Card> = {
         <CardMedia
           as="img"
           alt="green iguana"
-          width="33.333%"
+          w="33.333%"
           src="https://mui.com/static/images/cards/contemplative-reptile.jpg"
         />
         <CardContent py="4">
@@ -48,11 +48,10 @@ export const Showcase: StoryObj<typeof Card> = {
           </Box>
           <Text>Good with children, only lightly bites limbs off.</Text>
           <Box as="hr" my="4" />
-          <Box width="100%" display="flex">
+          <Box w="100%" display="flex">
             <PrimaryButton
               justifyContent="center"
               flexGrow="1"
-              size="small"
               mr="2"
             >
               <ShoppingBagIcon width={16} height={16} />
@@ -61,7 +60,6 @@ export const Showcase: StoryObj<typeof Card> = {
             <OutlineButton
               justifyContent="center"
               flexGrow="1"
-              size="small"
               textAlign="center"
             >
               <ShoppingCartIcon width={16} height={16} />
@@ -71,7 +69,7 @@ export const Showcase: StoryObj<typeof Card> = {
         </CardContent>
       </Card>
 
-      <Card width={500}>
+      <Card w={500}>
         <CardContent borderBottom="border.1">
           <Title as="h4">Application form</Title>
         </CardContent>
@@ -114,7 +112,7 @@ export const Content: StoryObj<typeof Card> = {
 export const Media: StoryObj<typeof Card> = {
   render: () => (
     <Box display="flex" justifyContent="space-evenly">
-      <Card maxWidth={300} height="fit-content">
+      <Card maxWidth={300} h="fit-content">
         <CardMedia
           as="img"
           alt="green iguana"

@@ -11,7 +11,7 @@ export const Switch: StoryObj<typeof ThemeSwitch> = {
 };
 
 export const Button: StoryObj<typeof ThemeButton> = {
-  render: () => <Box display="flex" spaceXBetween="2">
+  render: () => <Box display="flex" spaceX="2">
     <ThemeButton />
     <OutlineButton>Profile</OutlineButton>
   </Box>,

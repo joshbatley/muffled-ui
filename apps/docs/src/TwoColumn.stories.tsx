@@ -9,7 +9,7 @@ export default {
 };
 
 let sidebar = (
-  <Box bg="primary" borderRight="background.1" height="100vh">
+  <Box bg="primary" borderRight="background.1" h="100vh">
     123
   </Box>
 );
@@ -17,7 +17,7 @@ let sidebar = (
 export const Showcase: StoryObj<typeof TwoColumns> = {
   render: () => (
     <TwoColumns sideNav={sidebar}>
-      <Box bg="muted" borderRight="background.1" height="100vh">
+      <Box bg="muted" borderRight="background.1" h="100vh">
         123
       </Box>
     </TwoColumns>

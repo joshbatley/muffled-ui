@@ -1,4 +1,3 @@
-import styled from 'styled-components';
 import { ClickableElement } from '../../inputs';
 import { Box } from '../../data';
 import { Tab } from '../../types/Tabs';
@@ -9,29 +8,21 @@ export type TabItemProps = {
   children: React.ReactNode;
 };
 
-const StyledBtn = styled(ClickableElement)`
-  scroll-snap-align: start;
-  border-radius: ${({ theme }) => theme.radii[3]};
-  margin-right: ${({ theme }) => theme.space[1]};
-  &:last-of-type {
-    margin-right: 0;
-  }
-  :focus {
-    outline: 0;
-  }
-`;
-
 export const TabItem: React.FC<TabItemProps> = ({ children, selected, onClick }) => (
-  <StyledBtn
-    px="3"
-    py="1"
+  <ClickableElement
+    padding="1 3"
     position="relative"
     boxShadow={selected ? 'base.1' : 'none'}
     bg={selected ? 'background' : 'transparent'}
     color={selected ? 'foreground' : 'mutedForeground'}
-    onClick={onClick}>
+    onClick={onClick}
+    borderRadius={3}
+    mr={{ '': 1, '&:last-of-type': 0 }}
+    outline={{ '&:focus': '0' }}
+    style={{ scrollSnapAlign: 'start' }}
+  >
     {children}
-  </StyledBtn >
+  </ClickableElement>
 );
 
 export type TabItemsProps = {

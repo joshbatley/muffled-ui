@@ -1,4 +1,4 @@
-import styled from 'styled-components';
+import { x, th } from '@xstyled/styled-components';
 import { ExclamationCircleIcon } from '@heroicons/react/24/outline';
 import { Box, Text, Title } from '../../data';
 import { CloseBtn } from './CloseBtn';
@@ -11,43 +11,55 @@ export type AlertProps = {
   withClose?: () => void;
 } & WithChildren;
 
-const Container = styled(Box) <{ destructive: boolean }>`
-  border: 1px solid;
-  border-color: ${({ theme, destructive }) => destructive ? theme.colors.destructive : theme.colors.border};
-  background: ${({ theme, destructive }) => destructive ? theme.colors.destructive : theme.colors.background};
-  h1, svg, p {
-    color: ${({ theme, destructive }) => destructive ? theme.colors.destructiveForeground : theme.colors.foreground};
-  }
-`;
+const Icon: React.FC<React.ComponentProps<typeof Box>> = (props) => (
+  <Box
+    float="left"
+    margin={{ ':empty': 0 }}
+    {...props}
+  />
+);
 
-const Icon = styled(Box)`
-  float: left;
-  :empty {
-    margin: 0;
-  }
-`;
-
-const Content = styled(Text)`
-  min-width: 100%;
-  margin-top: ${({ theme }) => theme.space[2]};
-  :empty {
-    margin-top: 0;
-  }
-`;
+const Content: React.FC<React.ComponentProps<typeof Text>> = (props) => (
+  <Text
+    minWidth="100%"
+    marginTop={{ '': 2, ':empty': 0 }}
+    {...props}
+  />
+);
 
 export const Alert: React.FC<AlertProps> = ({
   destructive = false, title, icon, children, withClose, ...rest
 }) => {
   let Icons = icon || (destructive ? <ExclamationCircleIcon width={20} height={20} /> : <></>);
   return (
-    <Container px={3} py={1} display="flex" flexGrow={1} alignItems="center" borderRadius="4" overflow="hidden" position="relative" width={29} fontSize={1} lineHeight={1} flexWrap="wrap" destructive={destructive} {...rest} boxShadow="highlight">
+    <Box
+      px={3}
+      py={1}
+      display="flex"
+      flexGrow={1}
+      alignItems="center"
+      borderRadius="4"
+      overflow="hidden"
+      position="relative"
+      w={29}
+      fontSize={1}
+      lineHeight={1}
+      flexWrap="wrap"
+      color={destructive ? 'destructiveForeground' : 'foreground'}
+      bg={destructive ? 'destructive' : 'background'}
+      border="1px solid"
+      borderColor={destructive ? 'destructive' : 'border'}
+      boxShadow="highlight"
+      data-test
+      {...rest}
+    >
       <Box minWidth="100%">
         <Icon mr={3} mt="1px" lineHeight={5} alignSelf="center">{Icons}</Icon>
-        <Title display="inline" fontWeight="600" fontSize={1} lineHeight={2} letterSpacing="0.025em">{title}</Title>
+        <Title display="inline" fontWeight="600" fontSize={1} lineHeight={2} letterSpacing="0.025em" color={destructive ? 'destructiveForeground' : 'foreground'}>{title}</Title>
         {withClose && (<CloseBtn onClick={withClose} />)}
       </Box>
       <Content>{children}</Content>
-    </Container>
+    </Box>
   );
 };
 

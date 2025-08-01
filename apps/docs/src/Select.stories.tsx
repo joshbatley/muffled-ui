@@ -22,7 +22,7 @@ const values = [
 
 export const Showcase: StoryObj<typeof SimpleSelect> = {
   render: ({ ...rest }) => (
-    <Box width="33.3%">
+    <Box w="33.3%">
       <SimpleSelect {...rest} values={values} />
       <br />
       <SimpleSelect {...rest} values={values} disabled />

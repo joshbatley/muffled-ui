@@ -1,5 +1,4 @@
 import { useEffect, useState } from 'react';
-import styled from 'styled-components';
 import { Slide } from '../../utils';
 import { Alert } from '../Alert';
 import { Snack } from '../../types/Snackbar';
@@ -7,10 +6,6 @@ import { Snack } from '../../types/Snackbar';
 export type SnackbarItemProps = {
   handleClose: () => void;
 } & Snack;
-
-const StyledAlert = styled(Alert)`
-  margin: ${({ theme }) => `${theme.space[1]} ${theme.space[4]}`};
-`;
 
 export const SnackbarItem: React.FC<SnackbarItemProps> = ({
   body, handleClose, duration, title, persist, ...rest
@@ -30,13 +25,14 @@ export const SnackbarItem: React.FC<SnackbarItemProps> = ({
 
   return (
     <Slide inProp={open} onDestroyed={handleClose}>
-      <StyledAlert
+      <Alert
+        margin="1 4"
         withClose={() => setOpen(false)}
         title={title}
         {...rest}
       >
         {body}
-      </StyledAlert>
+      </Alert>
     </Slide>
   );
 };

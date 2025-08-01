@@ -14,8 +14,8 @@ export const Showcase: StoryObj<typeof Switch> = {
   render: ({ disabled, ...rest }) => {
     let [check, setCheck] = useState<boolean>(false);
     return (
-      <Box spaceXBetween="2">
-        <Box spaceXBetween="2">
+      <Box spaceX="2">
+        <Box spaceX="2">
           <Text>Use me</Text>
           <Switch checked={check} {...rest} onChange={() => setCheck(!check)} />
           <br /><br />

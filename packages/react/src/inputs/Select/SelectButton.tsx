@@ -52,7 +52,7 @@ export const SelectButton: React.FC<SelectButtonProps> = ({
 
   return (
     <OutlineButton
-      width="100%"
+      w="100%"
       bg="background"
       justifyContent="space-between"
       {...getToggleButtonProps()}

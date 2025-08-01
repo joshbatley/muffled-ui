@@ -1,20 +1,10 @@
 import { useState, useEffect } from 'react';
-import styled from 'styled-components';
+import { x } from '@xstyled/styled-components';
 import { Portal } from '../../utils';
 import { SnackbarProviderProps, Snack, SnackOptions } from '../../types/Snackbar';
 import { SnackbarContext } from './SnackbarContext';
 import { SnackbarItem } from './SnackbarItem';
 import { createId, getPosition } from './utils';
-import { IntercardinalPoints } from '../../types';
-
-const Container = styled.div<{ anchor: IntercardinalPoints }>`
-  position: fixed;
-  display: flex;
-  z-index: 50;
-  margin-bottom: ${({ theme }) => theme.space[1]};
-  margin-top: ${({ theme }) => theme.space[1]};
-  ${({ anchor }) => getPosition(anchor)}
-`;
 
 export const SnackbarProvider: React.FC<SnackbarProviderProps> = ({
   anchor = 'NE', children, max = 3, autoHideDuration = 5000, portalLocation,
@@ -64,7 +54,14 @@ export const SnackbarProvider: React.FC<SnackbarProviderProps> = ({
       clearAll,
     }}>
       <Portal element={portalLocation}>
-        <Container anchor={anchor}>
+        <x.div
+          position="fixed"
+          display="flex"
+          zIndex={50}
+          marginBottom={1}
+          marginTop={1}
+          {...getPosition(anchor)}
+        >
           {items.map(({ id, duration, ...rest }) => (
             <SnackbarItem
               key={id}
@@ -73,7 +70,7 @@ export const SnackbarProvider: React.FC<SnackbarProviderProps> = ({
               {...rest}
             />
           ))}
-        </Container>
+        </x.div>
       </Portal>
       {children}
     </SnackbarContext.Provider >

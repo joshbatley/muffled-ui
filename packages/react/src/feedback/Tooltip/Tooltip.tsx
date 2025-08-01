@@ -1,7 +1,7 @@
 import { Ref, useState } from 'react';
 import { usePopper } from 'react-popper';
 import { Placement } from '@popperjs/core';
-import styled from 'styled-components';
+import { x } from '@xstyled/styled-components';
 import { Portal } from '../../utils';
 import { AsProp, WithChildren } from '../../types';
 
@@ -11,17 +11,6 @@ export type TooltipProps = {
   as?: AsProp;
   disabled?: boolean;
 } & WithChildren;
-
-const Popover = styled.div`
-  border-radius: ${({ theme }) => theme.radii[2]};
-  box-shadow: ${({ theme }) => theme.shadows.base[0]};
-  border: ${({ theme }) => theme.borders.border[1]};
-  padding: ${({ theme }) => `${theme.space[2]} ${theme.space[3]}`};
-  z-index: 10;
-  font-size: ${({ theme }) => theme.fontSizes[1]};
-  line-height: ${({ theme }) => theme.lineHeights[1]};
-  background: ${({ theme }) => theme.colors.background};
-`;
 
 export const Tooltip: React.FC<TooltipProps> = ({
   tooltip, children, direction = 'top', as: Component = 'div', disabled,
@@ -48,13 +37,21 @@ export const Tooltip: React.FC<TooltipProps> = ({
       </Component>
       {(!disabled && showTooltip) && (
         <Portal>
-          <Popover
+          <x.div
             ref={setPopperRef as Ref<HTMLDivElement>}
+            borderRadius={2}
+            boxShadow="base.0"
+            border="border.1"
+            padding="2 3"
+            zIndex={10}
+            fontSize={1}
+            lineHeight={1}
+            background="background"
             style={styles.popper}
             {...attributes.popper}
           >
             {tooltip}
-          </Popover>
+          </x.div>
         </Portal>
       )
       }

@@ -11,7 +11,7 @@ export type TileItemProps = {
 };
 
 const fallback = (
-  <Box width="12" height="12" display="flex" alignItems="center" justifyContent="center" color="baseHighlight"
+  <Box w="12" h="12" display="flex" alignItems="center" justifyContent="center" color="baseHighlight"
     borderRadius="2" bg="background.2">
     <PhotoIcon width={30} height={30} />
   </Box>
