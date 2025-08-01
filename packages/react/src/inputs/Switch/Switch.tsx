@@ -1,4 +1,4 @@
-import { x, useTheme } from '@xstyled/styled-components';
+import { x } from '@xstyled/styled-components';
 import { Box } from '../../data';
 
 export type SwitchProps = React.ComponentPropsWithRef<'input'>;
