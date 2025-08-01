@@ -1,5 +1,4 @@
 import { x, useTheme } from '@xstyled/styled-components';
-import { rgba } from 'polished';
 import type { LayoutProps, SpaceProps, SizingProps } from '@xstyled/styled-components';
 
 export type SkeletonProps = {
@@ -33,8 +32,7 @@ export const Skeleton: React.FC<SkeletonProps> = ({ variant = 'rectangle', ...re
   return (
     <x.div
       animation="pulse"
-      bg="primary"
-      opacity={0.1}
+      bg="modalBackdrop"
       {...getVariantProps()}
       {...rest}
     >
