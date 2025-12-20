@@ -5,7 +5,7 @@ import { Badge } from "@muffled-ui/ui-web"
 const meta = {
   title: "ui-web/Badge",
   component: Badge,
-  tags: ["autodocs"],
+  tags: [],
   parameters: {
     layout: "centered",
   },

@@ -5,7 +5,7 @@ import { Avatar, AvatarImage, AvatarFallback } from "@muffled-ui/ui-web"
 const meta = {
   title: "ui-web/Avatar",
   component: Avatar,
-  tags: ["autodocs"],
+  tags: [],
   parameters: { layout: "centered" },
 } satisfies Meta<typeof Avatar>
 

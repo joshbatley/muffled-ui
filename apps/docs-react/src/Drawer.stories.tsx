@@ -14,7 +14,7 @@ import {
 const meta = {
   title: "ui-web/Drawer",
   component: Drawer,
-  tags: ["autodocs"],
+  tags: [],
   parameters: { layout: "centered" },
 } satisfies Meta<typeof Drawer>
 

@@ -15,7 +15,7 @@ import {
 const meta = {
   title: "ui-web/Item",
   component: Item,
-  tags: ["autodocs"],
+  tags: [],
   parameters: { layout: "centered" },
 } satisfies Meta<typeof Item>
 

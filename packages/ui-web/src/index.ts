@@ -37,3 +37,4 @@ export * from './components/ui/textarea';
 export * from './components/ui/tooltip';
 
 export * from './components/utils/ThemeProvider';
+export * from './components/utils/ThemeToggle.tsx';

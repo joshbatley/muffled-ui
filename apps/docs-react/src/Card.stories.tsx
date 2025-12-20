@@ -13,7 +13,7 @@ import {
 const meta = {
   title: "ui-web/Card",
   component: Card,
-  tags: ["autodocs"],
+  tags: [],
   parameters: { layout: "centered" },
 } satisfies Meta<typeof Card>
 

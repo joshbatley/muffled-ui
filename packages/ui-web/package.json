@@ -71,10 +71,10 @@
     "typescript": "^5.9.3"
   },
   "scripts": {
-    "build:ts": "tsup",
+    "build:ts": "tsup --external ./globals.css",
     "build": "pnpm build:ts && pnpm build:css",
     "build:css": "pnpx @tailwindcss/cli -i ./src/styles/globals.css -o ./dist/globals.css --minify",
-    "dev": " tsup --watch",
+    "dev": "pnpm build:css && tsup --watch --external ./globals.css",
     "typecheck": "tsc -p tsconfig.json --noEmit",
     "ui:init": "shadcn init",
     "ui:add": "shadcn add",

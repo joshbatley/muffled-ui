@@ -16,7 +16,7 @@ import {
 const meta = {
   title: "ui-web/Menubar",
   component: Menubar,
-  tags: ["autodocs"],
+  tags: [],
   parameters: { layout: "centered" },
 } satisfies Meta<typeof Menubar>
 

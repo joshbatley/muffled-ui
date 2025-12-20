@@ -13,7 +13,7 @@ import {
 const meta = {
   title: "ui-web/Pagination",
   component: Pagination,
-  tags: ["autodocs"],
+  tags: [],
   parameters: { layout: "centered" },
 } satisfies Meta<typeof Pagination>
 

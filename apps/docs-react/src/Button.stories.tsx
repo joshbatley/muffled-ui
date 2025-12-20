@@ -5,7 +5,7 @@ import { Button } from "@muffled-ui/ui-web"
 const meta = {
   title: "ui-web/Button",
   component: Button,
-  tags: ["autodocs"],
+  tags: [],
   parameters: {
     layout: "centered",
   },

@@ -5,7 +5,7 @@ import { Spinner } from "@muffled-ui/ui-web"
 const meta = {
   title: "ui-web/Spinner",
   component: Spinner,
-  tags: ["autodocs"],
+  tags: [],
   parameters: { layout: "centered" },
 } satisfies Meta<typeof Spinner>
 

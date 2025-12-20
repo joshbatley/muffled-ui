@@ -5,7 +5,7 @@ import { RadioGroup, RadioGroupItem, Label } from "@muffled-ui/ui-web"
 const meta = {
   title: "ui-web/RadioGroup",
   component: RadioGroup,
-  tags: ["autodocs"],
+  tags: [],
   parameters: { layout: "centered" },
 } satisfies Meta<typeof RadioGroup>
 

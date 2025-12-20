@@ -5,7 +5,7 @@ import { Slider } from "@muffled-ui/ui-web"
 const meta = {
   title: "ui-web/Slider",
   component: Slider,
-  tags: ["autodocs"],
+  tags: [],
   parameters: { layout: "centered" },
   args: {
     defaultValue: [50],

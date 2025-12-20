@@ -5,7 +5,7 @@ import { Skeleton } from "@muffled-ui/ui-web"
 const meta = {
   title: "ui-web/Skeleton",
   component: Skeleton,
-  tags: ["autodocs"],
+  tags: [],
   parameters: { layout: "centered" },
 } satisfies Meta<typeof Skeleton>
 

@@ -6,7 +6,7 @@ import { toast } from "sonner"
 const meta = {
   title: "ui-web/Sonner",
   component: Toaster,
-  tags: ["autodocs"],
+  tags: [],
   parameters: { layout: "centered" },
 } satisfies Meta<typeof Toaster>
 

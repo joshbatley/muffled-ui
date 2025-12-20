@@ -5,7 +5,7 @@ import { Tooltip, TooltipTrigger, TooltipContent, Button } from "@muffled-ui/ui-
 const meta = {
   title: "ui-web/Tooltip",
   component: Tooltip,
-  tags: ["autodocs"],
+  tags: [],
   parameters: { layout: "centered" },
 } satisfies Meta<typeof Tooltip>
 

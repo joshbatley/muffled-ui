@@ -5,7 +5,7 @@ import { Textarea } from "@muffled-ui/ui-web"
 const meta = {
   title: "ui-web/Textarea",
   component: Textarea,
-  tags: ["autodocs"],
+  tags: [],
   parameters: { layout: "centered" },
   args: {
     placeholder: "Write something...",

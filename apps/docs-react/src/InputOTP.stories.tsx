@@ -5,7 +5,7 @@ import { InputOTP, InputOTPGroup, InputOTPSlot, InputOTPSeparator } from "@muffl
 const meta = {
   title: "ui-web/InputOTP",
   component: InputOTP,
-  tags: ["autodocs"],
+  tags: [],
   parameters: { layout: "centered" },
 } satisfies Meta<typeof InputOTP>
 

@@ -5,7 +5,7 @@ import { Progress } from "@muffled-ui/ui-web"
 const meta = {
   title: "ui-web/Progress",
   component: Progress,
-  tags: ["autodocs"],
+  tags: [],
   parameters: { layout: "centered" },
   args: {
     value: 33,

@@ -12,7 +12,7 @@ import {
 const meta = {
   title: "ui-web/InputGroup",
   component: InputGroup,
-  tags: ["autodocs"],
+  tags: [],
   parameters: { layout: "centered" },
 } satisfies Meta<typeof InputGroup>
 

@@ -1,5 +1,5 @@
 import React, { createContext, useContext, useEffect, useState } from 'react';
-import '../../styles/globals.css';
+import './globals.css';
 
 const LocalStorageKey = '@muffled-ui/settings';
 
@@ -54,9 +54,9 @@ export const MuffledUI: React.FC<ThemeProviderProps> = ({ children }) => {
     root.classList.add(theme);
   }, [theme]);
 
-  const setTheme =  (theme: ProvidedTheme) => {
-    localStorage.setItem(LocalStorageKey, JSON.stringify({ theme: theme }));
-    setThemeKey(theme);
+  const setTheme =  (t: ProvidedTheme) => {
+    localStorage.setItem(LocalStorageKey, JSON.stringify({ theme: t }));
+    setThemeKey(t);
   };
 
   return (

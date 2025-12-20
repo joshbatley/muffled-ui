@@ -5,7 +5,7 @@ import { Button, ButtonGroup, ButtonGroupText, ButtonGroupSeparator } from "@muf
 const meta = {
   title: "ui-web/ButtonGroup",
   component: ButtonGroup,
-  tags: ["autodocs"],
+  tags: [],
   parameters: {
     layout: "centered",
   },

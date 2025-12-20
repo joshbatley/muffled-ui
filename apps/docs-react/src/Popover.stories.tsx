@@ -5,7 +5,7 @@ import { Popover, PopoverTrigger, PopoverContent, Button } from "@muffled-ui/ui-
 const meta = {
   title: "ui-web/Popover",
   component: Popover,
-  tags: ["autodocs"],
+  tags: [],
   parameters: { layout: "centered" },
 } satisfies Meta<typeof Popover>
 

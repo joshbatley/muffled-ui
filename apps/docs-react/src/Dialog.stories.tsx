@@ -14,7 +14,7 @@ import {
 const meta = {
   title: "ui-web/Dialog",
   component: Dialog,
-  tags: ["autodocs"],
+  tags: [],
   parameters: { layout: "centered" },
 } satisfies Meta<typeof Dialog>
 

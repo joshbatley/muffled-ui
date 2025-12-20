@@ -5,7 +5,7 @@ import { Tabs, TabsList, TabsTrigger, TabsContent } from "@muffled-ui/ui-web"
 const meta = {
   title: "ui-web/Tabs",
   component: Tabs,
-  tags: ["autodocs"],
+  tags: [],
   parameters: { layout: "centered" },
 } satisfies Meta<typeof Tabs>
 

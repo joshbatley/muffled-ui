@@ -1,13 +1,14 @@
-import React, {useCallback} from "react";
+import React, {useCallback } from "react";
 import {useMuffledSettings} from "@muffled-ui/ui-web";
-import {useOnDarkModeEvent, useUpdateDarkMode} from "./hooks.ts";
+import {useOnDarkModeEvent } from "./hooks.ts";
 
-export const Comp: React.FC<{ isDark?: boolean, children: any }> = ({ children, isDark }) => {
+
+export const Comp: React.FC<{ children: React.ReactNode }> = ({ children }) => {
   const { theme, setTheme } = useMuffledSettings();
-  const handleColorScheme = useCallback((value: any) => {
+  const handleColorScheme = useCallback((value: boolean) => {
     setTheme(value ? 'dark' : 'light')
-  }, [setTheme])
-  useOnDarkModeEvent(handleColorScheme)
+  }, [setTheme]);
+  useOnDarkModeEvent(handleColorScheme);
 
   return (
     <div>{children}</div>

@@ -20,7 +20,7 @@ import {
 const meta = {
   title: "ui-web/Sidebar",
   component: Sidebar,
-  tags: ["autodocs"],
+  tags: [],
   parameters: { layout: "fullscreen" },
 } satisfies Meta<typeof Sidebar>
 

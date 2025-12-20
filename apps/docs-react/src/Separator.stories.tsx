@@ -5,7 +5,7 @@ import { Separator } from "@muffled-ui/ui-web"
 const meta = {
   title: "ui-web/Separator",
   component: Separator,
-  tags: ["autodocs"],
+  tags: [],
   parameters: { layout: "centered" },
 } satisfies Meta<typeof Separator>
 

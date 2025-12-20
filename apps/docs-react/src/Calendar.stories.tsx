@@ -5,7 +5,7 @@ import { Calendar } from "@muffled-ui/ui-web"
 const meta = {
   title: "ui-web/Calendar",
   component: Calendar,
-  tags: ["autodocs"],
+  tags: [],
   parameters: { layout: "centered" },
 } satisfies Meta<typeof Calendar>
 

@@ -5,7 +5,7 @@ import { Label, Input } from "@muffled-ui/ui-web"
 const meta = {
   title: "ui-web/Label",
   component: Label,
-  tags: ["autodocs"],
+  tags: [],
   parameters: { layout: "centered" },
 } satisfies Meta<typeof Label>
 

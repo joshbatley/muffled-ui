@@ -5,7 +5,7 @@ import { Alert, AlertTitle, AlertDescription } from "@muffled-ui/ui-web"
 const meta = {
   title: "ui-web/Alert",
   component: Alert,
-  tags: ["autodocs"],
+  tags: [],
   parameters: { layout: "centered" },
   args: {
     children: (

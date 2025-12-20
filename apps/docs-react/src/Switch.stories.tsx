@@ -5,7 +5,7 @@ import { Switch, Label } from "@muffled-ui/ui-web"
 const meta = {
   title: "ui-web/Switch",
   component: Switch,
-  tags: ["autodocs"],
+  tags: [],
   parameters: { layout: "centered" },
 } satisfies Meta<typeof Switch>
 

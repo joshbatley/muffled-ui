@@ -13,7 +13,7 @@ import {
 const meta = {
   title: "ui-web/Breadcrumb",
   component: Breadcrumb,
-  tags: ["autodocs"],
+  tags: [],
   parameters: {
     layout: "centered",
   },

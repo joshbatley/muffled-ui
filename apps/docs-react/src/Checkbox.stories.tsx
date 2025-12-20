@@ -5,7 +5,7 @@ import { Checkbox, Label } from "@muffled-ui/ui-web"
 const meta = {
   title: "ui-web/Checkbox",
   component: Checkbox,
-  tags: ["autodocs"],
+  tags: [],
   parameters: { layout: "centered" },
 } satisfies Meta<typeof Checkbox>
 

@@ -13,7 +13,7 @@ import {
 const meta = {
   title: "ui-web/Select",
   component: Select,
-  tags: ["autodocs"],
+  tags: [],
   parameters: { layout: "centered" },
 } satisfies Meta<typeof Select>
 

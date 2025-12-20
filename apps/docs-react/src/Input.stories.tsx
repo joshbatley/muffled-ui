@@ -5,7 +5,7 @@ import { Input } from "@muffled-ui/ui-web"
 const meta = {
   title: "ui-web/Input",
   component: Input,
-  tags: ["autodocs"],
+  tags: [],
   parameters: { layout: "centered" },
   args: {
     placeholder: "Type here",

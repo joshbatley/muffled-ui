@@ -1,0 +1,70 @@
+[14:30:43.581] [INFO] storybook v10.1.10
+[14:30:44.465] [INFO] Loading main config failed as the file does not seem to be valid ESM. Trying a temporary fix, please ensure the main config is valid ESM.
+[14:30:45.084] [DEBUG] Getting package.json info for /Users/josh/Projects/js/muffled-ui/apps/docs/package.json...
+[14:30:45.089] [WARN] You are currently using Storybook [1m10.1.10[22m but you have packages which are incompatible with it:
+
+- @storybook/addon-essentials@8.6.14 which depends on 8.6.14
+ Repo: https://github.com/storybookjs/storybook/tree/next/code/addons/essentials
+- @storybook/addon-interactions@8.6.14 which depends on 8.6.14
+ Repo: https://github.com/storybookjs/storybook/tree/next/code/addons/interactions
+- @storybook/blocks@8.6.14 which depends on ^8.6.14
+ Repo: https://github.com/storybookjs/storybook/tree/next/code/lib/blocks
+- @storybook/manager-api@8.6.14 which depends on ^8.2.0 || ^8.3.0-0 || ^8.4.0-0 || ^8.5.0-0 || ^8.6.0-0
+ Repo: https://github.com/storybookjs/storybook/tree/next/code/lib/manager-api
+- @storybook/preview-api@8.6.14 which depends on ^8.2.0 || ^8.3.0-0 || ^8.4.0-0 || ^8.5.0-0 || ^8.6.0-0
+ Repo: https://github.com/storybookjs/storybook/tree/next/code/lib/preview-api
+- @storybook/test@8.6.14 which depends on 8.6.14
+ Repo: https://github.com/storybookjs/storybook/tree/next/code/lib/test
+- @storybook/theming@8.6.14 which depends on ^8.2.0 || ^8.3.0-0 || ^8.4.0-0 || ^8.5.0-0 || ^8.6.0-0
+ Repo: https://github.com/storybookjs/storybook/tree/next/code/lib/theming
+- storybook-dark-mode@4.0.2 which depends on ^8.0.0
+
+Please consider updating your packages or contacting the maintainers for compatibility details.
+
+For more details on compatibility guidance, see:
+https://github.com/storybookjs/storybook/issues/32836
+[14:30:45.111] [ERROR] [38;2;241;97;97mSB_CORE-SERVER_0002 (CriticalPresetLoadError): Storybook failed to load the following preset: ./.storybook/main.ts.
+
+Please check whether your setup is correct, the Storybook dependencies (and their peer dependencies) are installed correctly and there are no package version clashes.
+
+If you believe this is a bug, please open an issue on Github.
+
+ReferenceError: require is not defined in ES module scope, you can use import instead
+    at getAbsolutePath (file://./.storybook/main.ts:53:18)
+    at file://./.storybook/main.ts:19:5
+    at ModuleJob.run (node:internal/modules/esm/module_job:325:25)
+    at async ModuleLoader.import (node:internal/modules/esm/loader:606:24)
+    at async importModule (file:///Users/josh/Projects/js/muffled-ui/node_modules/storybook/dist/_node-chunks/chunk-BA3X633S.js:732:11)
+    at async loadMainConfig (file:///Users/josh/Projects/js/muffled-ui/node_modules/storybook/dist/_node-chunks/chunk-LLCTWVOB.js:11670:12)
+    at async buildDevStandalone (file:///Users/josh/Projects/js/muffled-ui/node_modules/storybook/dist/core-server/index.js:7149:16)
+    at async withTelemetry (file:///Users/josh/Projects/js/muffled-ui/node_modules/storybook/dist/_node-chunks/chunk-PGCRO4IZ.js:209:12)
+    at async dev (file:///Users/josh/Projects/js/muffled-ui/node_modules/storybook/dist/bin/core.js:2734:3)
+    at async _Command.<anonymous> (file:///Users/josh/Projects/js/muffled-ui/node_modules/storybook/dist/bin/core.js:2801:92)
+
+More info: 
+[39m
+    at loadPreset (file:///Users/josh/Projects/js/muffled-ui/node_modules/storybook/dist/_node-chunks/chunk-LLCTWVOB.js:10101:13)
+    at async Promise.all (index 1)
+    at async loadPresets (file:///Users/josh/Projects/js/muffled-ui/node_modules/storybook/dist/_node-chunks/chunk-LLCTWVOB.js:10110:73)
+    at async getPresets (file:///Users/josh/Projects/js/muffled-ui/node_modules/storybook/dist/_node-chunks/chunk-LLCTWVOB.js:10141:23)
+    at async buildDevStandalone (file:///Users/josh/Projects/js/muffled-ui/node_modules/storybook/dist/core-server/index.js:7163:17)
+    at async withTelemetry (file:///Users/josh/Projects/js/muffled-ui/node_modules/storybook/dist/_node-chunks/chunk-PGCRO4IZ.js:209:12)
+    at async dev (file:///Users/josh/Projects/js/muffled-ui/node_modules/storybook/dist/bin/core.js:2734:3)
+    at async _Command.<anonymous> (file:///Users/josh/Projects/js/muffled-ui/node_modules/storybook/dist/bin/core.js:2801:92)
+[14:30:45.113] [WARN] Broken build, fix the error above.
+You may need to refresh the browser.
+[14:30:45.119] [WARN]   Failed to load preset: "/Users/josh/Projects/js/muffled-ui/apps/docs/.storybook/main.ts"
+[14:30:45.119] [ERROR] [38;2;241;97;97mReferenceError: require is not defined in ES module scope, you can use import instead[39m
+    at getAbsolutePath (file://./.storybook/main.ts:53:18)
+    at file://./.storybook/main.ts:19:5
+    at ModuleJob.run (node:internal/modules/esm/module_job:325:25)
+    at async ModuleLoader.import (node:internal/modules/esm/loader:606:24)
+    at async importModule (file:///Users/josh/Projects/js/muffled-ui/node_modules/storybook/dist/_node-chunks/chunk-BA3X633S.js:732:11)
+    at async loadMainConfig (file:///Users/josh/Projects/js/muffled-ui/node_modules/storybook/dist/_node-chunks/chunk-LLCTWVOB.js:11670:12)
+    at async buildDevStandalone (file:///Users/josh/Projects/js/muffled-ui/node_modules/storybook/dist/core-server/index.js:7149:16)
+    at async withTelemetry (file:///Users/josh/Projects/js/muffled-ui/node_modules/storybook/dist/_node-chunks/chunk-PGCRO4IZ.js:209:12)
+    at async dev (file:///Users/josh/Projects/js/muffled-ui/node_modules/storybook/dist/bin/core.js:2734:3)
+    at async _Command.<anonymous> (file:///Users/josh/Projects/js/muffled-ui/node_modules/storybook/dist/bin/core.js:2801:92)
+[14:30:45.136] [INFO] Loading main config failed as the file does not seem to be valid ESM. Trying a temporary fix, please ensure the main config is valid ESM.
+[14:30:45.426] [INFO] Loading main config failed as the file does not seem to be valid ESM. Trying a temporary fix, please ensure the main config is valid ESM.
+[14:30:45.459] [INFO] Loading main config failed as the file does not seem to be valid ESM. Trying a temporary fix, please ensure the main config is valid ESM.
