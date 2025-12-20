@@ -16,7 +16,7 @@ const Comp: React.FC<{ isDark?: boolean, children: any }> = ({ children, isDark 
   }, [theme])
 
   React.useEffect(() => {
-    setTheme(isDark ? 'Dark' : 'Light');
+    setTheme(isDark ? 'dark' : 'light');
   }, [isDark])
 
   return (

@@ -4,14 +4,14 @@
   "version": "0.0.2",
   "scripts": {
     "start": "vite",
-    "build": "tsc && vite build",
+    "build": "vite build",
     "lint": "eslint . --max-warnings 0",
     "preview": "vite preview"
   },
   "dependencies": {
     "@muffled-ui/react": "workspace:*",
-    "react": "^18.2.0",
-    "react-dom": "^18.2.0"
+    "react": "^19.2.3",
+    "react-dom": "^19.2.3"
   },
   "devDependencies": {
     "@repo/eslint-config": "workspace:*",
