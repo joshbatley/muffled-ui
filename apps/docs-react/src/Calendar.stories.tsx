@@ -1,4 +1,5 @@
 import type { Meta, StoryObj } from "@storybook/react-vite"
+import React from "react";
 
 import { Calendar } from "@muffled-ui/ui-web"
 
@@ -16,7 +17,7 @@ export const Single: Story = {
   render: () => {
     const [date, setDate] = React.useState<Date | undefined>(new Date())
     return (
-      <Calendar mode="single" selected={date} onSelect={setDate} />
+      <Calendar mode="single" selected={date} onSelect={setDate} className="rounded-md border shadow-sm" />
     )
   },
 }
