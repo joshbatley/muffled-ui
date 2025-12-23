@@ -17,9 +17,9 @@ type Story = StoryObj<typeof meta>
 export const Basic: Story = {
   render: () => (
     <ButtonGroup>
-      <Button>One</Button>
-      <Button>Two</Button>
-      <Button>Three</Button>
+      <Button variant="outline">One</Button>
+      <Button variant="outline">Two</Button>
+      <Button variant="outline">Three</Button>
     </ButtonGroup>
   ),
 }

@@ -35,7 +35,7 @@ export const WithPrefixSuffix: Story = {
       <InputGroup>
         <InputGroupInput placeholder="Search" />
         <InputGroupAddon align="inline-end">
-          <InputGroupButton size="sm">Go</InputGroupButton>
+          <InputGroupButton variant="secondary">Search</InputGroupButton>
         </InputGroupAddon>
       </InputGroup>
     </div>

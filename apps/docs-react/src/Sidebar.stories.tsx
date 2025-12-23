@@ -30,9 +30,20 @@ type Story = StoryObj<typeof meta>
 export const Basic: Story = {
   render: () => (
     <SidebarProvider>
-      <Sidebar>
+      <Sidebar variant="inset" >
         <SidebarHeader>
-          <SidebarTrigger />
+          <SidebarMenu>
+            <SidebarMenuItem>
+              <SidebarMenuButton
+                asChild
+                className="data-[slot=sidebar-menu-button]:!p-1.5"
+              >
+                <a href="#">
+                  <span className="text-base font-semibold">Acme Inc.</span>
+                </a>
+              </SidebarMenuButton>
+            </SidebarMenuItem>
+          </SidebarMenu>
         </SidebarHeader>
         <SidebarContent>
           <SidebarGroup>
@@ -62,11 +73,14 @@ export const Basic: Story = {
           <Button variant="secondary" size="sm">Logout</Button>
         </SidebarFooter>
       </Sidebar>
-      <SidebarInset>
-        <div style={{ padding: 16 }}>
-          <h3 style={{ marginBottom: 12 }}>Content area</h3>
-          <p>Use the trigger in the header to toggle the sidebar.</p>
-        </div>
+      <SidebarInset >
+        <main className="flex flex-1 flex-col">
+          <SidebarTrigger />
+          <div style={{ padding: 16 }}>
+            <h3 style={{ marginBottom: 12 }}>Content area</h3>
+            <p>Use the trigger in the header to toggle the sidebar.</p>
+          </div>
+        </main>
       </SidebarInset>
     </SidebarProvider>
   ),

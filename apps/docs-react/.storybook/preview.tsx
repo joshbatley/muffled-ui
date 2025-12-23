@@ -8,13 +8,36 @@ import LogoLight from '/src/assets/logo-light.svg';
 import LogoDark from '/src/assets/logo-dark.svg';
 
 
+export const lightTheme = {
+  ...themes.light,
+  base: 'light',
+  brandTitle: 'Muffled UI',
+  brandUrl: 'https://github.com/joshbatley/muffled-ui',
+  brandImage: LogoLight,
+  appBg: 'hsl(0, 0%, 100%)',
+  appContentBg: 'hsl(0, 0%, 100%)',
+  barBg: 'hsl(0, 0%, 100%)',
+}
+
+export const darkTheme = {
+  ...themes.dark,
+  base: 'dark',
+  brandTitle: 'Muffled UI',
+  brandUrl: 'https://github.com/joshbatley/muffled-ui',
+  brandImage: LogoDark,
+  appBg: 'hsl(220, 15%, 10%)',
+  appContentBg: 'hsl(220, 15%, 10%)',
+  barBg: 'hsl(220, 15%, 10%)',
+};
+
+
 const preview: Preview = {
   decorators: ThemeWrapper,
   parameters: {
     darkMode: {
       classTarget: 'html',
-      dark: { ...themes.dark, brandImage: LogoDark, },
-      light: { ...themes.light, brandImage: LogoLight, }
+      dark: darkTheme,
+      light: lightTheme
     },
     controls: {
       matchers: {

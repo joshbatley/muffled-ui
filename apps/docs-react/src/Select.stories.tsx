@@ -7,6 +7,7 @@ import {
   SelectItem,
   SelectValue,
   SelectLabel,
+  SelectGroup,
   SelectSeparator,
 } from "@muffled-ui/ui-web"
 
@@ -22,15 +23,17 @@ type Story = StoryObj<typeof meta>
 
 export const Basic: Story = {
   render: () => (
-    <Select defaultValue="apple">
-      <SelectTrigger className="w-56">
+    <Select>
+      <SelectTrigger style={{width: 200}}>
         <SelectValue placeholder="Select a fruit" />
       </SelectTrigger>
       <SelectContent>
-        <SelectLabel>Fruits</SelectLabel>
-        <SelectItem value="apple">Apple</SelectItem>
-        <SelectItem value="banana">Banana</SelectItem>
-        <SelectItem value="grapes">Grapes</SelectItem>
+        <SelectGroup>
+          <SelectLabel>Fruits</SelectLabel>
+          <SelectItem value="apple">Apple</SelectItem>
+          <SelectItem value="banana">Banana</SelectItem>
+          <SelectItem value="grapes">Grapes</SelectItem>
+        </SelectGroup>
         <SelectSeparator />
         <SelectItem value="orange">Orange</SelectItem>
       </SelectContent>

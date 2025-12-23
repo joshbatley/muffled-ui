@@ -13,7 +13,8 @@
       "import": "./dist/index.mjs",
       "default": "./dist/index.js"
     },
-    "./globals.css": "./dist/globals.css",
+    "./theme": "./src/styles/theme.css",
+    "./styled.css": "./styled.css",
     "./index.d.mts": "./dist/index.d.mts"
   },
   "files": [
@@ -44,6 +45,7 @@
     "@radix-ui/react-tooltip": "^1.2.8",
     "@tailwindcss/cli": "^4.1.18",
     "@tailwindcss/postcss": "^4.1.18",
+    "@tanstack/react-table": "^8.21.3",
     "class-variance-authority": "^0.7.1",
     "clsx": "^2.1.1",
     "cmdk": "^1.1.1",
@@ -64,6 +66,7 @@
     "@types/react": "^19.2.1",
     "@types/react-dom": "^19.2.1",
     "autoprefixer": "^10.4.22",
+    "concurrently": "^9.2.1",
     "postcss": "^8.5.6",
     "shadcn": "^3.5.1",
     "tailwindcss": "^4.1.17",
@@ -71,10 +74,10 @@
     "typescript": "^5.9.3"
   },
   "scripts": {
-    "build:ts": "tsup --external ./globals.css",
+    "build:ts": "tsup --external ./styled.css",
     "build": "pnpm build:ts && pnpm build:css",
-    "build:css": "pnpx @tailwindcss/cli -i ./src/styles/globals.css -o ./dist/globals.css --minify",
-    "dev": "pnpm build:css && tsup --watch --external ./globals.css",
+    "build:css": "pnpx @tailwindcss/cli -i src/styles/styled.css -o ./dist/styled.css --minify",
+    "dev": "concurrently \"tsup --watch --external ../styled.css\" \"pnpx @tailwindcss/cli -i src/styles/styled.css -o ./styled.css --watch\"",
     "typecheck": "tsc -p tsconfig.json --noEmit",
     "ui:init": "shadcn init",
     "ui:add": "shadcn add",

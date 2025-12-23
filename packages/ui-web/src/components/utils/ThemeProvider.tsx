@@ -1,5 +1,5 @@
 import React, { createContext, useContext, useEffect, useState } from 'react';
-import './globals.css';
+import '../styled.css';
 
 const LocalStorageKey = '@muffled-ui/settings';
 

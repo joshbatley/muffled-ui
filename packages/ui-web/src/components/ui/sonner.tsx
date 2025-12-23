@@ -7,14 +7,13 @@ import {
   OctagonX,
   TriangleAlert,
 } from 'lucide-react';
-import { useTheme } from 'next-themes';
 import { Toaster as Sonner, toast } from 'sonner';
+import { useMuffledSettings } from '@/components/utils/ThemeProvider.tsx';
 
 type ToasterProps = React.ComponentProps<typeof Sonner>;
 
 const Toaster = ({ ...props }: ToasterProps) => {
-  const { theme = 'system' } = useTheme();
-
+  const { theme } = useMuffledSettings();
   return (
     <Sonner
       theme={theme as ToasterProps['theme']}
@@ -27,14 +26,16 @@ const Toaster = ({ ...props }: ToasterProps) => {
         loading: <LoaderCircle className="h-4 w-4 animate-spin" />,
       }}
       toastOptions={{
+        unstyled: true,
         classNames: {
           toast:
-            'group toast group-[.toaster]:bg-background group-[.toaster]:text-foreground group-[.toaster]:border-border group-[.toaster]:shadow-lg',
-          description: 'group-[.toast]:text-muted-foreground',
+            'group toast border-border shadow-lg px-4 py-3 border rounded-lg flex items-center gap-4 w-80 bg-background',
+          description: '!text-muted-foreground',
+          error: 'bg-destructive',
           actionButton:
-            'group-[.toast]:bg-primary group-[.toast]:text-primary-foreground',
+            'bg-primary text-primary-foreground',
           cancelButton:
-            'group-[.toast]:bg-muted group-[.toast]:text-muted-foreground',
+            'bg-muted text-muted-foreground',
         },
       }}
       {...props}
@@ -43,3 +44,17 @@ const Toaster = ({ ...props }: ToasterProps) => {
 };
 
 export { Toaster, toast };
+
+
+///    padding: 16px;
+//     background: var(--normal-bg);
+//     border: 1px solid var(--normal-border);
+//     color: var(--normal-text);
+//     border-radius: var(--border-radius);
+//     box-shadow: 0 4px 12px rgba(0, 0, 0, .1);
+//     width: var(--width);
+//     font-size: 13px;
+//     display: flex;
+//     align-items: center;
+//     gap: 6px;
+// }

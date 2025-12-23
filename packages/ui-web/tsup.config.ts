@@ -5,5 +5,5 @@ export default defineConfig({
   format: ['esm', 'cjs'],
   dts: true,
   external: ['react'],
-  clean: true,
+  clean: false,
 });
