@@ -1,6 +1,6 @@
 import type { Meta, StoryObj } from "@storybook/react-vite"
 
-import { Badge } from "@muffled-ui/ui-web"
+import { Badge, Avatar, AvatarImage, AvatarFallback } from "@muffled-ui/ui-web"
 
 const meta = {
   title: "ui-web/Badge",
@@ -26,6 +26,19 @@ export const Variants: Story = {
       <Badge {...args} variant="secondary">Secondary</Badge>
       <Badge {...args} variant="destructive">Destructive</Badge>
       <Badge {...args} variant="outline">Outline</Badge>
+    </div>
+  ),
+}
+
+export const Positions: Story = {
+  render: (args) => (
+    <div>
+      <Badge variant="destructive"  position="N" tag {...args}>
+        <Avatar>
+          <AvatarImage alt="User" src="https://i.pravatar.cc/100?img=1" />
+          <AvatarFallback>AB</AvatarFallback>
+        </Avatar>
+      </Badge>
     </div>
   ),
 }

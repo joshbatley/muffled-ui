@@ -50,7 +50,6 @@ export const MuffledUI: React.FC<ThemeProviderProps> = ({ children }) => {
       root.classList.add(systemTheme)
       return
     }
-    console.log(root)
     root.classList.add(theme)
   }, [theme])
 
