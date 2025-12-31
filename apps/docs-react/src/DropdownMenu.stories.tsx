@@ -11,10 +11,10 @@ import {
   DropdownMenuRadioGroup,
   DropdownMenuRadioItem,
   Button,
-} from "@muffled-ui/ui-web"
+} from "@muffled-ui/react"
 
 const meta = {
-  title: "ui-web/DropdownMenu",
+  title: "react/DropdownMenu",
   component: DropdownMenu,
   tags: [],
   parameters: { layout: "centered" },

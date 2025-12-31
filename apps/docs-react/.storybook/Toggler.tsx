@@ -1,5 +1,5 @@
 import React, {useCallback } from "react";
-import {useMuffledSettings} from "@muffled-ui/ui-web";
+import {useMuffledSettings} from "@muffled-ui/react";
 import {useOnDarkModeEvent } from "./hooks.ts";
 
 

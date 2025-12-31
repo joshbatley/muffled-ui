@@ -10,10 +10,10 @@ import {
   CommandSeparator,
   CommandShortcut,
   CommandDialog,
-} from "@muffled-ui/ui-web"
+} from "@muffled-ui/react"
 
 const meta = {
-  title: "ui-web/Command",
+  title: "react/Command",
   component: Command,
   tags: [],
   parameters: { layout: "centered" },

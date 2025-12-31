@@ -9,10 +9,10 @@ import {
   DrawerTitle,
   DrawerDescription,
   Button,
-} from "@muffled-ui/ui-web"
+} from "@muffled-ui/react"
 
 const meta = {
-  title: "ui-web/Drawer",
+  title: "react/Drawer",
   component: Drawer,
   tags: [],
   parameters: { layout: "centered" },

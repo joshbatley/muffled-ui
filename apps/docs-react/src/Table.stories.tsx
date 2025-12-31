@@ -9,10 +9,10 @@ import {
   TableCell,
   TableCaption,
   TableFooter,
-} from "@muffled-ui/ui-web"
+} from "@muffled-ui/react"
 
 const meta = {
-  title: "ui-web/Table",
+  title: "react/Table",
   component: Table,
   tags: [],
   parameters: { layout: "centered" },

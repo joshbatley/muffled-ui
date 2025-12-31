@@ -1,9 +1,9 @@
 import type { Meta, StoryObj } from "@storybook/react-vite"
 
-import { Switch, Label } from "@muffled-ui/ui-web"
+import { Switch, Label } from "@muffled-ui/react"
 
 const meta = {
-  title: "ui-web/Switch",
+  title: "react/Switch",
   component: Switch,
   tags: [],
   parameters: { layout: "centered" },

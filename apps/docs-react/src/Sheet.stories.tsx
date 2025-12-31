@@ -9,10 +9,10 @@ import {
   SheetTitle,
   SheetDescription,
   Button,
-} from "@muffled-ui/ui-web"
+} from "@muffled-ui/react"
 
 const meta = {
-  title: "ui-web/Sheet",
+  title: "react/Sheet",
   component: Sheet,
   tags: [],
   parameters: { layout: "centered" },

@@ -2,7 +2,7 @@ import type { Meta, StoryObj } from "@storybook/react-vite";
 import {  DataTable,
   DataTableColumnHeader,
   DataTablePagination,
-  DataTableViewOptions  } from "@muffled-ui/ui-web"
+  DataTableViewOptions  } from "@muffled-ui/react"
 import type { ColumnDef } from "@tanstack/react-table";
 type Payment = {
   id: string;
@@ -50,7 +50,7 @@ const manyPayments: Payment[] = Array.from({ length: 25 }, (_, i) => ({
 }));
 
 const meta = {
-  title: "ui-web/DataTable",
+  title: "react/DataTable",
   component: DataTable,
   subcomponents: {
     DataTableColumnHeader,

@@ -1,9 +1,9 @@
 import type { Meta, StoryObj } from "@storybook/react-vite"
 
-import { Slider } from "@muffled-ui/ui-web"
+import { Slider } from "@muffled-ui/react"
 
 const meta = {
-  title: "ui-web/Slider",
+  title: "react/Slider",
   component: Slider,
   tags: [],
   parameters: { layout: "centered" },

@@ -8,10 +8,10 @@ import {
   CardContent,
   CardFooter,
   Button,
-} from "@muffled-ui/ui-web"
+} from "@muffled-ui/react"
 
 const meta = {
-  title: "ui-web/Card",
+  title: "react/Card",
   component: Card,
   tags: [],
   parameters: { layout: "centered" },

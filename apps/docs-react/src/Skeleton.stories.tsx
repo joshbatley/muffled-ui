@@ -1,9 +1,9 @@
 import type { Meta, StoryObj } from "@storybook/react-vite"
 
-import { Skeleton } from "@muffled-ui/ui-web"
+import { Skeleton } from "@muffled-ui/react"
 
 const meta = {
-  title: "ui-web/Skeleton",
+  title: "react/Skeleton",
   component: Skeleton,
   tags: [],
   parameters: { layout: "centered" },

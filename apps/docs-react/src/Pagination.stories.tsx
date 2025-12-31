@@ -8,10 +8,10 @@ import {
   PaginationNext,
   PaginationLink,
   PaginationEllipsis,
-} from "@muffled-ui/ui-web"
+} from "@muffled-ui/react"
 
 const meta = {
-  title: "ui-web/Pagination",
+  title: "react/Pagination",
   component: Pagination,
   tags: [],
   parameters: { layout: "centered" },

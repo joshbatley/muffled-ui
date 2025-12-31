@@ -9,10 +9,10 @@ import {
   SelectLabel,
   SelectGroup,
   SelectSeparator,
-} from "@muffled-ui/ui-web"
+} from "@muffled-ui/react"
 
 const meta = {
-  title: "ui-web/Select",
+  title: "react/Select",
   component: Select,
   tags: [],
   parameters: { layout: "centered" },

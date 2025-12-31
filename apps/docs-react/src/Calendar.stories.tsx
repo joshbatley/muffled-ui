@@ -1,10 +1,10 @@
 import type { Meta, StoryObj } from "@storybook/react-vite"
 import React from "react";
 
-import { Calendar } from "@muffled-ui/ui-web"
+import { Calendar } from "@muffled-ui/react"
 
 const meta = {
-  title: "ui-web/Calendar",
+  title: "react/Calendar",
   component: Calendar,
   tags: [],
   parameters: { layout: "centered" },

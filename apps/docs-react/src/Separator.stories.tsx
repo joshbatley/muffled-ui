@@ -1,9 +1,9 @@
 import type { Meta, StoryObj } from "@storybook/react-vite"
 
-import { Separator } from "@muffled-ui/ui-web"
+import { Separator } from "@muffled-ui/react"
 
 const meta = {
-  title: "ui-web/Separator",
+  title: "react/Separator",
   component: Separator,
   tags: [],
   parameters: { layout: "centered" },

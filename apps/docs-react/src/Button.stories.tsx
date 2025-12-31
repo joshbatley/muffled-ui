@@ -1,9 +1,9 @@
 import type { Meta, StoryObj } from "@storybook/react-vite"
 
-import { Button } from "@muffled-ui/ui-web"
+import { Button } from "@muffled-ui/react"
 
 const meta = {
-  title: "ui-web/Button",
+  title: "react/Button",
   component: Button,
   tags: [],
   parameters: {

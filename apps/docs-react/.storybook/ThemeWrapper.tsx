@@ -1,4 +1,4 @@
-import {MuffledUI} from "@muffled-ui/ui-web";
+import {MuffledUI} from "@muffled-ui/react";
 import {Comp} from "./Toggler.tsx";
 import React from "react";
 

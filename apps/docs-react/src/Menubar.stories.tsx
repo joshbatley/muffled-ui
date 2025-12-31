@@ -11,10 +11,10 @@ import {
   MenubarCheckboxItem,
   MenubarRadioGroup,
   MenubarRadioItem,
-} from "@muffled-ui/ui-web"
+} from "@muffled-ui/react"
 
 const meta = {
-  title: "ui-web/Menubar",
+  title: "react/Menubar",
   component: Menubar,
   tags: [],
   parameters: { layout: "centered" },

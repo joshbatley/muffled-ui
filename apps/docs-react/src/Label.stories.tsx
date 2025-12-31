@@ -1,9 +1,9 @@
 import type { Meta, StoryObj } from "@storybook/react-vite"
 
-import { Label, Input } from "@muffled-ui/ui-web"
+import { Label, Input } from "@muffled-ui/react"
 
 const meta = {
-  title: "ui-web/Label",
+  title: "react/Label",
   component: Label,
   tags: [],
   parameters: { layout: "centered" },

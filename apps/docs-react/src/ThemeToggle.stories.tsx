@@ -1,9 +1,9 @@
 import type { Meta, StoryObj } from "@storybook/react-vite"
 
-import { ThemeToggle } from "@muffled-ui/ui-web"
+import { ThemeToggle } from "@muffled-ui/react"
 
 const meta = {
-  title: "ui-web/ThemeToggle",
+  title: "react/ThemeToggle",
   component: ThemeToggle,
   tags: [],
   parameters: { layout: "centered" },

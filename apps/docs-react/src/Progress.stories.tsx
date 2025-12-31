@@ -1,9 +1,9 @@
 import type { Meta, StoryObj } from "@storybook/react-vite"
 
-import { Progress } from "@muffled-ui/ui-web"
+import { Progress } from "@muffled-ui/react"
 
 const meta = {
-  title: "ui-web/Progress",
+  title: "react/Progress",
   component: Progress,
   tags: [],
   parameters: { layout: "centered" },

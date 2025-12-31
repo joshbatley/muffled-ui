@@ -1,67 +1,73 @@
-# Muffled UI Demo Application
+# React + TypeScript + Vite
 
-This is a demo application showcasing the Muffled UI React component library in a real-world application context. It demonstrates how to use and integrate the components in a Vite-based React application.
+This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
 
-## Getting Started
+Currently, two official plugins are available:
 
-To run the demo application locally:
+- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) (or [oxc](https://oxc.rs) when used in [rolldown-vite](https://vite.dev/guide/rolldown)) for Fast Refresh
+- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
 
-```bash
-# Using pnpm
-pnpm start
+## React Compiler
 
-# Using yarn
-yarn start
+The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
 
-# Using npm
-npm start
+## Expanding the ESLint configuration
+
+If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
+
+```js
+export default defineConfig([
+  globalIgnores(['dist']),
+  {
+    files: ['**/*.{ts,tsx}'],
+    extends: [
+      // Other configs...
+
+      // Remove tseslint.configs.recommended and replace with this
+      tseslint.configs.recommendedTypeChecked,
+      // Alternatively, use this for stricter rules
+      tseslint.configs.strictTypeChecked,
+      // Optionally, add this for stylistic rules
+      tseslint.configs.stylisticTypeChecked,
+
+      // Other configs...
+    ],
+    languageOptions: {
+      parserOptions: {
+        project: ['./tsconfig.node.json', './tsconfig.app.json'],
+        tsconfigRootDir: import.meta.dirname,
+      },
+      // other options...
+    },
+  },
+])
 ```
 
-The application will be available at [http://localhost:5173](http://localhost:5173) (or another port if 5173 is already in use).
+You can also install [eslint-plugin-react-x](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-dom) for React-specific lint rules:
 
-## Features
+```js
+// eslint.config.js
+import reactX from 'eslint-plugin-react-x'
+import reactDom from 'eslint-plugin-react-dom'
 
-- **Component Showcase**: Real-world examples of Muffled UI components in action
-- **Integration Examples**: Demonstrates how to integrate multiple components together
-- **Responsive Design**: Shows how the components behave on different screen sizes
-- **Theme Customization**: Examples of customizing the component themes
-- **Form Handling**: Examples of using form components with state management
-
-## Project Structure
-
-- `src/components/` - Custom components built with Muffled UI
-- `src/pages/` - Example pages showcasing different use cases
-- `src/layouts/` - Layout components for structuring the application
-- `src/hooks/` - Custom hooks for state management and other functionality
-
-## Building for Production
-
-To build the application for production:
-
-```bash
-# Using pnpm
-pnpm build
-
-# Using yarn
-yarn build
-
-# Using npm
-npm run build
-```
-
-This will generate optimized production files in the `dist` directory that can be deployed to any static hosting service.
-
-## Preview Production Build
-
-To preview the production build locally:
-
-```bash
-# Using pnpm
-pnpm preview
-
-# Using yarn
-yarn preview
-
-# Using npm
-npm run preview
+export default defineConfig([
+  globalIgnores(['dist']),
+  {
+    files: ['**/*.{ts,tsx}'],
+    extends: [
+      // Other configs...
+      // Enable lint rules for React
+      reactX.configs['recommended-typescript'],
+      // Enable lint rules for React DOM
+      reactDom.configs.recommended,
+    ],
+    languageOptions: {
+      parserOptions: {
+        project: ['./tsconfig.node.json', './tsconfig.app.json'],
+        tsconfigRootDir: import.meta.dirname,
+      },
+      // other options...
+    },
+  },
+])
 ```

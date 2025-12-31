@@ -15,10 +15,10 @@ import {
   SidebarMenuItem,
   SidebarMenuButton,
   Button,
-} from "@muffled-ui/ui-web"
+} from "@muffled-ui/react"
 
 const meta = {
-  title: "ui-web/Sidebar",
+  title: "react/Sidebar",
   component: Sidebar,
   tags: [],
   parameters: { layout: "fullscreen" },

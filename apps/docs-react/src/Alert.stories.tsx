@@ -1,9 +1,9 @@
 import type { Meta, StoryObj } from "@storybook/react-vite"
 
-import { Alert, AlertTitle, AlertDescription } from "@muffled-ui/ui-web"
+import { Alert, AlertTitle, AlertDescription } from "@muffled-ui/react"
 
 const meta = {
-  title: "ui-web/Alert",
+  title: "react/Alert",
   component: Alert,
   tags: [],
   parameters: { layout: "centered" },

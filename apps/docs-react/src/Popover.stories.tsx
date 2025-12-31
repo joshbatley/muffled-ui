@@ -1,9 +1,9 @@
 import type { Meta, StoryObj } from "@storybook/react-vite"
 
-import { Popover, PopoverTrigger, PopoverContent, Button } from "@muffled-ui/ui-web"
+import { Popover, PopoverTrigger, PopoverContent, Button } from "@muffled-ui/react"
 
 const meta = {
-  title: "ui-web/Popover",
+  title: "react/Popover",
   component: Popover,
   tags: [],
   parameters: { layout: "centered" },

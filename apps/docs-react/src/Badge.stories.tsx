@@ -1,9 +1,9 @@
 import type { Meta, StoryObj } from "@storybook/react-vite"
 
-import { Badge, Avatar, AvatarImage, AvatarFallback } from "@muffled-ui/ui-web"
+import { Badge, Avatar, AvatarImage, AvatarFallback } from "@muffled-ui/react"
 
 const meta = {
-  title: "ui-web/Badge",
+  title: "react/Badge",
   component: Badge,
   tags: [],
   parameters: {

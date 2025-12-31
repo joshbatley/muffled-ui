@@ -1,9 +1,9 @@
 import type { Meta, StoryObj } from "@storybook/react-vite"
 
-import { Tooltip, TooltipTrigger, TooltipContent, Button } from "@muffled-ui/ui-web"
+import { Tooltip, TooltipTrigger, TooltipContent, Button } from "@muffled-ui/react"
 
 const meta = {
-  title: "ui-web/Tooltip",
+  title: "react/Tooltip",
   component: Tooltip,
   tags: [],
   parameters: { layout: "centered" },

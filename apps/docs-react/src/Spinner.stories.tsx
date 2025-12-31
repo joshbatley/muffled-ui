@@ -1,9 +1,9 @@
 import type { Meta, StoryObj } from "@storybook/react-vite"
 
-import { Spinner } from "@muffled-ui/ui-web"
+import { Spinner } from "@muffled-ui/react"
 
 const meta = {
-  title: "ui-web/Spinner",
+  title: "react/Spinner",
   component: Spinner,
   tags: [],
   parameters: { layout: "centered" },

@@ -1,9 +1,9 @@
 import type { Meta, StoryObj } from "@storybook/react-vite"
 
-import { Button, ButtonGroup, ButtonGroupText, ButtonGroupSeparator } from "@muffled-ui/ui-web"
+import { Button, ButtonGroup, ButtonGroupText, ButtonGroupSeparator } from "@muffled-ui/react"
 
 const meta = {
-  title: "ui-web/ButtonGroup",
+  title: "react/ButtonGroup",
   component: ButtonGroup,
   tags: [],
   parameters: {

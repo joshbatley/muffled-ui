@@ -8,10 +8,10 @@ import {
   BreadcrumbPage,
   BreadcrumbSeparator,
   BreadcrumbEllipsis,
-} from "@muffled-ui/ui-web"
+} from "@muffled-ui/react"
 
 const meta = {
-  title: "ui-web/Breadcrumb",
+  title: "react/Breadcrumb",
   component: Breadcrumb,
   tags: [],
   parameters: {

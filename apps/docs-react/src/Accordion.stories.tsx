@@ -1,9 +1,9 @@
 import type { Meta, StoryObj } from "@storybook/react-vite"
 
-import { Accordion, AccordionItem, AccordionTrigger, AccordionContent } from "@muffled-ui/ui-web"
+import { Accordion, AccordionItem, AccordionTrigger, AccordionContent } from "@muffled-ui/react"
 
 const meta = {
-  title: "ui-web/Accordion",
+  title: "react/Accordion",
   component: Accordion,
   tags: [],
   parameters: { layout: "centered" },

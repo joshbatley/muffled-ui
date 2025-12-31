@@ -1,9 +1,9 @@
 import type { Meta, StoryObj } from "@storybook/react-vite"
 
-import { Textarea } from "@muffled-ui/ui-web"
+import { Textarea } from "@muffled-ui/react"
 
 const meta = {
-  title: "ui-web/Textarea",
+  title: "react/Textarea",
   component: Textarea,
   tags: [],
   parameters: { layout: "centered" },

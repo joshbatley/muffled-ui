@@ -10,7 +10,7 @@
   "dependencies": {
     "react": "^19.2.0",
     "react-dom": "^19.2.0",
-    "@muffled-ui/ui-web": "workspace:*"
+    "@muffled-ui/react": "workspace:*"
   },
   "devDependencies": {
     "@chromatic-com/storybook": "^4.1.3",

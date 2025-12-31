@@ -7,6 +7,8 @@ import LogoLight from '/src/assets/logo-light.svg';
 // @ts-expect-error it works
 import LogoDark from '/src/assets/logo-dark.svg';
 
+import '@muffled-ui/react/styled.css'
+
 
 export const lightTheme = {
   ...themes.light,

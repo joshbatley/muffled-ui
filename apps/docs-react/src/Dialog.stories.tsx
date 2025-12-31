@@ -9,10 +9,10 @@ import {
   DialogDescription,
   DialogFooter,
   Button,
-} from "@muffled-ui/ui-web"
+} from "@muffled-ui/react"
 
 const meta = {
-  title: "ui-web/Dialog",
+  title: "react/Dialog",
   component: Dialog,
   tags: [],
   parameters: { layout: "centered" },

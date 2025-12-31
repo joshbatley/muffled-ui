@@ -1,9 +1,9 @@
 import type { Meta, StoryObj } from "@storybook/react-vite"
 
-import { Checkbox, Label } from "@muffled-ui/ui-web"
+import { Checkbox, Label } from "@muffled-ui/react"
 
 const meta = {
-  title: "ui-web/Checkbox",
+  title: "react/Checkbox",
   component: Checkbox,
   tags: [],
   parameters: { layout: "centered" },

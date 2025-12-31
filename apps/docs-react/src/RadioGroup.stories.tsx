@@ -1,9 +1,9 @@
 import type { Meta, StoryObj } from "@storybook/react-vite"
 
-import { RadioGroup, RadioGroupItem, Label } from "@muffled-ui/ui-web"
+import { RadioGroup, RadioGroupItem, Label } from "@muffled-ui/react"
 
 const meta = {
-  title: "ui-web/RadioGroup",
+  title: "react/RadioGroup",
   component: RadioGroup,
   tags: [],
   parameters: { layout: "centered" },

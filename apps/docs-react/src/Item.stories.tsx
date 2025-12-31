@@ -9,10 +9,10 @@ import {
   ItemActions,
   ItemGroup,
   Button,
-} from "@muffled-ui/ui-web"
+} from "@muffled-ui/react"
 
 const meta = {
-  title: "ui-web/Item",
+  title: "react/Item",
   component: Item,
   tags: [],
   parameters: { layout: "centered" },

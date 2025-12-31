@@ -1,8 +1,8 @@
 import type { Meta, StoryObj } from "@storybook/react-vite";
-import { Combobox } from "@muffled-ui/ui-web"
+import { Combobox } from "@muffled-ui/react"
 
 const meta = {
-  title: "ui-web/Combobox",
+  title: "react/Combobox",
   component: Combobox,
   parameters: {
     layout: "centered",

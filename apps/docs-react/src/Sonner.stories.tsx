@@ -1,9 +1,9 @@
 import type { Meta, StoryObj } from "@storybook/react-vite"
 
-import { Toaster, Button, toast } from "@muffled-ui/ui-web"
+import { Toaster, Button, toast } from "@muffled-ui/react"
 
 const meta = {
-  title: "ui-web/Sonner",
+  title: "react/Sonner",
   component: Toaster,
   tags: [],
   parameters: { layout: "centered" },
