@@ -3,6 +3,7 @@
   "version": "0.0.0",
   "private": false,
   "sideEffects": false,
+  "type": "module",
   "main": "./dist/index.js",
   "module": "./dist/index.mjs",
   "types": "./dist/index.d.ts",
@@ -62,6 +63,7 @@
     "vaul": "^1.1.2"
   },
   "devDependencies": {
+    "@repo/eslint-config": "workspace:*",
     "@types/node": "^24.10.1",
     "@types/react": "^19.2.1",
     "@types/react-dom": "^19.2.1",
@@ -81,6 +83,7 @@
     "typecheck": "tsc -p tsconfig.json --noEmit",
     "ui:init": "shadcn init",
     "ui:add": "shadcn add",
-    "ui:update": "shadcn add --overwrite"
+    "ui:update": "shadcn add --overwrite",
+    "lint": "eslint ."
   }
 }

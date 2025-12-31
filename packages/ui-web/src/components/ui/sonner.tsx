@@ -1,4 +1,4 @@
-'use client';
+'use client'
 
 import {
   CircleCheck,
@@ -6,14 +6,14 @@ import {
   LoaderCircle,
   OctagonX,
   TriangleAlert,
-} from 'lucide-react';
-import { Toaster as Sonner, toast } from 'sonner';
-import { useMuffledSettings } from '@/components/utils/ThemeProvider.tsx';
+} from 'lucide-react'
+import { Toaster as Sonner, toast } from 'sonner'
+import { useMuffledSettings } from '@/components/utils/ThemeProvider.tsx'
 
-type ToasterProps = React.ComponentProps<typeof Sonner>;
+type ToasterProps = React.ComponentProps<typeof Sonner>
 
 const Toaster = ({ ...props }: ToasterProps) => {
-  const { theme } = useMuffledSettings();
+  const { theme } = useMuffledSettings()
   return (
     <Sonner
       theme={theme as ToasterProps['theme']}
@@ -40,11 +40,10 @@ const Toaster = ({ ...props }: ToasterProps) => {
       }}
       {...props}
     />
-  );
-};
+  )
+}
 
-export { Toaster, toast };
-
+export { Toaster, toast }
 
 ///    padding: 16px;
 //     background: var(--normal-bg);

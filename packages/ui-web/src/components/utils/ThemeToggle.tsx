@@ -1,16 +1,16 @@
-import { Moon, Sun } from 'lucide-react';
+import { Moon, Sun } from 'lucide-react'
 
-import { Button } from '@/components/ui/button';
+import { Button } from '@/components/ui/button'
 import {
   DropdownMenu,
   DropdownMenuContent,
   DropdownMenuItem,
   DropdownMenuTrigger,
-} from '@/components/ui/dropdown-menu';
-import { useMuffledSettings } from './ThemeProvider';
+} from '@/components/ui/dropdown-menu'
+import { useMuffledSettings } from './ThemeProvider'
 
 export function ThemeToggle() {
-  const { setTheme } = useMuffledSettings();
+  const { setTheme } = useMuffledSettings()
 
   return (
     <DropdownMenu>
@@ -33,5 +33,5 @@ export function ThemeToggle() {
         </DropdownMenuItem>
       </DropdownMenuContent>
     </DropdownMenu>
-  );
+  )
 }
