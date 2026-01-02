@@ -1,12 +1,12 @@
-import type { Meta, StoryObj } from "@storybook/react-vite"
+import type { Meta, StoryObj } from '@storybook/react-vite'
 
-import { Tabs, TabsList, TabsTrigger, TabsContent } from "@muffled-ui/react"
+import { Tabs, TabsList, TabsTrigger, TabsContent } from '@muffled-ui/react'
 
 const meta = {
-  title: "react/Tabs",
+  title: 'react/Tabs',
   component: Tabs,
   tags: [],
-  parameters: { layout: "centered" },
+  parameters: { layout: 'centered' },
 } satisfies Meta<typeof Tabs>
 
 export default meta

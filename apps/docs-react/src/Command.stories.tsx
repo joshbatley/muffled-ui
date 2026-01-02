@@ -1,4 +1,4 @@
-import type { Meta, StoryObj } from "@storybook/react-vite"
+import type { Meta, StoryObj } from '@storybook/react-vite'
 
 import {
   Command,
@@ -10,13 +10,13 @@ import {
   CommandSeparator,
   CommandShortcut,
   CommandDialog,
-} from "@muffled-ui/react"
+} from '@muffled-ui/react'
 
 const meta = {
-  title: "react/Command",
+  title: 'react/Command',
   component: Command,
   tags: [],
-  parameters: { layout: "centered" },
+  parameters: { layout: 'centered' },
 } satisfies Meta<typeof Command>
 
 export default meta

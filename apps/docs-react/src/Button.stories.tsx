@@ -1,16 +1,16 @@
-import type { Meta, StoryObj } from "@storybook/react-vite"
+import type { Meta, StoryObj } from '@storybook/react-vite'
 
-import { Button } from "@muffled-ui/react"
+import { Button } from '@muffled-ui/react'
 
 const meta = {
-  title: "react/Button",
+  title: 'react/Button',
   component: Button,
   tags: [],
   parameters: {
-    layout: "centered",
+    layout: 'centered',
   },
   args: {
-    children: "Button",
+    children: 'Button',
   },
 } satisfies Meta<typeof Button>
 
@@ -20,8 +20,8 @@ type Story = StoryObj<typeof meta>
 export const Default: Story = {}
 
 export const Variants: Story = {
-  render: (args) => (
-    <div style={{ display: "flex", gap: 12, flexWrap: "wrap" }}>
+  render: args => (
+    <div style={{ display: 'flex', gap: 12, flexWrap: 'wrap' }}>
       <Button {...args} variant="default">Default</Button>
       <Button {...args} variant="secondary">Secondary</Button>
       <Button {...args} variant="destructive">Destructive</Button>
@@ -33,8 +33,8 @@ export const Variants: Story = {
 }
 
 export const Sizes: Story = {
-  render: (args) => (
-    <div style={{ display: "flex", gap: 12, alignItems: "center", flexWrap: "wrap" }}>
+  render: args => (
+    <div style={{ display: 'flex', gap: 12, alignItems: 'center', flexWrap: 'wrap' }}>
       <Button {...args} size="sm">Small</Button>
       <Button {...args} size="default">Default</Button>
       <Button {...args} size="lg">Large</Button>

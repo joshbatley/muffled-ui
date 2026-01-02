@@ -1,4 +1,4 @@
-import type { Meta, StoryObj } from "@storybook/react-vite"
+import type { Meta, StoryObj } from '@storybook/react-vite'
 
 import {
   Breadcrumb,
@@ -8,14 +8,14 @@ import {
   BreadcrumbPage,
   BreadcrumbSeparator,
   BreadcrumbEllipsis,
-} from "@muffled-ui/react"
+} from '@muffled-ui/react'
 
 const meta = {
-  title: "react/Breadcrumb",
+  title: 'react/Breadcrumb',
   component: Breadcrumb,
   tags: [],
   parameters: {
-    layout: "centered",
+    layout: 'centered',
   },
 } satisfies Meta<typeof Breadcrumb>
 

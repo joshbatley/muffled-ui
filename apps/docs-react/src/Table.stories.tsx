@@ -1,4 +1,4 @@
-import type { Meta, StoryObj } from "@storybook/react-vite"
+import type { Meta, StoryObj } from '@storybook/react-vite'
 
 import {
   Table,
@@ -9,13 +9,13 @@ import {
   TableCell,
   TableCaption,
   TableFooter,
-} from "@muffled-ui/react"
+} from '@muffled-ui/react'
 
 const meta = {
-  title: "react/Table",
+  title: 'react/Table',
   component: Table,
   tags: [],
-  parameters: { layout: "centered" },
+  parameters: { layout: 'centered' },
 } satisfies Meta<typeof Table>
 
 export default meta

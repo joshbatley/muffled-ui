@@ -1,14 +1,14 @@
-import type { Meta, StoryObj } from "@storybook/react-vite"
+import type { Meta, StoryObj } from '@storybook/react-vite'
 
-import { Input } from "@muffled-ui/react"
+import { Input } from '@muffled-ui/react'
 
 const meta = {
-  title: "react/Input",
+  title: 'react/Input',
   component: Input,
   tags: [],
-  parameters: { layout: "centered" },
+  parameters: { layout: 'centered' },
   args: {
-    placeholder: "Type here",
+    placeholder: 'Type here',
   },
 } satisfies Meta<typeof Input>
 
@@ -18,9 +18,9 @@ type Story = StoryObj<typeof meta>
 export const Default: Story = {}
 
 export const Disabled: Story = {
-  args: { disabled: true, value: "Disabled" },
+  args: { disabled: true, value: 'Disabled' },
 }
 
 export const Invalid: Story = {
-  args: { "aria-invalid": true, defaultValue: "Invalid value" },
+  args: { 'aria-invalid': true, 'defaultValue': 'Invalid value' },
 }

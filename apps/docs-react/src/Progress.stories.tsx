@@ -1,12 +1,12 @@
-import type { Meta, StoryObj } from "@storybook/react-vite"
+import type { Meta, StoryObj } from '@storybook/react-vite'
 
-import { Progress } from "@muffled-ui/react"
+import { Progress } from '@muffled-ui/react'
 
 const meta = {
-  title: "react/Progress",
+  title: 'react/Progress',
   component: Progress,
   tags: [],
-  parameters: { layout: "centered" },
+  parameters: { layout: 'centered' },
   args: {
     value: 33,
   },
@@ -16,7 +16,7 @@ export default meta
 type Story = StoryObj<typeof meta>
 
 export const Default: Story = {
-  render: (args) => (
+  render: args => (
     <div style={{ width: 260 }}>
       <Progress {...args} />
     </div>

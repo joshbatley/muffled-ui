@@ -1,12 +1,12 @@
-import type { Meta, StoryObj } from "@storybook/react-vite"
+import type { Meta, StoryObj } from '@storybook/react-vite'
 
-import { Separator } from "@muffled-ui/react"
+import { Separator } from '@muffled-ui/react'
 
 const meta = {
-  title: "react/Separator",
+  title: 'react/Separator',
   component: Separator,
   tags: [],
-  parameters: { layout: "centered" },
+  parameters: { layout: 'centered' },
 } satisfies Meta<typeof Separator>
 
 export default meta
@@ -24,7 +24,7 @@ export const Horizontal: Story = {
 
 export const Vertical: Story = {
   render: () => (
-    <div style={{ display: "flex", alignItems: "stretch", gap: 12, height: 80 }}>
+    <div style={{ display: 'flex', alignItems: 'stretch', gap: 12, height: 80 }}>
       <div>Left</div>
       <Separator orientation="vertical" />
       <div>Right</div>

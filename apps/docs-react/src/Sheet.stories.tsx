@@ -1,4 +1,4 @@
-import type { Meta, StoryObj } from "@storybook/react-vite"
+import type { Meta, StoryObj } from '@storybook/react-vite'
 
 import {
   Sheet,
@@ -9,13 +9,13 @@ import {
   SheetTitle,
   SheetDescription,
   Button,
-} from "@muffled-ui/react"
+} from '@muffled-ui/react'
 
 const meta = {
-  title: "react/Sheet",
+  title: 'react/Sheet',
   component: Sheet,
   tags: [],
-  parameters: { layout: "centered" },
+  parameters: { layout: 'centered' },
 } satisfies Meta<typeof Sheet>
 
 export default meta

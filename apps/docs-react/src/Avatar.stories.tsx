@@ -1,12 +1,12 @@
-import type { Meta, StoryObj } from "@storybook/react-vite"
+import type { Meta, StoryObj } from '@storybook/react-vite'
 
-import { Avatar, AvatarImage, AvatarFallback } from "@muffled-ui/react"
+import { Avatar, AvatarImage, AvatarFallback } from '@muffled-ui/react'
 
 const meta = {
-  title: "react/Avatar",
+  title: 'react/Avatar',
   component: Avatar,
   tags: [],
-  parameters: { layout: "centered" },
+  parameters: { layout: 'centered' },
 } satisfies Meta<typeof Avatar>
 
 export default meta

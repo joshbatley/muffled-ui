@@ -1,8 +1,8 @@
-import type { StorybookConfig } from '@storybook/react-vite';
+import type { StorybookConfig } from '@storybook/react-vite'
 
-import {dirname} from "path"
+import { dirname } from 'path'
 
-import { fileURLToPath } from "url"
+import { fileURLToPath } from 'url'
 
 /**
 * This function is used to resolve the absolute path of a package.
@@ -12,7 +12,7 @@ function getAbsolutePath(value: string): string {
   return dirname(fileURLToPath(import.meta.resolve(`${value}/package.json`)))
 }
 
-const isProd = process.env.NODE_ENV === 'production';
+const isProd = process.env.NODE_ENV === 'production'
 
 const managerHead = (head: string | undefined) => `
   ${head}
@@ -29,20 +29,20 @@ const managerHeadProd = (head: string | undefined) => `
 `
 
 const config: StorybookConfig = {
-  "stories": [
-    "../src/**/*.stories.@(js|jsx|mjs|ts|tsx)",
+  stories: [
+    '../src/**/*.stories.@(js|jsx|mjs|ts|tsx)',
   ],
-  "addons": [
+  addons: [
     getAbsolutePath('@chromatic-com/storybook'),
     getAbsolutePath('@storybook/addon-vitest'),
     getAbsolutePath('@storybook/addon-a11y'),
     getAbsolutePath('@storybook/addon-docs'),
     getAbsolutePath('@storybook/addon-onboarding'),
-    getAbsolutePath('@vueless/storybook-dark-mode')
+    getAbsolutePath('@vueless/storybook-dark-mode'),
   ],
-  "staticDirs": ["../public"],
-  "framework": getAbsolutePath('@storybook/react-vite'),
-  "managerHead": (head) => isProd ? managerHeadProd(head) : managerHead(head),
-};
+  staticDirs: ['../public'],
+  framework: getAbsolutePath('@storybook/react-vite'),
+  managerHead: head => isProd ? managerHeadProd(head) : managerHead(head),
+}
 
-export default config;
+export default config

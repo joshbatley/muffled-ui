@@ -1,4 +1,4 @@
-import type { Meta, StoryObj } from "@storybook/react-vite"
+import type { Meta, StoryObj } from '@storybook/react-vite'
 
 import {
   InputGroup,
@@ -7,13 +7,13 @@ import {
   InputGroupText,
   InputGroupInput,
   InputGroupTextarea,
-} from "@muffled-ui/react"
+} from '@muffled-ui/react'
 
 const meta = {
-  title: "react/InputGroup",
+  title: 'react/InputGroup',
   component: InputGroup,
   tags: [],
-  parameters: { layout: "centered" },
+  parameters: { layout: 'centered' },
 } satisfies Meta<typeof InputGroup>
 
 export default meta
@@ -21,7 +21,7 @@ type Story = StoryObj<typeof meta>
 
 export const WithPrefixSuffix: Story = {
   render: () => (
-    <div style={{ display: "grid", gap: 12, width: 360 }}>
+    <div style={{ display: 'grid', gap: 12, width: 360 }}>
       <InputGroup>
         <InputGroupAddon>
           <InputGroupText>https://</InputGroupText>

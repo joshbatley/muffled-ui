@@ -1,12 +1,12 @@
-import type { Meta, StoryObj } from "@storybook/react-vite"
+import type { Meta, StoryObj } from '@storybook/react-vite'
 
-import { Popover, PopoverTrigger, PopoverContent, Button } from "@muffled-ui/react"
+import { Popover, PopoverTrigger, PopoverContent, Button } from '@muffled-ui/react'
 
 const meta = {
-  title: "react/Popover",
+  title: 'react/Popover',
   component: Popover,
   tags: [],
-  parameters: { layout: "centered" },
+  parameters: { layout: 'centered' },
 } satisfies Meta<typeof Popover>
 
 export default meta
@@ -19,7 +19,7 @@ export const Basic: Story = {
         <Button>Open popover</Button>
       </PopoverTrigger>
       <PopoverContent>
-        <div style={{ display: "grid", gap: 8 }}>
+        <div style={{ display: 'grid', gap: 8 }}>
           <div>Place any content here.</div>
           <div style={{ opacity: 0.7 }}>It can be interactive.</div>
         </div>

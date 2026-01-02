@@ -1,4 +1,4 @@
-import type { Meta, StoryObj } from "@storybook/react-vite"
+import type { Meta, StoryObj } from '@storybook/react-vite'
 
 import {
   DropdownMenu,
@@ -11,13 +11,13 @@ import {
   DropdownMenuRadioGroup,
   DropdownMenuRadioItem,
   Button,
-} from "@muffled-ui/react"
+} from '@muffled-ui/react'
 
 const meta = {
-  title: "react/DropdownMenu",
+  title: 'react/DropdownMenu',
   component: DropdownMenu,
   tags: [],
-  parameters: { layout: "centered" },
+  parameters: { layout: 'centered' },
 } satisfies Meta<typeof DropdownMenu>
 
 export default meta

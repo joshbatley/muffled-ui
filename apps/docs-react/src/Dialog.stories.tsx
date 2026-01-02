@@ -1,4 +1,4 @@
-import type { Meta, StoryObj } from "@storybook/react-vite"
+import type { Meta, StoryObj } from '@storybook/react-vite'
 
 import {
   Dialog,
@@ -9,13 +9,13 @@ import {
   DialogDescription,
   DialogFooter,
   Button,
-} from "@muffled-ui/react"
+} from '@muffled-ui/react'
 
 const meta = {
-  title: "react/Dialog",
+  title: 'react/Dialog',
   component: Dialog,
   tags: [],
-  parameters: { layout: "centered" },
+  parameters: { layout: 'centered' },
 } satisfies Meta<typeof Dialog>
 
 export default meta

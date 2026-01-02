@@ -1,4 +1,4 @@
-import type { Meta, StoryObj } from "@storybook/react-vite"
+import type { Meta, StoryObj } from '@storybook/react-vite'
 
 import {
   SidebarProvider,
@@ -15,13 +15,13 @@ import {
   SidebarMenuItem,
   SidebarMenuButton,
   Button,
-} from "@muffled-ui/react"
+} from '@muffled-ui/react'
 
 const meta = {
-  title: "react/Sidebar",
+  title: 'react/Sidebar',
   component: Sidebar,
   tags: [],
-  parameters: { layout: "fullscreen" },
+  parameters: { layout: 'fullscreen' },
 } satisfies Meta<typeof Sidebar>
 
 export default meta
@@ -30,7 +30,7 @@ type Story = StoryObj<typeof meta>
 export const Basic: Story = {
   render: () => (
     <SidebarProvider>
-      <Sidebar variant="inset" >
+      <Sidebar variant="inset">
         <SidebarHeader>
           <SidebarMenu>
             <SidebarMenuItem>
@@ -73,7 +73,7 @@ export const Basic: Story = {
           <Button variant="secondary" size="sm">Logout</Button>
         </SidebarFooter>
       </Sidebar>
-      <SidebarInset >
+      <SidebarInset>
         <main className="flex flex-1 flex-col">
           <SidebarTrigger />
           <div style={{ padding: 16 }}>

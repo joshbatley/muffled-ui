@@ -1,12 +1,12 @@
-import type { Meta, StoryObj } from "@storybook/react-vite"
+import type { Meta, StoryObj } from '@storybook/react-vite'
 
-import { Checkbox, Label } from "@muffled-ui/react"
+import { Checkbox, Label } from '@muffled-ui/react'
 
 const meta = {
-  title: "react/Checkbox",
+  title: 'react/Checkbox',
   component: Checkbox,
   tags: [],
-  parameters: { layout: "centered" },
+  parameters: { layout: 'centered' },
 } satisfies Meta<typeof Checkbox>
 
 export default meta
@@ -14,9 +14,9 @@ type Story = StoryObj<typeof meta>
 
 export const Basic: Story = {
   render: () => {
-    const id = "terms"
+    const id = 'terms'
     return (
-      <div style={{ display: "flex", alignItems: "center", gap: 8 }}>
+      <div style={{ display: 'flex', alignItems: 'center', gap: 8 }}>
         <Checkbox id={id} />
         <Label htmlFor={id}>Accept terms and conditions</Label>
       </div>
@@ -26,9 +26,9 @@ export const Basic: Story = {
 
 export const Disabled: Story = {
   render: () => {
-    const id = "disabled"
+    const id = 'disabled'
     return (
-      <div style={{ display: "flex", alignItems: "center", gap: 8 }}>
+      <div style={{ display: 'flex', alignItems: 'center', gap: 8 }}>
         <Checkbox id={id} disabled />
         <Label htmlFor={id}>Disabled</Label>
       </div>

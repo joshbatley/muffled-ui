@@ -1,14 +1,14 @@
-import type { Meta, StoryObj } from "@storybook/react-vite"
+import type { Meta, StoryObj } from '@storybook/react-vite'
 
-import { Textarea } from "@muffled-ui/react"
+import { Textarea } from '@muffled-ui/react'
 
 const meta = {
-  title: "react/Textarea",
+  title: 'react/Textarea',
   component: Textarea,
   tags: [],
-  parameters: { layout: "centered" },
+  parameters: { layout: 'centered' },
   args: {
-    placeholder: "Write something...",
+    placeholder: 'Write something...',
   },
 } satisfies Meta<typeof Textarea>
 
@@ -18,9 +18,9 @@ type Story = StoryObj<typeof meta>
 export const Default: Story = {}
 
 export const Disabled: Story = {
-  args: { disabled: true, defaultValue: "Disabled" },
+  args: { disabled: true, defaultValue: 'Disabled' },
 }
 
 export const Invalid: Story = {
-  args: { "aria-invalid": true, defaultValue: "Invalid" },
+  args: { 'aria-invalid': true, 'defaultValue': 'Invalid' },
 }

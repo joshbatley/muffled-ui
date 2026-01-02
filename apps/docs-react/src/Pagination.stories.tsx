@@ -1,4 +1,4 @@
-import type { Meta, StoryObj } from "@storybook/react-vite"
+import type { Meta, StoryObj } from '@storybook/react-vite'
 
 import {
   Pagination,
@@ -8,13 +8,13 @@ import {
   PaginationNext,
   PaginationLink,
   PaginationEllipsis,
-} from "@muffled-ui/react"
+} from '@muffled-ui/react'
 
 const meta = {
-  title: "react/Pagination",
+  title: 'react/Pagination',
   component: Pagination,
   tags: [],
-  parameters: { layout: "centered" },
+  parameters: { layout: 'centered' },
 } satisfies Meta<typeof Pagination>
 
 export default meta

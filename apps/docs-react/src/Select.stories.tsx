@@ -1,4 +1,4 @@
-import type { Meta, StoryObj } from "@storybook/react-vite"
+import type { Meta, StoryObj } from '@storybook/react-vite'
 
 import {
   Select,
@@ -9,13 +9,13 @@ import {
   SelectLabel,
   SelectGroup,
   SelectSeparator,
-} from "@muffled-ui/react"
+} from '@muffled-ui/react'
 
 const meta = {
-  title: "react/Select",
+  title: 'react/Select',
   component: Select,
   tags: [],
-  parameters: { layout: "centered" },
+  parameters: { layout: 'centered' },
 } satisfies Meta<typeof Select>
 
 export default meta
@@ -24,7 +24,7 @@ type Story = StoryObj<typeof meta>
 export const Basic: Story = {
   render: () => (
     <Select>
-      <SelectTrigger style={{width: 200}}>
+      <SelectTrigger style={{ width: 200 }}>
         <SelectValue placeholder="Select a fruit" />
       </SelectTrigger>
       <SelectContent>

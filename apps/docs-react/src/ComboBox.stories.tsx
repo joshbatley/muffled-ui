@@ -1,26 +1,26 @@
-import type { Meta, StoryObj } from "@storybook/react-vite";
-import { Combobox } from "@muffled-ui/react"
+import type { Meta, StoryObj } from '@storybook/react-vite'
+import { Combobox } from '@muffled-ui/react'
 
 const meta = {
-  title: "react/Combobox",
+  title: 'react/Combobox',
   component: Combobox,
   parameters: {
-    layout: "centered",
+    layout: 'centered',
     docs: {
       description: {
-        component: "A searchable dropdown component built with Radix UI Command and Popover primitives."
-      }
-    }
+        component: 'A searchable dropdown component built with Radix UI Command and Popover primitives.',
+      },
+    },
   },
-} satisfies Meta<typeof Combobox>;
+} satisfies Meta<typeof Combobox>
 
-export default meta;
-type Story = StoryObj<typeof meta>;
+export default meta
+type Story = StoryObj<typeof meta>
 
 /**
  * The default combobox with framework selection
  */
-export const Default: Story = {};
+export const Default: Story = {}
 
 /**
  * Multiple comboboxes to show state independence
@@ -38,7 +38,7 @@ export const Multiple: Story = {
       </div>
     </div>
   ),
-};
+}
 
 /**
  * Combobox in a form layout
@@ -68,4 +68,4 @@ export const InForm: Story = {
       </button>
     </div>
   ),
-};
+}

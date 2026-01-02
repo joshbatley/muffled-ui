@@ -1,16 +1,16 @@
-import type { Meta, StoryObj } from "@storybook/react-vite"
+import type { Meta, StoryObj } from '@storybook/react-vite'
 
-import { Badge, Avatar, AvatarImage, AvatarFallback } from "@muffled-ui/react"
+import { Badge, Avatar, AvatarImage, AvatarFallback } from '@muffled-ui/react'
 
 const meta = {
-  title: "react/Badge",
+  title: 'react/Badge',
   component: Badge,
   tags: [],
   parameters: {
-    layout: "centered",
+    layout: 'centered',
   },
   args: {
-    children: "Badge",
+    children: 'Badge',
   },
 } satisfies Meta<typeof Badge>
 
@@ -20,8 +20,8 @@ type Story = StoryObj<typeof meta>
 export const Default: Story = {}
 
 export const Variants: Story = {
-  render: (args) => (
-    <div style={{ display: "flex", gap: 12, flexWrap: "wrap" }}>
+  render: args => (
+    <div style={{ display: 'flex', gap: 12, flexWrap: 'wrap' }}>
       <Badge {...args} variant="default">Default</Badge>
       <Badge {...args} variant="secondary">Secondary</Badge>
       <Badge {...args} variant="destructive">Destructive</Badge>
@@ -31,9 +31,9 @@ export const Variants: Story = {
 }
 
 export const Positions: Story = {
-  render: (args) => (
+  render: args => (
     <div>
-      <Badge variant="destructive"  position="N" tag {...args}>
+      <Badge variant="destructive" position="N" tag {...args}>
         <Avatar>
           <AvatarImage alt="User" src="https://i.pravatar.cc/100?img=1" />
           <AvatarFallback>AB</AvatarFallback>

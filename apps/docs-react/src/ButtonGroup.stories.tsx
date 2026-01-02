@@ -1,13 +1,13 @@
-import type { Meta, StoryObj } from "@storybook/react-vite"
+import type { Meta, StoryObj } from '@storybook/react-vite'
 
-import { Button, ButtonGroup, ButtonGroupText, ButtonGroupSeparator } from "@muffled-ui/react"
+import { Button, ButtonGroup, ButtonGroupText, ButtonGroupSeparator } from '@muffled-ui/react'
 
 const meta = {
-  title: "react/ButtonGroup",
+  title: 'react/ButtonGroup',
   component: ButtonGroup,
   tags: [],
   parameters: {
-    layout: "centered",
+    layout: 'centered',
   },
 } satisfies Meta<typeof ButtonGroup>
 

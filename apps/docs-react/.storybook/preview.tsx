@@ -1,14 +1,13 @@
-import type { Preview } from "@storybook/react-vite";
-import { themes } from "storybook/theming";
-import {ThemeWrapper} from "./ThemeWrapper.tsx";
+import type { Preview } from '@storybook/react-vite'
+import { themes } from 'storybook/theming'
+import { ThemeWrapper } from './ThemeWrapper.tsx'
 
 // @ts-expect-error it works
-import LogoLight from '/src/assets/logo-light.svg';
+import LogoLight from '/src/assets/logo-light.svg'
 // @ts-expect-error it works
-import LogoDark from '/src/assets/logo-dark.svg';
+import LogoDark from '/src/assets/logo-dark.svg'
 
 import '@muffled-ui/react/styled.css'
-
 
 export const lightTheme = {
   ...themes.light,
@@ -30,8 +29,7 @@ export const darkTheme = {
   appBg: 'hsl(220, 15%, 10%)',
   appContentBg: 'hsl(220, 15%, 10%)',
   barBg: 'hsl(220, 15%, 10%)',
-};
-
+}
 
 const preview: Preview = {
   decorators: ThemeWrapper,
@@ -39,7 +37,7 @@ const preview: Preview = {
     darkMode: {
       classTarget: 'html',
       dark: darkTheme,
-      light: lightTheme
+      light: lightTheme,
     },
     controls: {
       matchers: {
@@ -49,9 +47,9 @@ const preview: Preview = {
     },
 
     a11y: {
-      test: "todo",
+      test: 'todo',
     },
   },
-};
+}
 
-export default preview;
+export default preview

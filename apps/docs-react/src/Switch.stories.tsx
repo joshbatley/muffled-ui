@@ -1,12 +1,12 @@
-import type { Meta, StoryObj } from "@storybook/react-vite"
+import type { Meta, StoryObj } from '@storybook/react-vite'
 
-import { Switch, Label } from "@muffled-ui/react"
+import { Switch, Label } from '@muffled-ui/react'
 
 const meta = {
-  title: "react/Switch",
+  title: 'react/Switch',
   component: Switch,
   tags: [],
-  parameters: { layout: "centered" },
+  parameters: { layout: 'centered' },
 } satisfies Meta<typeof Switch>
 
 export default meta
@@ -16,7 +16,7 @@ export const Basic: Story = {}
 
 export const WithLabel: Story = {
   render: () => (
-    <div style={{ display: "flex", alignItems: "center", gap: 8 }}>
+    <div style={{ display: 'flex', alignItems: 'center', gap: 8 }}>
       <Switch id="notif" />
       <Label htmlFor="notif">Enable notifications</Label>
     </div>

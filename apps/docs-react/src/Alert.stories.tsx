@@ -1,12 +1,12 @@
-import type { Meta, StoryObj } from "@storybook/react-vite"
+import type { Meta, StoryObj } from '@storybook/react-vite'
 
-import { Alert, AlertTitle, AlertDescription } from "@muffled-ui/react"
+import { Alert, AlertTitle, AlertDescription } from '@muffled-ui/react'
 
 const meta = {
-  title: "react/Alert",
+  title: 'react/Alert',
   component: Alert,
   tags: [],
-  parameters: { layout: "centered" },
+  parameters: { layout: 'centered' },
   args: {
     children: (
       <>
@@ -23,5 +23,5 @@ type Story = StoryObj<typeof meta>
 export const Default: Story = {}
 
 export const Destructive: Story = {
-  args: { variant: "destructive" },
+  args: { variant: 'destructive' },
 }

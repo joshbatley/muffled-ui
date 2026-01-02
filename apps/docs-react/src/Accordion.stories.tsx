@@ -1,12 +1,12 @@
-import type { Meta, StoryObj } from "@storybook/react-vite"
+import type { Meta, StoryObj } from '@storybook/react-vite'
 
-import { Accordion, AccordionItem, AccordionTrigger, AccordionContent } from "@muffled-ui/react"
+import { Accordion, AccordionItem, AccordionTrigger, AccordionContent } from '@muffled-ui/react'
 
 const meta = {
-  title: "react/Accordion",
+  title: 'react/Accordion',
   component: Accordion,
   tags: [],
-  parameters: { layout: "centered" },
+  parameters: { layout: 'centered' },
 } satisfies Meta<typeof Accordion>
 
 export default meta
@@ -15,7 +15,7 @@ type Story = StoryObj<typeof meta>
 
 export const Single: Story = {
   args: {
-    type: "single",
+    type: 'single',
   },
   render: () => (
     <Accordion type="single" collapsible style={{ width: 360 }}>

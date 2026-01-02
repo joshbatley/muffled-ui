@@ -1,12 +1,12 @@
-import type { Meta, StoryObj } from "@storybook/react-vite"
+import type { Meta, StoryObj } from '@storybook/react-vite'
 
-import { Slider } from "@muffled-ui/react"
+import { Slider } from '@muffled-ui/react'
 
 const meta = {
-  title: "react/Slider",
+  title: 'react/Slider',
   component: Slider,
   tags: [],
-  parameters: { layout: "centered" },
+  parameters: { layout: 'centered' },
   args: {
     defaultValue: [50],
     max: 100,
@@ -18,7 +18,7 @@ export default meta
 type Story = StoryObj<typeof meta>
 
 export const Default: Story = {
-  render: (args) => (
+  render: args => (
     <div style={{ width: 260 }}>
       <Slider {...args} />
     </div>

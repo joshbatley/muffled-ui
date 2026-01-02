@@ -1,12 +1,12 @@
-import type { Meta, StoryObj } from "@storybook/react-vite"
+import type { Meta, StoryObj } from '@storybook/react-vite'
 
-import { InputOTP, InputOTPGroup, InputOTPSlot, InputOTPSeparator } from "@muffled-ui/react"
+import { InputOTP, InputOTPGroup, InputOTPSlot, InputOTPSeparator } from '@muffled-ui/react'
 
 const meta = {
-  title: "react/InputOTP",
+  title: 'react/InputOTP',
   component: InputOTP,
   tags: [],
-  parameters: { layout: "centered" },
+  parameters: { layout: 'centered' },
 } satisfies Meta<typeof InputOTP>
 
 export default meta
