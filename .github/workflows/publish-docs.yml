@@ -36,7 +36,6 @@ jobs:
         name: Install pnpm
         with:
           version: 10.26.1
-          cache: true
           run_install: false
 
       - name: Install dependencies
