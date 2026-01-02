@@ -30,6 +30,7 @@
   },
   "files": [
     "dist",
+    "src/styles/theme.css",
     "package.json"
   ],
   "peerDependencies": {
