@@ -35,10 +35,6 @@ const badgeVariants = cva(
   },
 )
 
-const t = () => (
-  <div className="z-9999  empty:p-1.5" />
-)
-
 export interface BadgeProps
   extends React.HTMLAttributes<HTMLDivElement>,
   VariantProps<typeof badgeVariants> { tag?: string | boolean }
