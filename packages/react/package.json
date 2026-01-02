@@ -94,6 +94,6 @@
     "ui:init": "shadcn init",
     "ui:add": "shadcn add",
     "ui:update": "shadcn add --overwrite",
-    "lint": "eslint . --config eslint.config.mjs"
+    "lint": "eslint ."
   }
 }
