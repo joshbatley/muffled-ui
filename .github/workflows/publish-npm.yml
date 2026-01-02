@@ -19,10 +19,11 @@ jobs:
         with:
           node-version: 18
 
-      - uses: pnpm/action-setup@v2
+      - uses: pnpm/action-setup@v4
         name: Install pnpm
         with:
-          version: 8
+          version: 10
+          cache: true
           run_install: false
 
       - name: install
