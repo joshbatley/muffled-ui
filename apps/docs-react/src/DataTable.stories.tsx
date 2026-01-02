@@ -83,12 +83,12 @@ export const Simple: Story = {
   args: {
     columns: columns as any,
     data: manyPayments.slice(0, 3),
-  },
+  } as any,
 }
 
 export const Empty: Story = {
   args: {
     columns: columns as any,
     data: [],
-  },
+  } as any,
 }
