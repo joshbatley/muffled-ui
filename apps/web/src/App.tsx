@@ -1,34 +1,36 @@
-import { Box, ImageComp, Text, PrimaryButton, Badge, CenteredWidget, useMuffledSettings } from '@muffled-ui/react';
-import LogoLight from './assets/logo-light.svg';
-import LogoDark from './assets/logo-dark.svg';
-import ReactLogo from './assets/react-light.svg';
+import { Badge, Button, useMuffledSettings } from '@muffled-ui/react'
+import LogoLight from './assets/logo-light.svg'
+import LogoDark from './assets/logo-dark.svg'
+import ReactLogo from './assets/react-light.svg'
 
-export const App: React.FC = () => {
-  const { theme } = useMuffledSettings();
+function App() {
+  const { theme } = useMuffledSettings()
+
   return (
-    <CenteredWidget>
-      <Box display="grid" gridTemplateColumns={{ '': '1fr 1fr', md: '1fr' }} w={{ '': 'auto', sm: '500px' }} gap="3" alignItems="flex-end" mt="-200px" mx={{ '': '30px', sm: 'auto' }}>
-        <ImageComp src={theme === 'Dark' ? LogoDark : LogoLight} w="100%" h="82px" margin="0 auto" gridColumn={{ '': 'span 2', sm: 'span 1' }} />
-        <Box mt="10">
-          <Text fontSize={{ '': '1', sm: '0' }}>&nbsp;</Text>
+    <div className="flex place-items-center justify-center h-screen">
+      <div className="grid grid-cols-1 md:grid-cols-2 sm:w-auto gap-3 items-end -mt-50 mx-auto sm:mx-7.5">
+        <img src={theme === 'dark' ? LogoDark : LogoLight} className="w-full h-20.5 mx-auto col-span-1 sm:col-span-2" />
+        <div className="mt-10">
+          <p className="text-sm sm:text-xs">&nbsp;</p>
           <a href="/react">
-            <PrimaryButton w="100%" justifyContent="center" py="4">
-              <ImageComp src={ReactLogo} h="5" />
-              <Text>React</Text>
-            </PrimaryButton>
+            <Button size="lg" className="w-full justify-center py-8 px-20 text-lg">
+              <img src={ReactLogo} className="h-5" />
+              <p>React</p>
+            </Button>
           </a>
-        </Box>
+        </div>
 
-        <Box display="flex" justifyContent="center" flexWrap="wrap" mt="10">
-          <Badge tag="Coming Soon" position="N" destructive>
-            <PrimaryButton w="100%" justifyContent="center" disabled py="4">
-              <ImageComp src={ReactLogo} h="5" />
-              <Text>React Native</Text>
-            </PrimaryButton>
+        <div className="flex justify-center flex-wrap mt-10">
+          <Badge tag="Coming Soon" position="N" variant="destructive">
+            <Button size="lg" className="w-full justify-center py-8 px-20 text-lg" disabled>
+              <img src={ReactLogo} className="h-5" />
+              <p>React Native</p>
+            </Button>
           </Badge>
-        </Box>
-      </Box>
-    </CenteredWidget>
-  );
-};
+        </div>
+      </div>
+    </div>
+  )
+}
 
+export default App

@@ -1,0 +1,39 @@
+{
+  "name": "docs-react",
+  "private": true,
+  "version": "0.0.0",
+  "type": "module",
+  "scripts": {
+    "dev": "storybook dev -p 6006",
+    "build": "storybook build",
+    "lint": "eslint ."
+  },
+  "dependencies": {
+    "react": "^19.2.0",
+    "react-dom": "^19.2.0",
+    "@muffled-ui/react": "workspace:*"
+  },
+  "devDependencies": {
+    "@chromatic-com/storybook": "^4.1.3",
+    "@storybook/addon-a11y": "^10.1.10",
+    "@storybook/addon-docs": "^10.1.10",
+    "@storybook/addon-onboarding": "^10.1.10",
+    "@storybook/addon-vitest": "^10.1.10",
+    "@storybook/react-vite": "^10.1.10",
+    "@types/node": "^24.10.1",
+    "@types/react": "^19.2.5",
+    "@types/react-dom": "^19.2.3",
+    "@vitejs/plugin-react": "^5.1.1",
+    "@vitest/browser-playwright": "^4.0.16",
+    "@vitest/coverage-v8": "^4.0.16",
+    "@vueless/storybook-dark-mode": "^10.0.4",
+    "@repo/eslint-config": "workspace:*",
+    "globals": "^16.5.0",
+    "playwright": "^1.57.0",
+    "storybook": "^10.1.10",
+    "typescript": "~5.9.3",
+    "typescript-eslint": "^8.46.4",
+    "vite": "^7.2.4",
+    "vitest": "^4.0.16"
+  }
+}

@@ -1,21 +1,22 @@
 {
   "extends": "@repo/typescript-config/react-library.json",
   "compilerOptions": {
+    "baseUrl": "./",
     "lib": [
       "dom",
       "ES2015"
     ],
     "types": [
-      "jest",
       "node"
-    ]
+    ],
+    "paths": {
+      "@/*": ["src/*"]
+    }
   },
   "include": [
     "."
   ],
-  "exclude": [
-    "dist",
-    "build",
-    "node_modules"
+  "exclude": ["dist", "node_modules",
+    "eslint.config.mjs"
   ]
 }

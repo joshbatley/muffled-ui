@@ -9,6 +9,7 @@
   "updateInternalDependencies": "patch",
   "ignore": [
     "web",
-    "docs"
+    "docs-react",
+    "@repo/*"
   ]
 }
