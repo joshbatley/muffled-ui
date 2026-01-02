@@ -35,9 +35,3 @@ function App() {
 }
 
 export default App
-
-
-// <PrimaryButton w="100%" justifyContent="center" py="4">
-//   <ImageComp src={ReactLogo} h="5" />
-//   <Text>React</Text>
-// </PrimaryButton>
