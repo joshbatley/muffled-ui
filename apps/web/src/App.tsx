@@ -5,11 +5,11 @@ import ReactLogo from './assets/react-light.svg'
 
 function App() {
   const { theme } = useMuffledSettings()
-
+  console.log(theme)
   return (
     <div className="flex place-items-center justify-center h-screen">
       <div className="grid grid-cols-1 md:grid-cols-2 sm:w-auto gap-3 items-end -mt-50 mx-auto sm:mx-7.5">
-        <img src={theme === 'dark' ? LogoDark : LogoLight} className="w-full h-20.5 mx-auto col-span-1 sm:col-span-2" />
+        <img src={theme === 'light' ? LogoDark : LogoLight} className="w-full h-20.5 mx-auto col-span-1 sm:col-span-2" />
         <div className="mt-10">
           <p className="text-sm sm:text-xs">&nbsp;</p>
           <a href="/react">
