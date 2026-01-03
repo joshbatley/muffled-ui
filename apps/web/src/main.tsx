@@ -6,7 +6,7 @@ import { MuffledUI } from '@muffled-ui/react'
 
 createRoot(document.getElementById('root')!).render(
   <StrictMode>
-    <MuffledUI theme="dark">
+    <MuffledUI defaultTheme="light">
       <App />
     </MuffledUI>
   </StrictMode>,

@@ -5,7 +5,7 @@ const LocalStorageKey = '@muffled-ui/settings'
 export type ProvidedTheme = 'light' | 'dark' | 'system'
 
 export type ThemeProviderProps = {
-  theme?: ProvidedTheme
+  defaultTheme?: ProvidedTheme
   children?: React.ReactNode
 }
 
@@ -27,13 +27,18 @@ export const useMuffledSettings = () => {
   return context
 }
 
-export const MuffledUI: React.FC<ThemeProviderProps> = ({ children }) => {
+export const MuffledUI: React.FC<ThemeProviderProps> = ({ children, defaultTheme }) => {
   const [theme, setThemeKey] = useState<ProvidedTheme>(() => {
     if (localStorage.getItem(LocalStorageKey) !== null) {
       return JSON.parse(localStorage.getItem(LocalStorageKey) || '')?.theme
     }
-    return 'system'
+    return defaultTheme ? defaultTheme : 'system'
   })
+
+  const setTheme = (t: ProvidedTheme) => {
+    localStorage.setItem(LocalStorageKey, JSON.stringify({ theme: t }))
+    setThemeKey(t)
+  }
 
   useEffect(() => {
     const root = window.document.documentElement
@@ -47,15 +52,12 @@ export const MuffledUI: React.FC<ThemeProviderProps> = ({ children }) => {
         : 'light'
 
       root.classList.add(systemTheme)
+      setTheme(systemTheme)
       return
     }
+    setTheme(theme)
     root.classList.add(theme)
   }, [theme])
-
-  const setTheme = (t: ProvidedTheme) => {
-    localStorage.setItem(LocalStorageKey, JSON.stringify({ theme: t }))
-    setThemeKey(t)
-  }
 
   return (
     <SettingsContext.Provider value={{
