@@ -1,5 +1,11 @@
 # @muffled-ui/react
 
+## 1.3.2
+
+### Patch Changes
+
+- d589a27: Update Theme provider to correctly set setting
+
 ## 1.3.1
 
 ### Patch Changes
